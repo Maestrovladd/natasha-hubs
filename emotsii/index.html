@@ -1,0 +1,2414 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Эмоции · сентябрь 2026</title>
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --paper: #fff;
+      --ink: #17222d;
+      --muted: #4c5e70;
+      --line: #e6dfd3;
+      --accent: #0f4f92;
+      --soft: #eaf3fd;
+      --ok: #1a7f4e;
+      --warn: #b45309;
+      --stop: #9b2335;
+      --radius: 14px;
+      --shadow: 0 10px 24px rgba(20, 33, 45, 0.08);
+      --max: 1320px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.5;
+      background:
+        radial-gradient(circle at 8% 0%, #efe6d8 0%, transparent 42%),
+        radial-gradient(circle at 93% 5%, #e6effb 0%, transparent 34%),
+        var(--bg);
+    }
+    .layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 14px;
+    }
+    .side, .panel, .hero {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .side { position: sticky; top: 12px; height: fit-content; padding: 14px; }
+    .side h1 { margin: 0; font-size: 21px; letter-spacing: -0.03em; line-height: 1.15; }
+    .side p { margin: 8px 0 12px; color: var(--muted); font-size: 13px; }
+    .nav-kicker {
+      margin: 12px 0 4px; font-size: 10px; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--muted); font-weight: 700;
+    }
+    .nav-kicker:first-of-type { margin-top: 2px; }
+    .switches { display: grid; gap: 6px; margin-bottom: 10px; }
+    .switch {
+      display: block; padding: 8px 10px; border-radius: 10px;
+      border: 1px solid var(--line); background: #faf8f3;
+      font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .switch:focus-visible { outline: 3px solid #c9daef; outline-offset: 2px; }
+    .mini { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mini div { border: 1px solid var(--line); border-radius: 10px; text-align: center; padding: 8px; background: #fffdf9; }
+    .mini b { display: block; color: var(--accent); font-size: 15px; line-height: 1.15; }
+    .mini span { font-size: 11px; color: var(--muted); }
+    .main { display: grid; gap: 12px; min-width: 0; }
+    .hero { padding: 20px 22px; }
+    .hero h2 { margin: 0; font-size: 28px; letter-spacing: -0.03em; line-height: 1.12; }
+    .hero p { margin: 10px 0 0; color: var(--muted); max-width: 92ch; }
+    .tabs input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+    .panel { display: none; padding: 18px 20px 28px; }
+    .panel h2 { margin: 0; font-size: 24px; letter-spacing: -0.03em; }
+    .lead { margin: 8px 0 14px; color: var(--muted); font-size: 14px; }
+    .grid2 { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+    .grid3 { display: grid; gap: 10px; grid-template-columns: 1fr 1fr 1fr; }
+    .card { border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: #fffdfa; }
+    .card h3 { margin: 0 0 8px; font-size: 16px; }
+    .sec { margin: 18px 0 8px; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+    .panel { overflow-x: auto; }
+    th, td { padding: 8px 9px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13px; }
+    th { background: #f6f8fb; font-weight: 700; }
+    tr:last-child td { border-bottom: none; }
+    ul, ol { margin: 8px 0 0; padding-left: 18px; }
+    li + li { margin-top: 3px; }
+    .hint { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+    .callout {
+      border-left: 4px solid var(--accent); background: #f8fbff;
+      border-radius: 10px; padding: 10px 12px; margin-top: 10px; font-size: 14px;
+    }
+    .quote {
+      margin: 10px 0 0; padding: 10px 12px; border-left: 3px solid var(--accent);
+      background: #f7fafd; font-size: 14px;
+    }
+    .quote small { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; }
+    .scheme {
+      margin-top: 10px; padding: 12px; border: 1px dashed #c9daef;
+      border-radius: 12px; background: #f8fbff; font-size: 13.5px; line-height: 1.55;
+    }
+    .plates { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; margin-top: 12px; }
+    .plate { border: 1px solid var(--line); border-radius: 12px; padding: 11px 12px; background: #fff; }
+    .plate b { display: block; font-size: 13px; color: var(--accent); margin-bottom: 4px; }
+    .plate p { margin: 0; font-size: 13px; color: var(--muted); }
+    .rank {
+      display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .04em;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 999px; margin-right: 6px;
+    }
+    .rank.a { background: #e8f6ee; color: var(--ok); }
+    .rank.b { background: #fff3dc; color: var(--warn); }
+    .rank.c { background: #eef2f6; color: var(--muted); }
+    .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; margin: 8px 0 0; }
+    .flow .box { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 7px 10px; font-weight: 650; }
+    .flow .arr { color: var(--muted); }
+    .q { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 10px; background: #fff; }
+    .q .num { font-size: 12px; font-weight: 800; color: var(--accent); letter-spacing: .03em; text-transform: uppercase; }
+    .q h3 { margin: 4px 0 6px; font-size: 16px; }
+    .copybox {
+      margin-top: 12px; padding: 12px; border-radius: 10px; background: #17222d; color: #eef2f6;
+      font: 12.5px/1.45 ui-monospace, "SF Mono", Menlo, Consolas, monospace; white-space: pre-wrap;
+    }
+    .btn {
+      appearance: none; border: 0; background: var(--accent); color: #fff;
+      font: 650 13px/1 ui-sans-serif, system-ui, sans-serif;
+      padding: 10px 14px; border-radius: 10px; cursor: pointer; margin-top: 8px;
+    }
+    .cal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px; }
+    .cal .d { border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: #fff; font-size: 13px; }
+    .cal .d b { display: block; color: var(--accent); }
+    details { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; background: #fff; margin-top: 8px; }
+    summary { cursor: pointer; font-weight: 700; }
+    #tab0:checked ~ .main .switches label[for="tab0"],
+    #tab1:checked ~ .main .switches label[for="tab1"],
+    #tab2:checked ~ .main .switches label[for="tab2"],
+    #tab3:checked ~ .main .switches label[for="tab3"],
+    #tab4:checked ~ .main .switches label[for="tab4"],
+    #tab5:checked ~ .main .switches label[for="tab5"],
+    #tab6:checked ~ .main .switches label[for="tab6"],
+    #tab7:checked ~ .main .switches label[for="tab7"],
+    #tab8:checked ~ .main .switches label[for="tab8"],
+    #tab9:checked ~ .main .switches label[for="tab9"],
+    #tab10:checked ~ .main .switches label[for="tab10"],
+    #tab11:checked ~ .main .switches label[for="tab11"],
+    #tab12:checked ~ .main .switches label[for="tab12"],
+    #tab13:checked ~ .main .switches label[for="tab13"] {
+      background: #eef5fd; border-color: #c9daef; color: var(--accent);
+    }
+    #tab0:checked ~ .main .p0,
+    #tab1:checked ~ .main .p1,
+    #tab2:checked ~ .main .p2,
+    #tab3:checked ~ .main .p3,
+    #tab4:checked ~ .main .p4,
+    #tab5:checked ~ .main .p5,
+    #tab6:checked ~ .main .p6,
+    #tab7:checked ~ .main .p7,
+    #tab8:checked ~ .main .p8,
+    #tab9:checked ~ .main .p9,
+    #tab10:checked ~ .main .p10,
+    #tab11:checked ~ .main .p11,
+    #tab12:checked ~ .main .p12,
+    #tab13:checked ~ .main .p13 { display: block; }
+    .conc { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; background: #fff; margin-top: 12px; }
+    .conc > h3 { margin: 0 0 2px; font-size: 19px; letter-spacing: -0.02em; }
+    .conc .princ { margin: 0 0 10px; font-size: 12.5px; color: var(--accent); font-weight: 650; }
+    .slot { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
+    .slot > b { display: block; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+    .none { color: var(--stop); font-weight: 650; }
+    .steps { counter-reset: st; list-style: none; padding-left: 0; margin: 6px 0 0; }
+    .steps li { counter-increment: st; position: relative; padding-left: 30px; margin-top: 5px; font-size: 13.5px; }
+    .steps li::before {
+      content: counter(st); position: absolute; left: 0; top: 1px;
+      width: 21px; height: 21px; border-radius: 50%; background: var(--soft); color: var(--accent);
+      font-size: 11px; font-weight: 800; display: grid; place-items: center;
+    }
+    .p0 .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 18px; }
+    .p0 .toc a {
+      font-size: 12px; font-weight: 650; color: var(--accent); text-decoration: none;
+      border: 1px solid #c9daef; background: var(--soft); border-radius: 999px; padding: 5px 10px;
+    }
+    .p0 .chapter { margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: 20px; letter-spacing: -0.03em; }
+    .p0 .chapter:first-of-type { border-top: 0; margin-top: 8px; padding-top: 0; }
+    .p0 .prose { max-width: 72ch; font-size: 15px; line-height: 1.62; }
+    .p0 .prose p { margin: 0 0 10px; }
+    .theses { margin: 10px 0 0; padding-left: 22px; }
+    .theses li { margin-top: 6px; font-size: 14.5px; }
+    .p0 img.ref { width: 100%; max-width: 720px; border: 1px solid var(--line); border-radius: 12px; display: block; margin: 10px 0; }
+    .ladder { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 10px; }
+    .ladder .band { display: grid; grid-template-columns: 1.15fr 0.85fr; border-top: 1px solid var(--line); }
+    .ladder .band:first-child { border-top: 0; }
+    .ladder .feel, .ladder .do { padding: 10px 12px; font-size: 13px; }
+    .ladder .do { border-left: 1px solid var(--line); background: #fff; }
+    .ladder .feel b { display: inline-block; min-width: 1.6em; color: var(--accent); }
+    .ladder .hi { background: #fdecee; }
+    .ladder .mid { background: #fff6e8; }
+    .ladder .ok { background: #f4f8ee; }
+    .ladder .low { background: #f7fbff; }
+    .ladder .do b { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); }
+    .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+    .offer .who { margin: 0 0 4px; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    .offer h3 { margin: 0 0 6px; font-size: 16px; }
+    .ocard { border: 1px solid var(--line); border-radius: 16px; background: #fff; padding: 18px 20px 14px; margin-top: 14px; }
+    .ocard.pick { border-color: #b9d0ea; box-shadow: 0 1px 0 #e8eff8, 0 10px 24px -18px rgba(28,70,120,.35); }
+    .ocard .tag {
+      display: inline-block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 800;
+      color: var(--accent); background: var(--soft); border: 1px solid #c9daef; border-radius: 999px; padding: 4px 10px;
+    }
+    .ocard .tag.grey { color: var(--muted); background: #f6f7f9; border-color: var(--line); }
+    .ocard .oh1 { margin: 12px 0 3px; font-size: 23px; line-height: 1.18; letter-spacing: -0.035em; font-weight: 800; }
+    .ocard .oh2 { margin: 0 0 9px; font-size: 16.5px; line-height: 1.35; color: #41536a; font-weight: 500; }
+    .ocard .olead { margin: 0 0 4px; font-size: 14.5px; line-height: 1.55; max-width: 66ch; }
+    .f { display: grid; grid-template-columns: 148px 1fr; gap: 12px; border-top: 1px solid var(--line); padding: 9px 0; font-size: 13.5px; line-height: 1.5; }
+    .f > b { font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); padding-top: 3px; font-weight: 800; }
+    .f ul { margin: 0; padding-left: 17px; }
+    .f ul li + li { margin-top: 3px; }
+    .f .pill {
+      display: inline-block; background: var(--accent); color: #fff; border-radius: 10px;
+      padding: 7px 14px; font-weight: 700; font-size: 13px;
+    }
+    @media (max-width: 700px) { .f { grid-template-columns: 1fr; gap: 4px; } }
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 1fr; }
+      .side { position: static; }
+      .grid2, .grid3, .cal, .plates, .offer-grid, .ladder .band { grid-template-columns: 1fr; }
+      .ladder .do { border-left: 0; border-top: 1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs layout">
+    <input type="radio" name="main-tab" id="tab0" checked>
+    <input type="radio" name="main-tab" id="tab1">
+    <input type="radio" name="main-tab" id="tab2">
+    <input type="radio" name="main-tab" id="tab3">
+    <input type="radio" name="main-tab" id="tab4">
+    <input type="radio" name="main-tab" id="tab5">
+    <input type="radio" name="main-tab" id="tab6">
+    <input type="radio" name="main-tab" id="tab7">
+    <input type="radio" name="main-tab" id="tab8">
+    <input type="radio" name="main-tab" id="tab9">
+    <input type="radio" name="main-tab" id="tab10">
+    <input type="radio" name="main-tab" id="tab11">
+    <input type="radio" name="main-tab" id="tab12">
+    <input type="radio" name="main-tab" id="tab13">
+
+    <aside class="side main">
+      <h1>Эмоции</h1>
+        <p>Сначала вкладка 0, потом 8. Остальное — справка и архив.</p>
+      <div class="switches">
+        <p class="nav-kicker">Рабочий текст</p>
+        <label class="switch" for="tab0">0. Читать</label>
+        <p class="nav-kicker">Глава подробнее</p>
+        <label class="switch" for="tab1">1. Костяк</label>
+        <label class="switch" for="tab2">2. Как устроена глава</label>
+        <label class="switch" for="tab3">3. Системы</label>
+        <label class="switch" for="tab4">4. Понять и назвать</label>
+        <label class="switch" for="tab5">5. Изменить</label>
+        <label class="switch" for="tab6">6. Уязвимость и пик</label>
+        <label class="switch" for="tab11">11. Примеры и опоры</label>
+        <p class="nav-kicker">Запуск</p>
+        <label class="switch" for="tab7">7. ЦА подробно</label>
+        <label class="switch" for="tab8">8. Результат и офферы</label>
+        <label class="switch" for="tab9">9. Календарь</label>
+        <p class="nav-kicker">Не глава 9</p>
+        <label class="switch" for="tab10">10. Архив слотов</label>
+        <label class="switch" for="tab12">12. Сверка источников</label>
+        <label class="switch" for="tab13">13. Логика эфира</label>
+      </div>
+      <div class="mini">
+        <div><b>01.09</b><span>анкета</span></div>
+        <div><b>16.09</b><span>закрытый</span></div>
+        <div><b>30.09</b><span>открытый</span></div>
+        <div><b>05.10</b><span>старт</span></div>
+      </div>
+    </aside>
+
+    <div class="main">
+
+      <section class="panel p0">
+        <h2>Читать</h2>
+        <p class="lead">Рабочий текст запуска. Сверху вниз: о чём глава, для кого, что в ней по порядку, что можно обещать, как это сказать на ленде. Источник один: глава 9 Линехан, страницы 597–751. Остальные вкладки — справка и архив, их не нужно читать, чтобы понять продукт.</p>
+        <nav class="toc">
+          <a href="#p0-how">Как читать</a>
+          <a href="#p0-book">Глава</a>
+          <a href="#p0-who">Кто это</a>
+          <a href="#p0-depth">Что в главе</a>
+          <a href="#p0-promise">Обещать</a>
+          <a href="#p0-offers">Оффер</a>
+        </nav>
+
+        <h3 class="chapter" id="p0-how">Как этим пользоваться</h3>
+        <div class="prose">
+          <p>Эта вкладка написана связной речью. Её можно прочитать за один заход и унести смысл. Цитаты, полные списки и схемы лежат дальше: вкладки 2–6 и 11.</p>
+          <p>Сюда не входит глава 10 (стрессоустойчивость), майский курс осознанности и чужие ленды. Если кусок не из девятой — он либо внизу как граница, либо во вкладках «не глава 9».</p>
+          <p><b>Почему так, а не куча равных вкладок.</b> Сначала рабочий слой: что это, кому, что обещать, как сказать. Потом приложение. Если положить главу, чужие ленды и запасные концепты рядом как равные, теряется, что брать на сайт. Поэтому названия и офферы собраны во вкладке 8. Длинные слоты презы — вкладка 10, не первый экран.</p>
+        </div>
+
+        <h3 class="chapter" id="p0-book">1. О чём девятая глава</h3>
+        <div class="prose">
+          <p>Книга Марши Линехан — методичка для того, кто ведёт тренинг навыков ДПТ. Не комикс для клиента. Глава 9 учит эмоциональной регуляции.</p>
+        </div>
+        <div class="quote">
+          Эмоциональная регуляция — способность контролировать или влиять на то, какие эмоции вы испытываете, когда вы их испытываете и как вы их переживаете и выражаете.
+          <small>Определение модуля. Регуляция бывает автоматической и сознательной. Здесь учат второе, чтобы со временем стало первым.</small>
+        </div>
+        <div class="prose">
+          <p>Цель модуля: меньше страдать. Не стерилизовать человека от эмоций. Одни люди с рождения чувствуют сильнее и дольше возвращаются в равновесие. Это биология, не моральный дефект.</p>
+          <p>Люди часто принимают болезненное чувство за проблему, которую надо срочно решить. Отсюда давление, вспышка, избегание, переедание, гиперконтроль. Книга читает это как попытки регуляции, а не как характер.</p>
+          <p>Навыкам учат только после того, как чувство признано. Иначе выйдет, что стыдившие были правы, и обучение не встанет.</p>
+          <p>Эмоции дисрегулируются, когда несмотря на все усилия человек утрачивает способность влиять на какие / когда / как. Это описание состояния, не приговор «слабый характер».</p>
+        </div>
+
+        <p class="hint">Четыре цели модуля, как в книге.</p>
+        <ol class="theses">
+          <li>Понять свои эмоции: назвать и понять роль.</li>
+          <li>Реже запускать нежелательные.</li>
+          <li>Стать менее хрупкой к эмоциональному разуму.</li>
+          <li>Когда переполняет — не сделать хуже.</li>
+        </ol>
+        <div class="prose">
+          <p>Меняем те эмоции, которые хочет менять сам человек. Если не хочет менять ни одну — над изменением не работаем.</p>
+        </div>
+        <table>
+          <thead><tr><th>В этом продукте</th><th>Не из этой главы</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Понять и назвать. Проверить факты. Противоположное действие целиком. Решение проблемы. Тело и маленькие «я могу». Прожить волну. Понять, почему навык «не сработал».</td>
+              <td>Кризис-набор: остановиться, сбить волну телом, отвлечься, улучшить момент. Это глава 10. Кошмары и полный список мифов с бланка, которого в этих страницах нет.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="chapter" id="p0-who">2. Кто этот человек</h3>
+        <div class="prose">
+          <p>Книга пишет прямо: модуль для людей с высокой чувствительностью, высокой интенсивностью или тем и другим. Часто слышали: «просто измени отношение». Живут среди тех, у кого «всё под контролем», и стыдятся, что у них не так.</p>
+          <p>Болезненное чувство для них — пожар. Поэтому давят, срываются или уходят. Градации нет: либо терпеть, либо уже несёт.</p>
+          <p>Таким людям навыки нужны. Без признания чувства обучение не встанет.</p>
+        </div>
+        <div class="grid3">
+          <article class="card">
+            <h3>Что болит</h3>
+            <ul>
+              <li>Стыдно, что так чувствую. Мне говорят сменить отношение.</li>
+              <li>Не понимаю, что чувствую. Как туман.</li>
+              <li>Либо давлю, либо несёт.</li>
+              <li>Вспыхиваю «из-за ерунды», когда не выспалась, болею или тяжёлый день.</li>
+              <li>Знаю умом, что безопасно. Телом нет.</li>
+              <li>Избегаю разговор, работу, лечение. Потом хуже.</li>
+              <li>Пробовала навык. В пике не сработал. Значит, я безнадёжная.</li>
+              <li>Тушу пожары. Приятного почти нет.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Чего хочет</h3>
+            <ul>
+              <li>Понимать, что чувствую, не жить в тумане.</li>
+              <li>Отличать «это по делу» от накрутки.</li>
+              <li>Не взрываться на людей, которых не хочу терять.</li>
+              <li>Делать важное, даже когда внутри страх, грусть или стыд.</li>
+              <li>Не стыдиться самого факта чувства.</li>
+              <li>Иметь что делать, когда эмоция есть. Не только «возьми себя в руки».</li>
+              <li>Чтобы в жизни было не только тушение: приятное и то, что важно.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Что скажет против</h3>
+            <ul>
+              <li>«Если научусь влиять, значит меня правильно стыдили.» Книга: сначала признать чувство.</li>
+              <li>«Это биология, ничего не изменить.» Биология есть. Навык всё равно нужен.</li>
+              <li>«В пике ваши практики бесполезны.» Согласны: сложное в точке срыва не берётся. Этот курс кризис не обещает.</li>
+              <li>«Если объяснимо, значит правильно.» Объяснимо ещё не значит по фактам.</li>
+              <li>«Я не хочу менять эту эмоцию.» Тогда её не меняем.</li>
+              <li>«Сначала уберу плохое, потом будет радость.» Избегая боль, вычёркиваешь и радость.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="hint">Шесть способов узнать человека в контенте. Первый заход — из главы, не из чужого ленда.</p>
+        <table>
+          <thead><tr><th>Как узнать</th><th>Что в главе стоит первым</th></tr></thead>
+          <tbody>
+            <tr><td>Давит. Делает вид, что ничего нет</td><td>Назвать не значит сдаться. Подавление часто раздувает вторую эмоцию</td></tr>
+            <tr><td>Срывается на близких, потом вина</td><td>Гнев часто вторичен к страху. Не атаковать</td></tr>
+            <tr><td>Не может назвать, что чувствует</td><td>Словарь и сила 0–100</td></tr>
+            <tr><td>Не идёт на разговор, работу, лечение</td><td>Если страх не по фактам: делать то, чего боишься</td></tr>
+            <tr><td>Ему говорили «просто смени отношение»</td><td>Сначала признать, что чувство есть</td></tr>
+            <tr><td>Срыв после бессонной или голодной</td><td>Тело. Не характер</td></tr>
+          </tbody>
+        </table>
+        <div class="prose">
+          <p>Курс не для тех, кто хочет, чтобы чувства исчезли; ищет замену врачу и таблеткам; в остром кризисе ждёт набор «когда уже несёт»; не хочет менять ни одну эмоцию.</p>
+        </div>
+
+        <h3 class="chapter" id="p0-depth">3. Что в главе по порядку</h3>
+        <div class="prose">
+          <p>Четыре блока обучения. Это каркас курса. Страх в словаре идёт первым. Так в книге, так и в программе.</p>
+        </div>
+        <ol class="steps">
+          <li><b>Понять и назвать.</b> Зачем эмоция. Почему ею трудно управлять. Из каких частей она собрана. Как её назвать.</li>
+          <li><b>Изменить сегодня.</b> Проверить факты. Дальше развилка: противоположное действие или решение проблемы.</li>
+          <li><b>Снизить уязвимость.</b> Копить приятное. Маленькое «я могу». Репетиция заранее. Тело как порог.</li>
+          <li><b>Сильная волна.</b> Наблюдать, описывать, не давить и не раздувать. Где сложный навык уже не берётся — граница, не обещание закрыть кризис.</li>
+        </ol>
+
+        <h3 class="sec">Понять и назвать</h3>
+        <div class="prose">
+          <p>Эмоции не враги. У них три функции. Двигать к действию: страх — бежать, гнев — защищаться, вина — не делать бесчестного. Сообщать другим: лицо быстрее слов, и это влияет, хотим мы того или нет. Сигналить себе: обрати внимание, это важно. Так книга объясняет то, что люди зовут интуицией.</p>
+          <p>Сигнал бывает точным и неточным. Это не повод его выключать. Это повод научиться его читать. Крайность: считать чувство фактом. «Если я чувствую себя некомпетентной, значит я некомпетентна.» Если навязчивый страх игл принять за факт, придётся избавляться от всех игл в мире.</p>
+          <p>Назвать чувство и поставить силу от 0 до 100 уже регуляция. Туман «не знаю, что чувствую» — нормальный старт.</p>
+          <p>Эмоция — система из десяти деталей: что случилось, внимание, мысль о событии, уязвимость тела, биология, переживание, лицо и слова, действие, название, то что остаётся после. Силой воли переживание не выключается. Меняешь деталь — может сдвинуться вся реакция.</p>
+          <p>Часто запускает не событие, а мысль о событии. В книге: одно и то же, две мысли, две эмоции. Объяснимая эмоция ещё не значит «по фактам». Змею уже унесли, страх остался: страх объясним, фактам текущей ситуации не соответствует.</p>
+          <p>Словарь функций в главе: страх, гнев, отвращение, печаль, стыд, вина, ревность, зависть, любовь, счастье. Рядом книга даёт другой список «около 10–12 универсальных», там есть радость, удивление, интерес. В продукт берём первый список. Не склеивать оба в «десять инструментов».</p>
+          <p>Почему эмоцией трудно управлять. Книга называет шесть причин, не пять. Биология. Нет навыка: это не то же самое, что нет мотивации. Подкрепление: эмоция «работает», её оставляют. Колебания настроения. Перенапряжение, когда мудрый разум уже недоступен. Мифы: и «всё можно силой воли», и «если чувствую, обязана менять ситуацию».</p>
+          <p>Часто мучает не первая эмоция, а вторая: стыд за страх, вина за вспышку. Гнев часто вторичен к страху. В книге этот кусок дополнительный: на первом проходе перегружает, его дают тем, кто идёт второй раз. На эфире это крючок, не оглавление курса.</p>
+          <p>Стыд: «я плохая». Вина: «этот поступок плохой». Их путают. Шаги разные.</p>
+        </div>
+
+        <h3 class="sec">Изменить сегодня</h3>
+        <div class="prose">
+          <p>Сначала факты. Шесть вопросов, в том числе какую угрозу человек предполагает. Потом два отдельных вопроса. Совпадает ли эмоция с фактами. Эффективно ли сейчас действовать по этому чувству. Это четыре ответа, не три ветки.</p>
+        </div>
+        <table>
+          <thead><tr><th></th><th>По фактам</th><th>Не по фактам</th></tr></thead>
+          <tbody>
+            <tr><td>Действовать по чувству сейчас помогает</td><td>Решать проблему или выразить чувство</td><td>Наблюдать эмоцию и принять последствия</td></tr>
+            <tr><td>Действовать по чувству сейчас вредит цели</td><td>Противоположное действие целиком и достаточно долго</td><td>Изменить мысли по фактам. Если знание не сдвинуло чувство — противоположное действие</td></tr>
+          </tbody>
+        </table>
+        <div class="prose">
+          <p>Если не по фактам или вредит цели — противоположное действие. Целиком. Пошла на вечеринку и стоит в углу: это половина, и половина не работает. Книга прямо этим объясняет «я пробовала, не помогло».</p>
+          <p>Если по фактам и эффективно — решать проблему, а не гасить нужный страх. Страх за ребёнка на дороге оставляют. Его задача: убрать ребёнка с дороги, не «успокоиться».</p>
+          <p>Шаги разные у разных эмоций. Страх, если нет фактической опасности: делать то, чего боишься. Гнев: не атаковать, вежливо отойти. Стыд не по фактам: не прятаться. Вина по фактам: исправить ущерб и повторять честное поведение. В гиде противоположного действия девять эмоций. Счастья в этом гиде нет.</p>
+          <p>Книга здесь напоминает четыре ответа, когда человек говорит «да, но»: решить проблему; изменить свою реакцию; принять ситуацию; оставаться несчастной или сделать хуже. Сама Линехан пишет, что это из другой главы, здесь только напоминание.</p>
+        </div>
+
+        <h3 class="sec">Снизить уязвимость</h3>
+        <div class="prose">
+          <p>Порог тела решает, взорвёшься ли «из-за ерунды». Сон, еда, болезнь, алкоголь, тяжёлый день. Это не характер.</p>
+          <p>Книга учит копить приятное, не ждать, пока жизнь станет лёгкой. Делать маленькое, после которого можно сказать «я могу». Репетировать трудное заранее. Следить за телом, чтобы не приходить к вспышке уже разбитой.</p>
+          <p>Рецепт несчастья в главе: тушить только пожары и не класть в жизнь ничего приятного и ценного. Избегая боль, человек вычёркивает и радость.</p>
+        </div>
+
+        <h3 class="sec">Когда волна сильная</h3>
+        <div class="prose">
+          <p>Осознанность к текущей эмоции в этой главе: наблюдать, описывать, не давить и не раздувать. Не решать жизнь в пике. Не «улыбнись, и пройдёт».</p>
+          <p>Выше своей точки срыва сложный навык недоступен. Точку отмечают не в кризисе: вспоминают прошлый раз, когда бились о стену, и ставят ту цифру на шкале 0–100. Общей цифры на всех нет.</p>
+        </div>
+        <div class="quote">
+          Достижение точки срыва навыков не означает, что сорвался сам человек.
+          <small>Это граница курса. Кризис-набор в девятой главе не учат.</small>
+        </div>
+
+        <h3 class="chapter" id="p0-promise">4. Что можно обещать</h3>
+        <div class="grid2">
+          <article class="card">
+            <h3>Можно</h3>
+            <ul>
+              <li>Назвать, какая эмоция сейчас, и оценить силу 0–100.</li>
+              <li>Понять, зачем она: действие, сообщение другим, сигнал себе.</li>
+              <li>Отличить факт от мысли о факте.</li>
+              <li>Иметь ветку вместо «возьми себя в руки»: менять действие или менять ситуацию.</li>
+              <li>Не стыдить себя за само чувство.</li>
+              <li>Снизить вспышки «из-за ерунды» через тело и маленькие «я могу».</li>
+              <li>В сильной волне не давить и не делать хуже. Знать, когда сложное уже не берётся.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Нельзя</h3>
+            <ul>
+              <li>Чувства исчезнут. Спокойствие круглосуточно. «Больше никогда не злиться.»</li>
+              <li>Замена врачу, таблеткам, работе с травмой.</li>
+              <li>Набор «когда уже несёт», пик 9 из 10.</li>
+              <li>Менять эмоцию, которую человек сам не хочет менять.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="chapter" id="p0-offers">5. Как это сказать на ленде</h3>
+        <div class="prose">
+          <p>Ниже один рабочий оффер. Он собран из главы 9. Его можно нести на страницу. Варианты названий, офферов и смыслов в презу — вкладка 8. Их нельзя смешивать на одном ленде и нельзя ставить вместо этого текста.</p>
+          <p>Прошлая склейка ломалась на второй строке: «влиять по шкале», «шаг под свою зону». Шкала зон и кризис-набор — не эта глава. Человек читает и не понимает, что покупает. Поэтому в рабочем оффере нет слов «шкала», «зона», «градус».</p>
+        </div>
+
+        <article class="card offer">
+          <p class="who">Курс · одна карточка на ленд</p>
+          <h3>Как перестать глушить эмоции и не срываться</h3>
+          <p>и научиться влиять на них, даже когда внутри злость, страх или вина</p>
+          <p>Короткие голосовые практики из модуля эмоциональной регуляции. Можно слушать где угодно. Не «возьми себя в руки» и не «стань спокойнее».</p>
+          <p><b>Что человек получает.</b> Навыки влиять на то, какие эмоции возникают, когда они возникают и как их выражать. Чтобы они меньше мешали целям и отношениям.</p>
+          <p><b>Как это устроено.</b> Сначала назвать чувство. Потом проверить, совпадает ли оно с фактами. Потом выбрать: менять своё действие или менять ситуацию. Плюс тело и маленькие «я могу», чтобы реже взрываться «из-за ерунды».</p>
+          <p><b>Первый сдвиг, который честно обещать.</b> Понять, какая эмоция сейчас. Отличить факт от накрутки. Иметь шаг вместо «возьми себя в руки». Не стыдить себя за само чувство.</p>
+        </article>
+
+        <div class="offer-grid" style="margin-top:12px">
+          <article class="card offer">
+            <p class="who">Закрытый эфир · 16.09</p>
+            <h3>Почему вы боретесь не с той эмоцией</h3>
+            <p>Что стоит за злостью, стыдом и «я снова вспылила» — и что с этим делать первым.</p>
+          </article>
+          <article class="card offer">
+            <p class="who">Открытый эфир · 30.09</p>
+            <h3>Почему вы взрываетесь «из-за ерунды»</h3>
+            <p>За вспышкой часто стоит не характер, а порог тела. Что поднимать до момента, а не в пике.</p>
+          </article>
+        </div>
+
+        <div class="prose" style="margin-top:14px">
+          <p><b>Приходите, если хотите:</b> идти к цели, даже когда внутри страх; не срываться на близких и потом не крутить вину; перестать давить чувство и ловить откат ещё сильнее; отличить факт от мысли о факте; понять, с какой эмоцией вы на самом деле боретесь; иметь что делать вместо «возьми себя в руки»; не решать в пике то, что в пике уже не берётся.</p>
+          <p><b>По итогу эфира уносят только это:</b> один разбор своей ситуации, одна развилка, понимание что вспышка «из-за ерунды» часто про порог, не про характер. Не «станете другим человеком за два часа».</p>
+          <p><b>Подарок за регистрацию.</b> Практика «Зачем вам эта эмоция». Три функции: действие, сообщение другим, сигнал себе. На ленде одной строкой: «Регистрируйтесь и сразу получите практику „Зачем вам эта эмоция“».</p>
+          <p><b>Запас названия,</b> если «глушить и срываться» слишком остро для тёплой базы: «Как перестать ждать, пока отпустит» / «и начать влиять на эмоцию, а не сидеть в ней». Смысл тот же, из этой главы. Не возвращать в запас «шкалу» и «зону».</p>
+        </div>
+        <div class="callout">На ленд — один голос. Спокойно, без вины, без канцелярита ДПТ в заголовке. Слова «регуляция», «противоположное действие», «первичная эмоция» — в эфир и в курс, не в H1. Цену, срок и истории учениц не выдумываем: в главе их нет.</div>
+
+        <h3 class="sec">Куда идти дальше</h3>
+        <table>
+          <thead><tr><th>Нужно</th><th>Вкладка</th></tr></thead>
+          <tbody>
+            <tr><td>Оглавление главы по порядку</td><td>2</td></tr>
+            <tr><td>Цитаты, модель из десяти деталей, словарь, факты, противоположное действие, тело, волна</td><td>3–6 и 11. Это глава</td></tr>
+            <tr><td>ЦА ещё раз таблицами</td><td>7. Та же глава, подробнее</td></tr>
+            <tr><td>Календарь и анкета</td><td>9. Это запуск, не книга</td></tr>
+            <tr><td>Результат, названия, офферы, смыслы в презу</td><td>8. Одна вкладка запуска</td></tr>
+            <tr><td>Длинные слоты под слайды</td><td>10. Архив. Не первый экран</td></tr>
+            <tr><td>Что из главы, а что склеено</td><td>12</td></tr>
+            <tr><td>Ход мысли эфира, как на созвоне про устойчивость</td><td>13. Не глава</td></tr>
+            <tr><td>Термометр Glenbrook и «Градус»</td><td>Не класть в продукт. Было в старой вкладке 0, снято из рабочего текста</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel p1">
+        <div class="hero" style="border:0;box-shadow:none;padding:0">
+          <h2>Научиться влиять на эмоции</h2>
+          <p>Не избавиться от чувств. Влиять на то, какие эмоции возникают, когда они возникают, и как их проживать и выражать. Цель модуля — снизить эмоциональные страдания. Одни люди всегда будут чувствовать сильнее других. Это биология, не моральный дефект.</p>
+        </div>
+        <p class="hint">Рабочий текст — вкладка 0. Названия и офферы — вкладка 8. Здесь карта главы целиком, техническим языком методички. Цитаты — вкладки 2–6 и 11. ЦА таблицами — вкладка 7. Календарь — вкладка 9. Сверка источников — вкладка 12.</p>
+
+        <h3 class="sec">Четыре блока курса</h3>
+        <table>
+          <thead><tr><th>Блок</th><th>Что умеет человек</th><th>Где в хабе</th></tr></thead>
+          <tbody>
+            <tr><td>Понять и назвать</td><td>Функции, барьеры, модель, словарь 10 эмоций, первичная / вторичная</td><td>вкладка 4</td></tr>
+            <tr><td>Изменить сегодня</td><td>Факты → противоположное действие или решение проблемы</td><td>вкладка 5</td></tr>
+            <tr><td>Снизить уязвимость</td><td>АВС_ЗАБОТА: позитив, мастерство, заранее, тело</td><td>вкладка 6</td></tr>
+            <tr><td>Сильные эмоции</td><td>Осознанность к текущей эмоции. Точка срыва — граница курса, не кризис-набор</td><td>вкладка 6</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Семь выводов после главы</h3>
+        <ol>
+          <li>Эмоция — система с функцией, не враг и не приговор характера.</li>
+          <li>Назвать эмоцию уже регуляция. Туман («не знаю, что чувствую») — нормальный старт, не дефект.</li>
+          <li>Стыд «просто смени отношение» ломает обучение. Сначала признать, что чувство есть.</li>
+          <li>Часто страдание раздувает вторичная реакция на первичную эмоцию.</li>
+          <li>Развилка не из трёх ответов, а из четырёх: сначала «по фактам или нет», потом «эффективно ли действовать по ней». По фактам и эффективно — действовать или решать проблему. По фактам, но вредит цели — противоположное действие. Не по фактам и вредит — изменить мысли, а если не помогло, противоположное действие. Не по фактам, но помогает — быть осознанной и принять последствия.</li>
+          <li>Порог тела (сон, еда, болезнь) решает, взорвёшься ли «из-за ерунды».</li>
+          <li>В пике сложные навыки не работают. Это не «ты сорвалась». Этот курс не обещает кризис-набор.</li>
+        </ol>
+
+        <h3 class="sec">Что можно обещать · чего нельзя</h3>
+        <div class="grid2">
+          <article class="card">
+            <h3>Можно</h3>
+            <ul>
+              <li>Понять, какая эмоция сейчас, 0–100</li>
+              <li>Отличить факт от мысли о факте</li>
+              <li>Выбрать ветку: менять эмоцию действием или менять ситуацию</li>
+              <li>Стать менее хрупкой за счёт режима и маленьких «я могу»</li>
+              <li>Проживать волну, не давя и не убегая</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Нельзя</h3>
+            <ul>
+              <li>Эмоции исчезнут навсегда</li>
+              <li>Замена врачу, таблеткам, работе с травмой</li>
+              <li>Набор «когда уже несёт» (это другой модуль книги)</li>
+              <li>Кошмары и гигиена сна как ядро курса</li>
+              <li>Менять эмоцию, которую человек сам не хочет менять</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="plates">
+          <div class="plate"><b>0. Читать</b><p>Рабочий текст: глава, человек, что в книге, оффер.</p></div>
+          <div class="plate"><b>2. Как устроена глава</b><p>Оглавление: 24 раздела простыми словами, что берём в курс.</p></div>
+          <div class="plate"><b>3. Системы</b><p>Модель эмоции, развилка, тело и жизнь, точка срыва — как схемы.</p></div>
+          <div class="plate"><b>4–6. Навыки</b><p>Понять → изменить → уязвимость и пик. С цитатами книги.</p></div>
+          <div class="plate"><b>7–8. ЦА и архив лендов</b><p>Боли и хотелки из главы. Вкладка 8 — чужие формулы, не текст на сайт.</p></div>
+          <div class="plate"><b>10. Концепты</b><p>Запасные входы. Не рабочий оффер.</p></div>
+          <div class="plate"><b>11. Примеры и опоры</b><p>Истории и метафоры главы для съёмки.</p></div>
+        </div>
+      </section>
+
+      <section class="panel p2">
+        <h2>Как устроена глава</h2>
+        <p class="lead">Это оглавление девятой главы простыми словами. Не новый смысл. Во вкладке 0 уже сказано, о чём книга. Здесь видно, в каком порядке Линехан это учит и что из 24 разделов берём в продукт.</p>
+
+        <h3 class="chapter">Сначала вся глава одним взглядом</h3>
+        <div class="prose">
+          <p>Книга идёт не «неделя — одно чувство». Она идёт блоками навыка. Сначала понять, что такое эмоция. Потом изменить сегодняшнюю. Потом сделать тело и жизнь менее хрупкими. Потом что делать, когда волна уже сильная. В конце: почему навык «не сработал».</p>
+        </div>
+        <ol class="steps">
+          <li><b>Ориентация.</b> Зачем этот модуль. Меньше страдать, не избавиться от чувств.</li>
+          <li><b>Понять и назвать.</b> Зачем эмоции нужны. Почему ими трудно управлять. Из каких частей собрана реакция. Как её заметить и назвать.</li>
+          <li><b>Изменить сегодня.</b> Проверить факты. Выбрать: противоположное действие или решение проблемы. Сделать это целиком.</li>
+          <li><b>Снизить уязвимость.</b> Копить приятное сейчас и на длинной дистанции. Маленькое «я могу». Репетиция заранее. Тело.</li>
+          <li><b>Сильная волна.</b> Наблюдать эмоцию, не давить. Если сложный навык уже не берётся — это граница. Кризис здесь не учат.</li>
+          <li><b>Починка.</b> Разобрать, почему шаг не встал: тело, пропущенный шаг, среда, пик.</li>
+        </ol>
+        <p class="hint">Два раздела про кошмары и гигиену сна в обычную группу не ставят. Бланки раздаток в этих страницах описаны, самих бланков здесь нет. Линехан пишет: важна информация, не бланк.</p>
+
+        <h3 class="chapter">24 раздела, как в книге</h3>
+        <p class="prose">Римские цифры — номера разделов методички. Строка «в продукт» значит: учим в курсе, не учим, или только как границу.</p>
+
+        <h3 class="sec">Ориентация</h3>
+        <table>
+          <thead><tr><th></th><th>Как называется в книге</th><th>Простыми словами</th><th>В продукт</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td>Цели модуля</td><td>Четыре цели: понять эмоции, реже запускать нежелательные, стать менее хрупкой, когда переполняет — не сделать хуже. Работаем с теми чувствами, которые человек сам хочет менять.</td><td>Да. Это обещание курса.</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Понять и назвать</h3>
+        <table>
+          <thead><tr><th></th><th>Как называется в книге</th><th>Простыми словами</th><th>В продукт</th></tr></thead>
+          <tbody>
+            <tr><td>II</td><td>Понимание и обозначение эмоций</td><td>Пока нет карты, человеком рулит туман или стыд. Знание — сила. Этот раздел собирает следующие.</td><td>Да</td></tr>
+            <tr><td>III</td><td>Роль и значение эмоций</td><td>Эмоции нужны для выживания. Три функции: двигать к действию, сообщать другим, сигналить себе. Цель не избавиться от них.</td><td>Да. Подарок «зачем вам эта эмоция».</td></tr>
+            <tr><td>IV</td><td>Трудности в регуляции эмоций</td><td>Шесть причин, почему трудно: биология, нет навыка, подкрепление, настроение, перенапряжение, мифы. Нет навыка — это не то же самое, что нет мотивации.</td><td>Да. Все шесть, не пять.</td></tr>
+            <tr><td>V</td><td>Модель эмоций</td><td>Эмоция собрана из десяти деталей. Силой воли чувство не выключается. Меняешь деталь — может сдвинуться вся реакция.</td><td>Да. Несколько уроков.</td></tr>
+            <tr><td>VI</td><td>Наблюдение, описание и обозначение</td><td>Заметить, описать, назвать. Поставить силу 0–100. Словарь чувств. Без имени рабочие листы пустые.</td><td>Да</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Первичная и вторичная эмоция в книге — дополнительный кусок. На первом проходе перегружает. Гнев часто вторичен к страху. На эфире это крючок, не оглавление курса.</p>
+
+        <h3 class="sec">Изменить сегодня</h3>
+        <table>
+          <thead><tr><th></th><th>Как называется в книге</th><th>Простыми словами</th><th>В продукт</th></tr></thead>
+          <tbody>
+            <tr><td>VII</td><td>Обзор изменения эмоциональных реакций</td><td>Карта трёх способов: проверить факты, противоположное действие, решение проблемы. Сначала всегда факты.</td><td>Да</td></tr>
+            <tr><td>VIII</td><td>Проверка фактов</td><td>Шесть вопросов, в том числе какую угрозу человек предполагает. Часто запускает мысль о событии, не само событие. Объяснимо ещё не значит по фактам: змею уже унесли, страх остался.</td><td>Да. Ядро.</td></tr>
+            <tr><td>IX</td><td>Подготовка к противоположному действию и решению проблемы</td><td>После фактов два отдельных вопроса: совпадает ли с фактами и эффективно ли действовать по чувству. Четыре ответа, не три ветки.</td><td>Да. Ядро эфира.</td></tr>
+            <tr><td>X</td><td>Практика противоположного действия</td><td>Если не по фактам или вредит цели. Целиком и достаточно долго. Пошла на вечеринку и стоит в углу — половина, и половина не работает. Шаги разные у страха, гнева, стыда, вины.</td><td>Да. Практика курса.</td></tr>
+            <tr><td>XI</td><td>Решение проблемы</td><td>Если чувство по фактам и эффективно: проблема в ситуации, не в эмоции. Семь шагов. Страх за ребёнка на дороге не гасят.</td><td>Да</td></tr>
+            <tr><td>XII</td><td>Обзор противоположного действия и решения проблемы</td><td>Сводка двух веток. Чтобы не забыть развилку.</td><td>Коротко, как повтор.</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Снизить уязвимость</h3>
+        <table>
+          <thead><tr><th></th><th>Как называется в книге</th><th>Простыми словами</th><th>В продукт</th></tr></thead>
+          <tbody>
+            <tr><td>XIII</td><td>Обзор снижения эмоциональной уязвимости</td><td>Можно стать менее хрупкой к болезненным чувствам. Не ждать героизма в пике.</td><td>Да</td></tr>
+            <tr><td>XIV</td><td>Аккумулировать положительные эмоции в краткосрочной перспективе</td><td>Копить приятное каждый день. Стена между собой и «морем дисконтроля». Тушить только пожары — рецепт несчастья.</td><td>Да</td></tr>
+            <tr><td>XV</td><td>Аккумулировать положительные эмоции в долгосрочной перспективе</td><td>Ценности и жизнь, которую стоит жить. Избегая боль, человек вычёркивает и радость.</td><td>Да</td></tr>
+            <tr><td>XVI</td><td>Вырабатывать мастерство и справляться заранее</td><td>Маленькое дело, после которого можно сказать «я могу». Репетиция трудного до ситуации, не в ней.</td><td>Да</td></tr>
+            <tr><td>XVII</td><td>В здоровом теле — здоровый дух</td><td>Сон, еда, болезнь, алкоголь, движение. Порог тела решает, взорвёшься ли «из-за ерунды». Это не характер.</td><td>Да</td></tr>
+            <tr><td>XVIII</td><td>Протокол работы с ночными кошмарами</td><td>Отдельный протокол. Линехан не ставит его галочкой для обычной группы.</td><td>Нет</td></tr>
+            <tr><td>XIX</td><td>Протокол гигиены сна</td><td>Тоже не ядро обычной группы. Сон как порог — в XVII. Этот протокол целиком не тащим.</td><td>Нет</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Сильная волна и починка</h3>
+        <table>
+          <thead><tr><th></th><th>Как называется в книге</th><th>Простыми словами</th><th>В продукт</th></tr></thead>
+          <tbody>
+            <tr><td>XX</td><td>Обзор управления непереносимыми эмоциями</td><td>Когда интенсивность такая, что нужны отдельные навыки. Карта того, что дальше.</td><td>Да, как карта</td></tr>
+            <tr><td>XXI</td><td>Осознанность к текущим эмоциям</td><td>Наблюдать, описывать, не давить и не раздувать. Подавление увеличивает страдание. Это навык этой главы, не майский курс осознанности.</td><td>Да</td></tr>
+            <tr><td>XXII</td><td>Управление чрезмерно сильными эмоциями</td><td>Точка срыва: сложный навык недоступен. Книга отсылает к модулю стрессоустойчивости. Здесь учат узнать свой порог, не кризис-набор.</td><td>Граница. Без СТОП и холодной воды.</td></tr>
+            <tr><td>XXIII</td><td>Устранение трудностей в регуляции эмоций</td><td>Почему навык «не сработал»: тело, пропущенные шаги, среда, мало усилий, уже пик.</td><td>Да, короткий блок</td></tr>
+            <tr><td>XXIV</td><td>Обзор навыков эмоциональной регуляции</td><td>Сборка всего модуля. Модель из раздела V помогает не потерять порядок.</td><td>Коротко, как повтор</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="chapter">Картинки, которыми книга объясняет</h3>
+        <div class="prose">
+          <p>Во вкладке 11 истории даны целиком. Здесь только зачем они в главе, чтобы имена не висели в воздухе.</p>
+        </div>
+        <table>
+          <thead><tr><th>Что в книге</th><th>Зачем это сказано</th></tr></thead>
+          <tbody>
+            <tr><td>Термостат</td><td>Регуляция — прибавить или убавить силу, как температуру в комнате. Не выключить отопление.</td></tr>
+            <tr><td>Спущенное колесо</td><td>Друг проехал мимо. Злость держится, пока не узнаёшь: в машине больной ребёнок. Смысл события меняется, меняется и чувство.</td></tr>
+            <tr><td>Змея</td><td>Страх объясним. Если змею уже унесли, фактам текущей ситуации он не соответствует.</td></tr>
+            <tr><td>Сьюзен и Дженни</td><td>Одно событие, две мысли, две эмоции. Запускает часто мысль, не факт.</td></tr>
+            <tr><td>Всадник и конь</td><td>Нужно и заметить эмоцию, и не бороться с ней насмерть. Борешься — конь дерётся. Не замечаешь себя — конь везёт сам.</td></tr>
+            <tr><td>Стена из песка</td><td>Давить чувство — как строить стену против моря. Вода просочится и оставит лужу.</td></tr>
+            <tr><td>Одуванчики</td><td>Три года борьбы с тем, что не истребляется. Иногда навык — перестать воевать с самим фактом чувства.</td></tr>
+            <tr><td>Вечеринка и угол</td><td>Противоположное действие наполовину не работает. Пришла и стоит в углу — это не тот навык.</td></tr>
+            <tr><td>Волна</td><td>Большинство эмоций длятся секунды или минуты. Задача удержать равновесие, не остановить море.</td></tr>
+            <tr><td>Полуночные мысли</td><td>Ночью катастрофа, утром «как я могла в это верить». Ночью можно не разбирать, а отложить до утра.</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Полуулыбку на лёгкий гнев в книге дают. Не на человеке, который травмировал, и не на свежей травме.</p>
+
+        <h3 class="sec">Куда идти за подробностями</h3>
+        <table>
+          <thead><tr><th>Блок главы</th><th>Вкладка</th></tr></thead>
+          <tbody>
+            <tr><td>Понять и назвать, цели, функции, шесть причин, модель, словарь</td><td>4</td></tr>
+            <tr><td>Факты, развилка, противоположное действие, решение проблемы</td><td>5</td></tr>
+            <tr><td>Приятное, мастерство, тело, волна, точка срыва</td><td>6</td></tr>
+            <tr><td>Цепочки и схемы теми же шагами, что в книге</td><td>3</td></tr>
+            <tr><td>Истории целиком</td><td>11</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel p3">
+        <h2>Системы главы</h2>
+        <p class="lead">Где в книге есть цепочка или схема — держим той же формой. Не выдумываем новую логику.</p>
+
+        <h3 class="sec">1. Эмоция как система · десять деталей</h3>
+        <p>Изменение любой части может изменить весь ответ. Силой воли «выключить чувство» нельзя: нет прямого рубильника. Тренер рисует эту модель на доске по ходу объяснения, чтобы человек не запутался в словах.</p>
+        <div class="scheme">
+          побуждающее событие → внимание → интерпретация → факторы уязвимости → биологические изменения → переживание (ощущения + побуждение) → выражение (лицо / тело / слова) → действие → название → последействие → <b>эмоция сама становится новым побуждающим событием</b>
+        </div>
+        <p class="hint">Семь свойств из книги: комплексны; автоматичны; нельзя изменить напрямую; внезапны, как волны в море, чаще секунды–минуты; самозапускаются; состоят из деталей; часть универсальна.</p>
+
+        <h3 class="sec">2. Карта: какая деталь — такой навык</h3>
+        <p>Главный смысл главы. Для каждой составляющей книга даёт определение, пример и <b>один способ изменить эмоцию, изменив эту составляющую</b>. Отсюда весь набор навыков.</p>
+        <table>
+          <thead><tr><th>Деталь</th><th>Что это</th><th>Чем крутить</th></tr></thead>
+          <tbody>
+            <tr><td>Побуждающее событие</td><td>Что случилось прямо перед эмоцией. Внешнее или внутреннее: мысль, предыдущая эмоция, способность или неспособность что-то сделать</td><td>Решение проблемы: изменить или избежать событие</td></tr>
+            <tr><td>Внимание</td><td>Событие не вызовет эмоцию, если не захватит хотя бы часть внимания. Неосознаваемых эмоций не существует</td><td>Переключить внимание</td></tr>
+            <tr><td>Интерпретация</td><td>Часто эмоцию вызывает не событие, а мысль о событии</td><td>Проверка фактов</td></tr>
+            <tr><td>Факторы уязвимости</td><td>Что сделало нас чувствительнее: недавнее и далёкое прошлое</td><td>АВС_ЗАБОТА, справляться заранее</td></tr>
+            <tr><td>Биологические изменения</td><td>Мозг, мышцы, сердце, дыхание. Симпатика активирует, парасимпатика тормозит</td><td>Навыки на парасимпатику, по назначению врача — препараты</td></tr>
+            <tr><td>Переживание</td><td>Телесные ощущения и побуждение к действию</td><td>Напрямую нельзя. Только осознанность к текущей эмоции или через другую деталь</td></tr>
+            <tr><td>Выражение</td><td>Лицо, поза, руки, голос, слова</td><td>Изменить выражение — не подавить, а заменить одно другим</td></tr>
+            <tr><td>Действие</td><td>Само действие — часть эмоции, не следствие</td><td>Противоположное действие</td></tr>
+            <tr><td>Название</td><td>Чтобы назвать, нужно осознать</td><td>Наблюдать, описывать, называть</td></tr>
+            <tr><td>Последействие</td><td>Внимание сужается, чувствительность к подтверждениям растёт. Эмоция поддерживает саму себя</td><td>Напомнить себе проверить факты</td></tr>
+          </tbody>
+        </table>
+        <div class="quote">
+          «Побуждающее событие» — термин вместо слова «триггер». Триггер подразумевает автоматический эффект: выстрел после нажатия крючка. «Побуждающее событие» — более мягкий термин, он подразумевает более легкий путь для изменений и вероятность того, что событие не обязательно приведёт к эмоциональной реакции.
+          <small>Сигналы работают как подсказки суфлёра из будки, за которыми следуют реплики актёров.</small>
+        </div>
+
+        <h3 class="sec">3. Развилка изменения · четыре квадранта</h3>
+        <p>Сначала всегда проверка фактов. Дальше два вопроса, а не один: соответствует ли фактам и эффективно ли действовать по ней. Получается четыре ответа, а не три.</p>
+        <table>
+          <thead><tr><th></th><th>Действовать эффективно</th><th>Действовать неэффективно</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>По фактам</b></td>
+              <td>Быть осознанной к эмоции, действовать по побуждению, <b>решать проблему</b>. Испугалась за ребёнка на дороге — не подавляй страх, иначе не побежишь за ним</td>
+              <td><b>Противоположное действие.</b> Подрезали на дороге — злость обоснована, подрезать в ответ неэффективно</td>
+            </tr>
+            <tr>
+              <td><b>Не по фактам</b></td>
+              <td>Быть осознанной к эмоции и <b>полностью принять последствия</b> своих действий. Иногда эмоция «эффективна» просто потому, что с ней хорошо. Тогда принимай, что отношения станут натянутыми</td>
+              <td>Изменить мысли по фактам — это самый простой путь, и часто больше ничего не нужно. Если знание фактов эмоцию не меняет — <b>противоположное действие</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="hint">Выше личной точки срыва любая из четырёх ветвей недоступна: сначала снизить волну кризисными навыками, потом вернуться сюда. Противоположное действие — не универсальная таблетка. Книга прямо: утверждать обратное значит инвалидировать серьёзность проблемы и накопление тяжёлых событий в жизни человека.</p>
+
+        <h3 class="sec">4. Четыре ответа на любую проблему</h3>
+        <p>Книга достаёт этот список, когда человек отвечает «да, но». Важно, почему это «да, но» появляется: при высоком накале <b>любое предложение изменить эмоцию воспринимается как инвалидация собственных чувств</b>. Спорить бесполезно, «да, но» просто не улучшает самочувствие и не решает проблему.</p>
+        <ol>
+          <li>Решить проблему: изменить ситуацию или выйти из неё.</li>
+          <li>Изменить свою эмоциональную реакцию, даже если ситуация остаётся.</li>
+          <li>Полностью принять ситуацию — это может принести ощущение свободы.</li>
+          <li>Оставаться несчастной или сделать ситуацию ещё хуже.</li>
+        </ol>
+        <p class="hint">Четвёртый пункт в книге появился из письма человека, прошедшего тренинг навыков. Линехан отмечает это отдельно.</p>
+
+        <h3 class="sec">5. АВС_ЗАБОТА</h3>
+        <div class="scheme">
+          <b>А</b> — аккумулировать положительные (стена между собой и «морем дисконтроля»)<br>
+          <b>В</b> — вырабатывать мастерство (защита от беспомощности)<br>
+          <b>С</b> — справляться заранее (репетиция до ситуации)<br>
+          <b>ЗАБОТА</b> — здоровье · активность · будьте умеренны · отдых 7–9 ч · тарелка 3–4 раза в день
+        </div>
+        <div class="grid2" style="margin-top:10px">
+          <article class="card">
+            <h3>Мастерство · три полосы</h3>
+            <p>В книге рисунок 9.1. Граница «невозможно» проходит на двух третях высоты:</p>
+            <ul>
+              <li>Слишком легко — мастерство не растёт</li>
+              <li>Трудно, но выполнимо — рабочая зона</li>
+              <li>Невозможно — провал и ещё меньше «я могу»</li>
+            </ul>
+            <p class="hint" style="margin-top:8px">«Жизнь, полная неудач, — это жизнь с завышенными ожиданиями.» Если задание оказалось слишком трудным, в следующий раз берут чуть менее трудное.</p>
+          </article>
+          <article class="card">
+            <h3>Справляться заранее</h3>
+            <ol>
+              <li>Описать вероятную трудную ситуацию и <b>проверить факты</b></li>
+              <li>Назвать эмоции и побуждения, которые помешают применить навык</li>
+              <li>Выбрать конкретные навыки, описать в деталях</li>
+              <li>Представить ситуацию живо: <b>себя внутри, а не наблюдая со стороны</b>, и в настоящем времени</li>
+              <li>Отрепетировать действия, мысли, слова и то, <b>как</b> ты их скажешь</li>
+              <li>Представить, как справишься с новой проблемой и с катастрофой, которой боишься больше всего</li>
+              <li>Закончить релаксацией</li>
+            </ol>
+            <p class="hint" style="margin-top:8px">Тем, у кого воображение вербальное, а не образное, — проговаривать про себя. Ещё варианты: телесное или звуковое воображение.</p>
+          </article>
+        </div>
+        <div class="quote" style="margin-top:12px">
+          Полезно завершить практику в воображении таким поведением, которое решает проблему или обеспечивает позитивный исход для себя и других.
+          <small>Не «представь, что всё обошлось», а «представь, как ты справляешься» — и доведи картинку до спокойного места.</small>
+        </div>
+
+        <h3 class="sec">6. Точка срыва</h3>
+        <div class="scheme">
+          полностью в эмоциональном разуме · не думаешь ни о чём, кроме эмоции · эмоционально потрясена · разум «застопорился», мозг перестал обрабатывать информацию · не можешь решить проблему и применить сложный навык
+        </div>
+        <p>Точку определяют <b>не в кризисе</b>: вспоминают прошлый раз, когда буквально бились о стену, и по шкале 0–100 отмечают тот уровень. Проверка: «я правда не могу — или не хочу, потому что кажется слишком трудным?» Если хочешь и не понимаешь как — это срыв навыка.</p>
+        <div class="callout">Достижение точки срыва навыков не означает, что сорвался сам человек.</div>
+        <p class="hint">Линехан в этом модуле обычно <b>не учит</b>, что делать в точке срыва: говорит, что эти навыки будут в следующем модуле. В самой главе даёт только указатель: изменить состояние тела (температура, мышечная релаксация, интенсивные упражнения, размеренное дыхание), отвлечься от события, самоуспокоение через пять органов чувств, улучшить текущий момент. И третий вариант — просто ничего с эмоцией не делать: рано или поздно она уйдёт.</p>
+      </section>
+
+      <section class="panel p4">
+        <h2>Понять и назвать</h2>
+        <p class="lead">Разделы I–VI. Знание — сила. Пока нет карты, человеком рулит туман или стыд.</p>
+
+        <div class="quote">
+          Эмоциональная регуляция — способность контролировать или влиять на то, какие эмоции вы испытываете, когда вы их испытываете и как вы их переживаете и выражаете.
+          <small>Определение модуля. Книга добавляет: регуляция бывает автоматической и сознательной. Здесь учим второе, чтобы со временем стало первым.</small>
+        </div>
+        <div class="quote">
+          Эмоции дисрегулируются, когда несмотря на все усилия вы утрачиваете способность влиять на какие / когда / как.
+          <small>Это не «слабый характер». Это описание состояния.</small>
+        </div>
+
+        <h3 class="sec">Цели модуля · четыре штуки</h3>
+        <ol>
+          <li>Понять свои эмоции: назвать + понять роль.</li>
+          <li>Снизить частоту нежелательных: окружение и жизнь, не «убить все чувства».</li>
+          <li>Снизить уязвимость к эмоциональному разуму (уравновесить с рациональным → мудрый).</li>
+          <li>Уменьшить страдания: когда переполняет — не сделать хуже.</li>
+        </ol>
+        <p class="hint">Меняем те эмоции, которые хочет менять сам человек, не окружение. Если не хочет менять ни одну — не работаем над изменением.</p>
+
+        <h3 class="sec">Три функции</h3>
+        <div class="grid3">
+          <article class="card">
+            <h3>Мотивировать действие</h3>
+            <p>Страх — бежать. Гнев — защищаться. Без срочности эмоции люди не успевают спастись (цунами в книге). Тревога перед экзаменом мобилизует — студент может не хотеть её снимать. Вина удерживает от бесчестного.</p>
+          </article>
+          <article class="card">
+            <h3>Сообщать другим</h3>
+            <p>Лицо быстрее слов. Влияет, хотим мы того или нет: тепло, разочарование, горе как просьба о помощи, злость как стоп. Если каждый раз за гнев дают желаемое — гнев подкрепляется.</p>
+          </article>
+          <article class="card">
+            <h3>Сигнал себе</h3>
+            <p>Лампа: обрати внимание, это важно. Это и есть то, что называют интуицией — эмоция как сигнал. Часть сигналов обрабатывается вне сознания. Без понимания «откуда и зачем» эмоцию трудно изменить.</p>
+          </article>
+        </div>
+        <div class="quote">
+          Мы вряд ли сможем познать всю глубину ситуации, если оттолкнём эмоции. Методом проб и ошибок люди учатся, когда стоит доверять своим эмоциональным реакциям, а когда они искажают информацию.
+          <small>Сигнал бывает точным и неточным. Это не повод его выключать — это повод научиться его читать.</small>
+        </div>
+        <p class="hint">Крайность — считать эмоцию фактом: «если я чувствую себя некомпетентной, значит я некомпетентна», «если мне правильно кажется, значит это правильно». Книга: если навязчивый страх игл воспринимать как факт, придётся избавляться от всех игл в мире.</p>
+
+        <h3 class="sec">Два механизма, которые объясняют «меня не понимают»</h3>
+        <p>Это самая сильная и самая деликатная часть первого блока. Книга предупреждает: доносить это нужно осторожно, потому что сама идея звучит инвалидирующе. Нужны забота, терпение и умение.</p>
+        <div class="grid2">
+          <article class="card">
+            <h3>Громче, чтобы услышали</h3>
+            <p>Когда чувства раз за разом сводят к минимуму, человеку трудно принимать всерьёз свои проблемы и потребности. Один из способов противодействия — <b>усилить интенсивность своей эмоции</b>. Дальше ловушка: если в следующий раз в тех же обстоятельствах не быть излишне эмоциональной, это как будто докажет, что другие были правы и первая реакция была неуместна. А если окажется, что ситуация была не так плоха, придёт стыд за то, что причинила окружающим столько хлопот.</p>
+            <p>После достаточного количества таких случаев человек начинает считать, что его целостность связана в один узел с эмоциями. Функция отрицательных эмоций постепенно сокращается до <b>самовалидации</b>.</p>
+          </article>
+          <article class="card">
+            <h3>Их просто не видят</h3>
+            <p>Обратный полюс. Многие учатся скрывать эмоции, контролируя мимику и язык тела. Это естественный результат социального научения в эмоционально инвалидирующем окружении. Происходит автоматически: человек к этому не стремится и этого не осознаёт.</p>
+            <div class="callout">Это основная причина, по которой окружающие не обращают внимания на эмоции таких людей — они их просто не видят.</div>
+            <p>Плюс гипотеза книги: некоторые рождаются с менее экспрессивной системой. Окружение не получает обратной связи, становится менее чувствительным к их выражению — и инвалидирующий паттерн складывается сам.</p>
+          </article>
+        </div>
+        <p class="hint">Исследование: если невербальное выражение не совпадает со словами, окружающие почти всегда доверяют невербальному. Базовая предпосылка ДПТ: у многих людей с трудностями в управлении эмоциями невербальные проявления <b>неточно</b> указывают на то, что они на самом деле испытывают. Поэтому их неверно интерпретируют.</p>
+        <p class="hint">Обратная сторона: иногда прятать эмоцию нельзя. Мать предупреждает сына об опасности — если она сохранит спокойный вид и сделает вид, что ей не страшно, ребёнок решит, что ситуация не такая опасная.</p>
+
+        <h3 class="sec">Почему трудно управлять</h3>
+        <p class="hint">Книга называет шесть факторов. Не пять — перенапряжение стоит отдельным пунктом, и на практике оно объясняет больше всего провалов.</p>
+        <article class="card">
+          <ul>
+            <li><b>Биология.</b> Три параметра различаются с рождения: чувствительность, интенсивность и <b>время, которое нужно, чтобы вернуться в равновесие</b>. Как дети в одной семье: темперамент виден сразу после рождения. Учиться регулировать эмоции — как учиться играть в гольф: научиться может каждый, кому-то это даётся намного проще.</li>
+            <li><b>Нет навыков.</b> Отсутствие навыка существенно отличается от отсутствия мотивации. Навык зависит от контекста: есть для одних ситуаций и нет для других, есть в одном настроении и нет в другом. Учатся с младенчества, через эмоциональный взаимообмен с матерью. Одни родители в этом преуспели, другие старались без навыка, третьим не хватило времени или желания, четвёртые сами не справлялись со своими эмоциями.</li>
+            <li><b>Подкрепление.</b> Плач «работает» — слушают только когда плачешь. Тогда грусть трудно снять: она полезна, даже если болит. Четыре способа, которыми эмоция себя подкрепляет: передаёт важное сообщение, заставляет других что-то сделать, мотивирует нас самих, <b>подтверждает наше представление о том, что происходит</b>, и просто позволяет чувствовать себя лучше, чем без неё.</li>
+            <li><b>Колебания настроения.</b> Регуляция отнимает много сил и требует готовности. Можно уметь — и не смочь из-за настроения.</li>
+            <li><b>Эмоциональное перенапряжение.</b> Эмоции такие сильные, что мудрый разум недоступен. Тревожные руминации запускаются как компьютерная программа. «Почему я это сделала», «что мне теперь делать» кажутся поиском ответа, но это ответ на тревогу: ответа обычно нет, заботы идут по кругу. Часто беспокойство выполняет функцию избегания эмоции. Навык может быть — руминация не даст им воспользоваться.</li>
+            <li><b>Мифы.</b> Два типа: инвалидирующие («отрицательные эмоции эгоистичны», «всё можно силой воли») и переоценивающие («если у меня есть эмоция, я обязана изменить ситуацию»). Оба набора мешают.</li>
+          </ul>
+        </article>
+        <div class="grid2">
+          <article class="card">
+            <h3>Плач как вихрь</h3>
+            <p>«Несмотря на то что плач зачастую приносит облегчение, в некоторых случаях он подобен неуправляемому вихрю: чем больше мы плачем, тем более сильный дистресс испытываем. Непрекращающаяся руминация о том, что пошло не так, вызывает уже настоящие рыдания, и восстановительная функция блокируется.»</p>
+          </article>
+          <article class="card">
+            <h3>Море дисконтроля</h3>
+            <p>«Чрезмерный гнев или другие сильные эмоции могут быть подобны падению в море дисконтроля. Рациональный разум тогда не имеет шанса на существование и не может влиять на эмоциональный разум.»</p>
+          </article>
+        </div>
+        <div class="quote">
+          Сами по себе эмоции не хорошие и не плохие. Они просто есть. Ярлык «плохая» толкает к подавлению. Подавление — временное решение, которое в долгую ухудшает.
+          <small>Два мифа рядом: «подавлять неестественно» и «надо всё давить».</small>
+        </div>
+
+        <h3 class="sec">Словарь 10 эмоций · функция</h3>
+        <table>
+          <thead><tr><th>Эмоция</th><th>На что отвечает</th><th>Что делает</th></tr></thead>
+          <tbody>
+            <tr><td>Страх</td><td>Угроза жизни, здоровью, благополучию</td><td>Избежать опасности</td></tr>
+            <tr><td>Гнев</td><td>Блокируют важную деятельность по достижению цели, нападают на нас или близких</td><td>Самооборона, мастерство, контроль</td></tr>
+            <tr><td>Отвращение</td><td>Пагубное, ядовитое, «зараза»</td><td>Отвергнуть, отойти</td></tr>
+            <tr><td>Печаль</td><td>Потеря человека, вещи, недостигнутая цель</td><td>Сосредоточиться на ценном; сигнал «нужна помощь»</td></tr>
+            <tr><td>Стыд</td><td>Черты или поведение, наказуемые в группе</td><td>Не нарушать правила группы</td></tr>
+            <tr><td>Вина</td><td>Поступок против своих норм</td><td>Исправить ущерб</td></tr>
+            <tr><td>Ревность</td><td>Пытаются отнять значимые отношения или объект</td><td>Защитить то, что есть</td></tr>
+            <tr><td>Зависть</td><td>У других есть желаемое, у нас нет</td><td>Мотивирует добиваться</td></tr>
+            <tr><td>Любовь</td><td>Воспроизводство, выживание, единение</td><td>Искать близость, держать связь</td></tr>
+            <tr><td>Счастье</td><td>Наше благополучие и благополучие тех, о ком заботимся, и своей группы</td><td>Продолжать то, что приносит удовольствие и совпадает с ценностями</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Это десять эмоций словаря главы. Универсальных книга насчитывает около 10–12: гнев, радость, отвращение, страх, ревность, вина, печаль, стыд, удивление, интерес, зависть, любовь. Остальные — результат научения и обычно комбинация базовых. Перечисленные признаки типичны, но не обязательны: культура и личный опыт научения меняют картину.</p>
+        <p class="hint">Стыд и вину книга ставит рядом, потому что их путают. Стыд — реакция на оценку <b>себя</b> как плохой или недостойной. Вина — реакция на оценку <b>конкретного поступка</b> как плохого или аморального.</p>
+        <div class="quote">
+          Отчаяние — это печаль в сочетании с уверенностью, что дела обстоят плохо и нет надежды на улучшение.
+          <small>Сложные эмоции складываются из базовой эмоции и убеждения. Поэтому их и труднее назвать.</small>
+        </div>
+        <div class="quote">
+          Ревность — когда вы обладаете чем-то ценным, что кто-то может отнять. Зависть — когда этого у вас нет, а у другого есть.
+          <small>Короткое различие для эфира.</small>
+        </div>
+
+        <h3 class="sec">Когда эмоция эффективна</h3>
+        <ul>
+          <li>Действие по ней в ваших интересах</li>
+          <li>Выражение приближает к цели</li>
+          <li>Влияние на других вам на пользу</li>
+          <li>Сообщение себе стоит услышать</li>
+        </ul>
+        <p>Если не так — навыки регуляции как раз про это. Не про стерилизацию человека от чувств.</p>
+
+        <h3 class="sec">Наблюдать и описывать · зачем это три разные вещи</h3>
+        <div class="grid3">
+          <article class="card">
+            <h3>Чтобы управлять</h3>
+            <p>Исследование: точность в описании эмоции и события работает лучше, чем попытки управлять эмоцией общим способом. Тревогу скорее удаётся снизить, наблюдая и описывая <b>конкретную</b> тревожащую ситуацию, а не общее впечатление.</p>
+          </article>
+          <article class="card">
+            <h3>Чтобы отделиться</h3>
+            <p>«Научившись наблюдать за своими эмоциями, вы сможете отделить себя от них и не отождествлять себя с ними.» Без этого зазора нет места думать и применять навык.</p>
+          </article>
+          <article class="card">
+            <h3>Чтобы слиться</h3>
+            <p>И одновременно — «слиться с эмоциями в том смысле, чтобы воспринимать их как часть себя, а не как что-то отдельное от вас». Оба движения нужны сразу.</p>
+          </article>
+        </div>
+        <div class="quote">
+          В той степени, в которой всадник слит с конём, он может им управлять. Если всадник отделён от коня и борется с ним, конь будет сопротивляться в ответ, и наездник не сможет мягко его контролировать. Если же всадник не осознаёт себя и не отделяет себя от коня, он просто окажется придатком к коню, а конь возьмёт на себя весь контроль.
+          <small>Главная метафора этого блока. Отвечает сразу на два страха: «я стану роботом» и «меня несёт».</small>
+        </div>
+        <p class="hint">Отдельное доказательство: люди, которые могут точно называть свои эмоции, испытывают меньше отрицательных эмоций. Названия эмоций мы усваиваем через научение — значит, их можно доучить.</p>
+
+        <h3 class="sec">Первичная и вторичная</h3>
+        <p>Первичная — спонтанная первая реакция. Вторичная — реакция на свою же эмоцию. Иногда вторичная приходит так быстро, что первичную не видно. Иногда человек годами подавлял первичные и теперь автоматически «перепрыгивает» через них, никогда их не переживая: развилась привычка к вторичной реакции.</p>
+        <p class="hint">Гнев часто вторичен к страху. Для некоторых людей гнев вторичен ко многим первичным эмоциям. Страх тоже бывает вторичным — когда человек очень боится своего гнева. Если первичную не найти, работать с ней нельзя, и решение проблемы буксует.</p>
+        <article class="card">
+          <h3>Три вопроса, которыми ищут первичную</h3>
+          <ol>
+            <li>Какие эмоции были бы у большинства людей <b>после</b> этой эмоции?</li>
+            <li>Если бы вы не боялись своих эмоций, не стыдились их и не винили себя за них — что бы вы почувствовали после этого события?</li>
+            <li>Есть ли эмоциональный ответ, которого вы, вероятно, избегаете?</li>
+          </ol>
+        </article>
+        <p class="hint">Про сильный дистресс книга говорит прямо: он результат <b>вторичных</b> реакций — сильного стыда, тревоги, ярости — на первичные эмоции. Чаще всего первичные эмоции адаптивны и соответствуют контексту. Чтобы снизить вторичные, нужна экспозиция первичных в безоценочной обстановке. Осознанность к своим эмоциям здесь работает как вариант экспозиции.</p>
+
+        <h3 class="sec">Амбивалентность</h3>
+        <p>Две и больше эмоций одновременно — это норма, а не путаница. Можно любить родителей и быть в ярости к ним, и хотеть оказаться от них как можно дальше. При переезде в новый город — радостное возбуждение и страх сразу. Способ разобраться: заполнить лист на <b>каждую</b> эмоцию отдельно и не решать заранее, какая первичная.</p>
+
+        <h3 class="sec">Где люди путаются в дневнике эмоций</h3>
+        <ul>
+          <li><b>Пишут историю в графу «событие».</b> Побуждающее событие — только несколько моментов прямо перед вспышкой. Вся предыстория идёт в «факторы уязвимости»: этот раздел там именно для того, чтобы человек мог изложить историю, которая объясняет его реакцию.</li>
+          <li><b>Забывают отметить уязвимость.</b> Болезнь или боль, алкоголь и препараты, недосып, недоедание или переедание, стрессовое событие <b>в течение 24 часов</b> до вспышки.</li>
+          <li><b>Путают биологию и выражение.</b> Биологические изменения — автоматика: покраснела, мышцы напряглись, пот, волосы дыбом. Выражение — то, что видно другим: хмуриться, морщиться, улыбаться, сутулиться, сжимать руки, отступать, опускать взгляд, скрещивать руки.</li>
+          <li><b>Не чувствуют тело.</b> «Если вы годами игнорировали свои телесные ощущения, это может быть сложно.» Туман бывает не только про название эмоции, но и про то, какую часть тела ты вообще сейчас ощущаешь.</li>
+        </ul>
+        <div class="quote">
+          Если кто-то предлагает вам перестать переживать какую-то эмоцию, это как предложить перестать чувствовать, как капли дождя стекают по коже, или перестать чувствовать боль после удара по голове.
+          <small>Переживание нельзя изменить напрямую — только через внимание или другую деталь системы. И честная оговорка книги: почти невозможно переключить внимание, когда рука находится в огне.</small>
+        </div>
+      </section>
+
+      <section class="panel p5">
+        <h2>Изменить сегодняшнюю эмоцию</h2>
+        <p class="lead">Разделы VII–XII. Три способа. Сначала факты. Потом ветка.</p>
+
+        <div class="quote">
+          Мы часто реагируем на мысли и интерпретации о событиях вместо фактов. Изменение убеждений в соответствии с фактами может изменить эмоциональную реакцию.
+        </div>
+
+        <h3 class="sec">Проверка фактов · шесть вопросов</h3>
+        <p>Это не «подумай позитивно». Это шесть конкретных вопросов в жёстком порядке. В рабочем листе каждый шаг двойной: сначала что я описываю и думаю, потом альтернатива по фактам. Интенсивность до и после, 0–100.</p>
+        <ol class="steps">
+          <li><b>Какую эмоцию я хочу изменить?</b> Факты могут соответствовать одной эмоции и не соответствовать другой. Пока не знаешь какая — менять нечего.</li>
+          <li><b>Какое событие её вызвало?</b> Только факты через органы чувств. Без оценок, крайностей и чёрно-белого. Событие бывает внутренним: предыдущая эмоция, череда мыслей, способность или неспособность что-то сделать. Ловушка: собственное мысленное описание ситуации может стать побуждающим событием сильнее самой ситуации.</li>
+          <li><b>Каковы мои интерпретации и предположения?</b> «Мы всегда добавляем что-то субъективное к тому, что наблюдаем, и затем реагируем в большей степени на то, что добавили, чем на то, что наблюдали.» Дальше — рассмотреть все другие возможные объяснения, особенно более доброжелательные.</li>
+          <li><b>Какую угрозу я предполагаю?</b> Болезненные эмоции почти всегда связаны с каким-то типом угрозы, и часто она не высказана даже про себя. Назвать её. Оценить вероятность из мудрого разума. Придумать другие возможные исходы: само генерирование альтернатив повышает уверенность, что другой результат возможен.</li>
+          <li><b>Что считать катастрофой?</b> Если худшее случится — каковы реальные последствия? Катастрофизация — преувеличивать негатив и держать внимание на худшем исходе. Дальше не спорить с фактами, а представить, как справляешься: решение проблемы, справиться заранее, радикальное принятие.</li>
+          <li><b>Соответствует ли эмоция и её интенсивность фактам?</b> Отдельно интенсивность. «Вы уволены с работы и начинаете реагировать так, как если бы опустились на дно нищеты.» «Человек втискивается в очередь перед вами, а вы реагируете так, словно он физически напал на вас или вашего ребёнка.»</li>
+        </ol>
+        <div class="callout">Если все факты проверены, а эмоция всё ещё сильная — скорее всего это вторичная эмоция. Тогда ищут не факт, а невысказанную угрозу, на которую реакция идёт на самом деле.</div>
+
+        <h3 class="sec">Какая угроза за какой эмоцией</h3>
+        <table>
+          <thead><tr><th>Эмоция</th><th>Невысказанная угроза</th></tr></thead>
+          <tbody>
+            <tr><td>Гнев</td><td>На вас напали или воспрепятствовали важным целям</td></tr>
+            <tr><td>Страх</td><td>Опасность для жизни, здоровья, благополучия</td></tr>
+            <tr><td>Отвращение</td><td>Вы заразились</td></tr>
+            <tr><td>Грусть</td><td>Потеря чего-то важного или потеря целей</td></tr>
+            <tr><td>Стыд</td><td>Изгнание из сообщества</td></tr>
+            <tr><td>Вина</td><td>Нарушение собственных ценностей</td></tr>
+            <tr><td>Ревность</td><td>Кто-то забирает любимого человека или ценную вещь</td></tr>
+            <tr><td>Зависть</td><td>Невозможность достичь нужного, потому что у других больше власти, влияния и имущества</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Четыре вида ошибок, а не один</h3>
+        <p>Хаб раньше сводил всё к чёрно-белому мышлению. В книге четыре разных типа, и самый практичный — второй.</p>
+        <article class="card">
+          <ul>
+            <li><b>Убеждения о реальности.</b> Человек, который думает, что близкий погиб в аварии, будет по-настоящему горевать, даже если близкий жив.</li>
+            <li><b>Убеждения о том, что мне необходимо.</b> «Мне требуется контроль» вместо «мне больше нравится контролировать себя, чем ощущать, что всё вышло из-под контроля». «Ты должен стать другим» вместо «ты тот, кто ты есть; что-то заставляет тебя быть таким, но мне хотелось бы, чтобы ты поступал иначе».</li>
+            <li><b>Убеждения о происходящем.</b> «Бензина хватит до заправки», когда стрелка на нуле. «Ты много времени проводишь с друзьями — значит, ты меня не любишь, и я ухожу».</li>
+            <li><b>Всё или ничего.</b> «Он ненавидит меня» вместо «он сильно раздражён». «Ты либо ранимый, либо нет» вместо «человек может быть в какой-то момент ранимым, а в какой-то очень стойким».</li>
+          </ul>
+        </article>
+
+        <h3 class="sec">Четыре способа проверить угрозу на деле</h3>
+        <ul>
+          <li>Вспомнить, чем заканчивались предыдущие разы с этой же мыслью. Голова болит — «наверное, страшная болезнь». Напомнить себе, сколько раз болела голова и проходила.</li>
+          <li>Задать вопрос и добрать информацию. Коллега прошёл мимо в торговом центре — просто спросить, заметил ли он вас.</li>
+          <li>Сначала успокоиться, чтобы увидеть ситуацию целиком.</li>
+          <li>Провести настоящий эксперимент. «Я не могу устроиться на работу» — разослать заявки и посмотреть, что произойдёт.</li>
+        </ul>
+        <p class="hint">Отдельно про эмоцию как фильтр восприятия: когда злимся, звонящий друг кажется скорее недоброжелателем. Когда тревожно, скрип окна кажется взломом. Когда стыдно за ошибку на работе, смех двух коллег в коридоре кажется смехом над нами. Одна и та же информация воспринимается по-разному в зависимости от текущего состояния.</p>
+        <article class="card">
+          <h3>Почему в пике это тяжело</h3>
+          <p>Последействие эмоции сужает внимание и повышает чувствительность к угрозе. Эмоция сама себя поддерживает: она делает нас сверхчувствительными к сигналам, которые её подтверждают, и информация, несовместимая с чувством, в поле внимания не попадает. Эмоция, которая как будто длится очень долго, — это самозапуск снова и снова.</p>
+          <p><b>Полуночные мысли.</b> Ночью катастрофа, утром «как я могла в это верить». Ночью можно сказать себе: это просто полуночные мысли, я проигнорирую их до утра.</p>
+        </article>
+        <div class="quote">
+          Лучший способ решить, менять ли эмоцию: спросить мудрый разум, насколько она эффективна для личных целей в этой ситуации.
+        </div>
+        <p class="hint">Диалектическая рамка проверки фактов: абсолютной истины не существует; вера в то, что «я знаю абсолютную истину», обычно приводит к конфликтам; разные мнения могут быть верными одновременно; всегда есть две и больше точек зрения и столько же решений; два противоположных мнения могут быть одинаково истинными; суть и истина со временем изменяются.</p>
+
+        <h3 class="sec">Противоположное действие · 7 шагов</h3>
+        <p>Не «сделать вид». Полное действие + лицо + тело, часто мысли. И достаточно долго. Пословица книги: упал с лошади — садись снова.</p>
+        <ol>
+          <li>Назвать эмоцию, 0–100</li>
+          <li>Проверить факты</li>
+          <li>Описать побуждение: что хочу сделать / сказать</li>
+          <li>Мудрый разум: это эффективно?</li>
+          <li>Найти противоположное своему побуждению — не копировать шаблон, побуждения бывают личными и культурными</li>
+          <li>Сделать целиком: поза, выражение лица, мысли, слова и интонация голоса</li>
+          <li>Повторять, <b>пока интенсивность не снизится хотя бы чуть-чуть</b> — и возвращаться к этому при каждом удобном случае</li>
+        </ol>
+        <p class="hint">Когда применять: сила или длительность не по фактам; по фактам, но сейчас вредит цели; побуждение — это способ избежать нужного (кровать при подавленности, не идти лечиться при тревоге, не встречаться с другом, чтобы не признаваться в потерянной книге).</p>
+        <div class="callout">Не подавлять эмоцию во время выполнения. «Только испытав свою эмоцию с помощью зрения, слуха и других органов чувств, вы сможете доподлинно узнать, что она не обоснована.» Как только мозг расшифрует эту информацию, реакция начнёт ослабевать. Если кажется, что не работает — просто подождать немного.</div>
+
+        <h3 class="sec">Противоположное действие наполовину</h3>
+        <p>Самая частая причина, по которой навык «не сработал». Книга разбирает это отдельным блоком с примерами — это готовый материал для эфира.</p>
+        <div class="grid2">
+          <article class="card">
+            <h3>Половина в словах и мыслях</h3>
+            <ul>
+              <li>Пойти на вечеринку, чтобы снизить страх знакомств, и простоять всё время в углу, уставившись в пол</li>
+              <li>Решиться на перелёт и всю дорогу думать «самолёт разобьётся»</li>
+              <li>Вести себя любезно, чтобы снизить злость, и думать «ты придурок, как отвратительно»</li>
+              <li>Ответить на вопрос в группе, чтобы снизить чувство унижения, и добавить «как глупо это было»</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Половина в лице, голосе, позе</h3>
+            <ul>
+              <li>Сказать «я тебя понимаю» с сарказмом в голосе</li>
+              <li>Пойти с детьми в парк, чтобы уйти от грусти, — с очень грустным лицом и в поникшей позе</li>
+              <li>Горбиться и выглядеть так, будто пытаешься спрятаться, делая то, чего стыдишься</li>
+            </ul>
+          </article>
+        </div>
+        <div class="quote">
+          Изменять мысли и выражение эмоций без изменения действий, побуждаемых эмоциями, вряд ли эффективно. Суть навыка — определить собственные побуждения к действию, определить соответствующие им противоположные действия и затем выполнить их.
+        </div>
+        <p class="hint">И терминологическая осторожность книги: Линехан избегает слова «иррациональный» и говорит «не соответствует фактам». Плюс предупреждение тренерам: если обращаться с человеком как с хрупким и неспособным самостоятельно решать проблемы, это только подкрепит хрупкость.</p>
+
+        <h3 class="sec">Два упражнения, которые делают на занятии</h3>
+        <div class="grid2">
+          <article class="card">
+            <h3>Гнев через лицо и руки</h3>
+            <p>Закрыть глаза, вспомнить ситуацию на прошлой неделе, где было злость, представить как происходящее сейчас, отметить чувства. Затем расслабить кисти и плечи, положить руки на бёдра ладонями вверх. Разгладить мышцы лица от лба до подбородка, уголки губ немного вверх. Снова отметить эмоции. Обычно гнев снижается.</p>
+          </article>
+          <article class="card">
+            <h3>Разница между спрятать и отпустить</h3>
+            <p>Вспомнить ситуацию, где было грустно или тревожно. Сначала попросить <b>скрыть</b> чувства так, чтобы никто в комнате не понял — отметить лицо и эмоции. Затем максимально разгладить лицо — отметить, что изменилось. Обычно люди говорят, что чувствуют себя гораздо более уязвимыми. Это и есть «позволить чувствам приходить и уходить»: не удерживать внутри и не отталкивать.</p>
+          </article>
+        </div>
+
+        <h3 class="sec">Какое действие на какую эмоцию</h3>
+        <table>
+          <thead><tr><th>Эмоция</th><th>Если не по фактам / неэффективна</th></tr></thead>
+          <tbody>
+            <tr><td>Страх</td><td>Делать то, чего боишься. Приближаться. «Что делать, когда боишься? — То, чего боишься.»</td></tr>
+            <tr><td>Гнев</td><td>Не атаковать. Вежливо отойти. Не жевать обиду. Точка зрения другого. Полуулыбка и ладони готовности. Лицо сначала полностью расслабить</td></tr>
+            <tr><td>Отвращение</td><td>Ближе к объекту, если нет реальной заразы / вреда. Исключение: не «обнимать» того, кто реально опасен</td></tr>
+            <tr><td>Зависть</td><td>Не преуменьшать благополучие других</td></tr>
+            <tr><td>Ревность</td><td>Отпустить лишний контроль, делиться, если угрозы отнять нет</td></tr>
+            <tr><td>Любовь</td><td>Если любовь не по фактам — противоположное сближению. Книга конкретна: любовь не по фактам, когда человек нас не любит, не заботится или активно вредит — агрессия и оскорбления, требование созависимости, требование поддерживать аддиктивное поведение ради отношений, угроза разрыва, если мы изменим свою жизнь к лучшему</td></tr>
+            <tr><td>Грусть</td><td>Активность и контакт. Но: <b>горе необходимо для переживания утраты</b>. Если избегать горя, можно застрять в нём надолго, и станет хуже. Противоположное действие применяют, <b>когда горе утихнет</b>, — оно возвращает к жизни, которую стоит жить</td></tr>
+            <tr><td>Стыд не по фактам</td><td>Не прятаться. Проверить, есть ли реальное отвержение группы. Скрывать поведение или черту стоит только если действительно не хочешь быть отвергнутой <b>именно этой</b> группой. Можно и проигнорировать это решение: стать активистом и работать над тем, чтобы изменить ценности группы</td></tr>
+            <tr><td>Вина по фактам</td><td>Исправить ущерб и повторять честное поведение снова и снова. Сначала оценить, что именно сделано: пнула стену — починить стену; соврала о человеке — сказать правду так, чтобы поверили. Если утрачено доверие или разрушено невосполнимое, возмещение займёт долгое время. Если раскрыть свою роль нельзя, можно помогать другим людям, а не тем, кому навредила</td></tr>
+            <tr><td>Отвращение к себе</td><td>Представить причины поступка. «Это лучше, чем ненавидеть себя за это всю жизнь»</td></tr>
+          </tbody>
+        </table>
+        <div class="callout">Полуулыбка и экспозиция — не на человеке, который травмировал, если человек не готов. Особенно при невылеченном ПТСР. Книга прямо.</div>
+        <p class="hint">Порядок обучения в книге: страх первым — если нет фактической опасности, противоположное действие почти всегда имеет смысл, и это самая простая эмоция для старта. Гнев сразу за страхом, потому что их часто путают.</p>
+        <p class="hint">Пять примеров «знаю умом, но»: понимаю, что это неопасно, и всё равно очень боюсь; знаю, что человек не хотел причинить боль, и всё равно злюсь; знаю, что муж любит и не оставит, и ревную, когда он смотрит на красивых женщин; в отличных отношениях с друзьями — прячу тело в раздевалке от стыда; понимаю, что мой поступок не был аморальным, и всё равно виню себя.</p>
+
+        <h3 class="sec">Решение проблемы · семь шагов</h3>
+        <p>Если эмоция по фактам и вы хотите её изменить — проблемой является ситуация. Это не «просто разберись»: у навыка есть свой алгоритм, и он такой же жёсткий, как у проверки фактов.</p>
+        <p class="hint">Сначала признать, что проблема есть. Шесть типов: люди и ситуации, которые вызывают болезненные эмоции; те, которых мы избегаем из-за боли; разовые; повторяющиеся; повторяющиеся срывы деструктивного поведения; хронические — ненавистная работа, домашнее насилие. И оговорка: проблема специфична для человека и для времени. То, что проблема для одной, не проблема для другой; та же ситуация может быть проблемой в один период жизни и не быть в другой.</p>
+        <ol class="steps">
+          <li><b>Описать ситуацию</b> — факты. Потом отдельно: что именно в ней проблемно, включая последствия. Потом отдельно: какие конфликты и препятствия мешают решить.</li>
+          <li><b>Проверить факты</b> — три подвопроса: правильны ли мои факты; насколько ситуация действительно невыносима; отражают ли факты те препятствия, которые я описала. В эмоциональном состоянии препятствий видно гораздо больше, чем есть.</li>
+          <li><b>Определить цель.</b> Простую и реально достижимую. Вопрос шага: что должно произойти, чтобы я почувствовала себя лучше.</li>
+          <li><b>Мозговой штурм.</b> Как можно больше идей и <b>ни одной оценки по ходу</b>. Записывать всё. Здесь нужны стрессоустойчивость и контроль побуждений — потому что оценивать хочется сразу.</li>
+          <li><b>Выбрать решение.</b> Расставить по предпочтительности и осуществимости, взять одно-два, прогнать «за и против» и спросить мудрый разум. Решение бесполезно, если его нельзя превратить в конкретное действие.</li>
+          <li><b>Превратить в действие.</b> Здесь всё и ломается — см. четыре препятствия ниже.</li>
+          <li><b>Оценить результат.</b> Удовлетворена ли я; лучше ли мне, чем было; были ли негативные последствия для меня или других. Может понадобиться несколько решений подряд. Даже если первое не решило проблему полностью, оно обычно как-то меняет ситуацию.</li>
+        </ol>
+        <article class="card">
+          <h3>Четыре препятствия на шаге «сделать»</h3>
+          <ul>
+            <li><b>Инертность.</b> «Это слишком сложно», «я слишком устала», «у меня нет времени».</li>
+            <li><b>Мысли страха.</b> «Если не сработает, я буду выглядеть дурой», «люди накричат на меня».</li>
+            <li><b>Своеволие.</b> «Не я должна это решать, это они сделали», «если я что-то сделаю для решения, я буду выглядеть слабой».</li>
+            <li><b>Импульсивность.</b> Бездумное эмоциональное решение вместо обдуманного.</li>
+          </ul>
+          <p class="hint" style="margin-top:8px">Когда человек знал работающее решение и не применил — это новая проблема для решения, а не приговор.</p>
+        </article>
+        <p>Иерархия при обоснованной эмоции: действовать сообразно эмоции → менять ситуацию → избегать или уйти, если разумно → менять мысли о ситуации.</p>
+        <p class="hint">Пример разницы: запрыгнуть на стул, увидев на кухне крысу, — временно снижает панику, но со стула придётся спуститься. Решение проблемы — мышеловка или служба. И предупреждение книги: идея, что существуют простые универсальные решения, сама становится препятствием для долгой работы, которую требуют некоторые проблемы.</p>
+      </section>
+
+      <section class="panel p6">
+        <h2>Уязвимость и пик</h2>
+        <p class="lead">Разделы XIII–XXIV без кошмаров. Фон жизни + что делать, когда волна большая.</p>
+
+        <h3 class="sec">Жизнь, которую стоит жить</h3>
+        <p>Краткосрочно: хотя бы одно приятное в день. Не травить его тревогой «это кончится». Осознанность к приятному — часть навыка.</p>
+        <p>Долгосрочно: ценности → цели → маленькие шаги. Избегая боль, часто вычёркиваешь и радость.</p>
+        <div class="quote">
+          Накопление событий, которые создают достойную жизнь, похоже на бросание монеток в копилку.
+          <small>И зачем копилка: легче совладать с потерей, если она уравновешена положительными переживаниями. Потеря денег травматична для бедного и несущественна для богатого. Уход друга разрушителен, если это были единственные отношения в жизни.</small>
+        </div>
+        <div class="grid2">
+          <article class="card">
+            <h3>Ценность — не цель</h3>
+            <p>Ценность — способ жизни, а не достижение в будущем. «Они похожи на дорогу среди бездорожья»: придают направление и значение, но не имеют конечной точки. Нельзя сказать «я достигла этой ценности и больше не нуждаюсь в этом приоритете».</p>
+            <p>Цель — конкретное и достижимое. Достигла — над ней больше не работаешь. Ценность «власть и влияние» — на всю жизнь; цель «получить степень» закрывается.</p>
+            <p class="hint" style="margin-top:8px">Ценности меняются со временем и могут конфликтовать между собой. Свободное время и развлечения важны, когда ты молода и без обязательств; после рождения ребёнка на первое место выходит семья.</p>
+          </article>
+          <article class="card">
+            <h3>Ваши это ценности или чужие</h3>
+            <p>Мы часто считаем ценности других своими, не задумываясь. Живём по чужим, чтобы получить одобрение. Два проверочных вопроса книги:</p>
+            <ul>
+              <li>Делали бы вы это, если бы никому не могли об этом рассказать? Быть образованной — важная ценность; но если бы нельзя было никому сказать, что вы ходите на курсы, вы бы продолжали ходить?</li>
+              <li>Если бы всё было возможно, в каком направлении вы бы хотели, чтобы двигалась ваша жизнь? Не «что реалистично» и не «чего вы, по мнению других, достойны».</li>
+            </ul>
+            <p class="hint" style="margin-top:8px">Честная оговорка: если мы высоко ценим чью-то любовь, мы должны хотя бы частично жить по его ценностям. Важно понимать, где заканчивается наша ценность быть любимой и начинается жизнь по чужому мудрому разуму.</p>
+          </article>
+        </div>
+        <h3 class="sec">Семь шагов построения достойной жизни</h3>
+        <ol class="steps">
+          <li><b>Избегать избегания.</b> Главная проблема — люди избегают делать то, что для этого нужно. Мешают незнание того, чего хочешь, переменчивость настроения, эмоциональные потрясения и невозможность принять, что жизнь часто несправедлива.</li>
+          <li><b>Определить свои ценности.</b> В книге список из 58 ценностей в 14 группах.</li>
+          <li><b>Выбрать одну ценность</b>, над которой работаешь прямо сейчас. Только одну, иначе задача кажется невыполнимой.</li>
+          <li><b>Придумать несколько целей</b>, которые приближают к этой ценности. Конкретных и посильных.</li>
+          <li><b>Выбрать одну цель</b> — реалистичную и важную.</li>
+          <li><b>Разбить на маленькие шаги.</b> Если шаг всё ещё большой — разбить ещё раз.</li>
+          <li><b>Сделать один шаг прямо сейчас.</b></li>
+        </ol>
+        <div class="scheme">
+          ценность: стать частью группы → цели: возобновить общение со старыми друзьями · найти работу с широким кругом общения · вступить в клуб → выбранная цель: вступить в клуб → шаги: найти список клубов · зайти в книжный и спросить про клуб книголюбов · присоединиться к онлайн-сообществу → <b>шаг прямо сейчас: включить компьютер</b>
+        </div>
+        <div class="callout">Предупреждение книги: список ценностей часто переживается как маленькое бедствие — человек видит, насколько он далёк от своих ценностей. Поэтому сначала просят найти одну-две ценности, которые в жизни <b>уже есть</b>: безопасное окружение, люди с общими интересами, то, что человек уже делает.</div>
+        <p class="hint">Отдельная мысль, которая объясняет очень много: краткосрочные удовольствия мешают долгосрочному счастью. Постоянный поиск того, что заставит почувствовать себя по-другому — желательно прямо сейчас — со временем мешает встраивать в жизнь долгие положительные события. Иногда мы ищем приятное именно чтобы не работать над отдалёнными целями. Постоянные положительные события — это только три вещи: жизнь по своим ценностям, достижение важных целей и продолжительные отношения, построенные на любви.</p>
+        <div class="quote">
+          В разбалансированном теле возрастает эмоциональная уязвимость. Заботясь о теле, повышаем устойчивость.
+        </div>
+        <article class="card">
+          <h3>ЗАБОТА</h3>
+          <ul>
+            <li><b>З</b>доровье. Болезнь понижает порог. Шесть барьеров к лечению из книги: стыд, отсутствие навыка настоять на своём, нехватка денег, проблемы с саморегуляцией, страх медицинского вмешательства и негативный опыт получения медицинской помощи.</li>
+            <li><b>А</b>ктивность. Регулярные аэробные упражнения — антидепрессант. 5–7 дней в неделю, наращивать примерно по 20 минут. График упражнений сам по себе вырабатывает мастерство. Проблема обычно не «не знаю, что делать», а самоорганизация.</li>
+            <li><b>Б</b>удьте умеренны. Алкоголь, вещества и отдельные продукты снижают порог. Изменяющие настроение вещества действительно меняют настроение — поэтому плохая идея принимать их перед событиями, где важен контроль за своим поведением.</li>
+            <li><b>О</b>тдых 7–9 часов, неизменный график, особенно если со сном есть проблемы. Дефицит сна вызывает множество эмоциональных проблем.</li>
+            <li><b>ТА</b>релка 3–4 раза в день. И переедание, и чрезмерная диета повышают уязвимость. Исследование про самоназначенные диеты: ограниченный приём пищи ведёт к неконтролируемому поглощению, а ещё к излишней озабоченности едой, повышенной эмоциональности и дисфории. Отдельно: воздерживаться от пищи, от которой конкретно тебя раскачивает.</li>
+          </ul>
+          <p class="hint">Русский акроним в издании — М.Б. Сологуб.</p>
+          <p class="hint">Примечание тренерам, которое стоит держать в тоне: не пытайтесь убедить человека, что пища, которую он считает для себя плохой, на самом деле ему не вредит. Это проигрышная битва.</p>
+        </article>
+        <p class="hint">Протоколы работы с кошмарами и гигиены сна Линехан рекомендует только для ознакомления и не помечает как обязательные: их обычно проходят не в группе тренинга навыков, а в отдельных группах по сну. Для курса это граница, а не тема.</p>
+
+        <h3 class="sec">Осознанность к текущей эмоции</h3>
+        <p>Это глава 9, не майский модуль осознанности как содержание курса. Объект — текущая эмоция. Линехан: не пропускать и не спешить. Избегание эмоций мешает почти каждому навыку модуля.</p>
+        <div class="quote">
+          Осознавать текущие эмоции — наблюдать, описывать и отпускать, не оценивая, не подавляя, не блокируя и не избегая.
+        </div>
+        <div class="quote">
+          Будьте открытыми к эмоциям, но не обязательно действуйте в соответствии с ними — и обнаружите, что эмоции не настолько катастрофичны. Наблюдение работает как экспозиция при фобии.
+        </div>
+        <div class="quote">
+          Принятие болезненных эмоций снимает страдания, оставляя боль. Борьба гарантирует, что они останутся. Иногда самое полезное — ничего с ними не делать.
+        </div>
+        <div class="quote">
+          Попытки помешать эмоциям или подавить их создают зависимость от собственных эмоций.
+          <small>Многие уверены, что должны всё время контролировать эмоции. Именно это и есть путь к потере свободы. Мудрость — позволять естественному потоку приходить и уходить, переживать эмоции и не позволять им собой управлять.</small>
+        </div>
+        <article class="card">
+          <h3>Как</h3>
+          <ul>
+            <li>Признать присутствие. Шаг назад. Отцепиться.</li>
+            <li>Волны на пляже: подступают и отступают. Пальцы в песок.</li>
+            <li>Серфинг: удержать равновесие на волне, не действовать из побуждения. Тот же навык, что серфинг желаний в лечении зависимостей.</li>
+            <li>Не блокировать, не оценивать, не удерживать, не убегать, не усиливать.</li>
+            <li><b>Осознанность к телу:</b> найти область в теле, где чувствуется переживание; пережить его так полно, как можешь; понаблюдать, сколько времени эмоции нужно, чтобы утихнуть или измениться. «Откройте свой разум для любопытства.»</li>
+            <li><b>Вы — это не ваша эмоция.</b> Действовать по ней не обязательно. И вспомнить время, когда вы чувствовали себя по-другому.</li>
+          </ul>
+        </article>
+        <div class="grid2">
+          <article class="card">
+            <h3>Стена из песка</h3>
+            <p>«Попытка построить стену, чтобы защититься от эмоций, всегда заканчивается тем, что эмоции проникают внутрь. Это похоже на попытку не дать морским волнам разбиться о берег, построив на их пути стену из песка. Они неизбежно просочатся через неё и оставят по ту сторону лужу, потому что не смогут быстро вернуться обратно в море.»</p>
+            <p class="hint" style="margin-top:8px">Точный образ того, почему подавление даёт не тишину, а застой.</p>
+          </article>
+          <article class="card">
+            <h3>Одуванчики</h3>
+            <p>Человек купил дом и решил вырастить идеальную лужайку. Одуванчики росли там, где он не хотел. Он их вырывал — вырастали снова. Купил гербициды — помогло до первого дождя. Решил, что дело в почве, потратил состояние на новый дерн — вылезли опять. Решил, что дело в соседях, и развернул кампанию, чтобы соседи вывели свои. На третий год написал в департамент сельского хозяйства. Ответ пришёл через несколько месяцев: «Сэр, наш совет заключается в том, чтобы вы научились любить эти одуванчики».</p>
+            <p class="hint" style="margin-top:8px">Историю рассказывают столько раз, сколько нужно, — пока человек сам не начнёт говорить: «я знаю, это одуванчики».</p>
+          </article>
+        </div>
+        <p class="hint">«Любовь» к своим эмоциям в этом контексте означает принятие, а не увеличение. Уважать свои эмоции и не считать их иррациональными или основанными на искажениях. Борьба с эмоцией не заставит её уйти — принятие даёт возможность что-то с ней сделать.</p>
+        <p class="hint">Четвёртая причина, зачем это нужно, редко проговаривается: принять болезненные эмоции как часть человеческого существования. Даже полностью изменив свою жизнь, человек не избавится от большинства отрицательных эмоций — они всегда будут её частью. Умение состоит в том, чтобы найти новый способ к ним относиться.</p>
+
+        <h3 class="sec">Если навык «не работает»</h3>
+        <p>Не бросать. Исправить применение. Вопросы книги:</p>
+        <ol>
+          <li>Стал ли я биологически уязвимее? Болезнь, цикл, еда, алкоголь, сон, активность, иногда расстройство, где нужны препараты — это к врачу, не к «ещё сильнее старайся».</li>
+          <li>Правильно ли применял шаги?</li>
+          <li>Не подкрепляет ли среда мою эмоциональность?</li>
+          <li>Уделяю ли время и усилия? Счёт «за и против», готовность, радикальное принятие.</li>
+          <li>Не слишком ли расстроен для сложных навыков? Тогда не героизм, а граница пика. Секрет в том, чтобы интенсивно тренировать самые важные навыки, <b>когда ты не в эмоциональном разуме</b>.</li>
+          <li>Не мешают ли мифы об эмоциях? «Мои эмоции глупые». «Я — это и есть мои эмоции». Проверять факты, оспаривать мифы, практиковать безоценочность.</li>
+        </ol>
+        <p>Если проблему можно решить сейчас — решать. Если нельзя и волнует — осознанность к текущей эмоции. Беспокойство часто = попытка избежать переживания, а от себя не убежишь. Сосредоточиваться больше на физических ощущениях, чем на эмоциональных мыслях и образах, и отметить, сколько времени уходит на то, чтобы сильная эмоция утихла.</p>
+      </section>
+
+      <section class="panel p7">
+        <h2>ЦА из главы</h2>
+        <p class="lead">Портрет до анкеты. Язык и ситуации — из примеров Линехан. Коротко это уже во вкладке 0. Здесь те же смыслы таблицами. После GetCourse уточним цифрами.</p>
+
+        <article class="card">
+          <h3>Кому модуль в книге</h3>
+          <p>Высокая чувствительность и/или высокая интенсивность. Часто слышал: «просто измени отношение». Живёт среди тех, у кого «всё под контролем», стыдится, что у него не так. Болезненные чувства для него — проблемы, которые надо срочно решить. Поэтому давит, взрывается, избегает, переедает, гиперконтролирует, рушит отношения. Это попытки регуляции, не характер.</p>
+          <p>Книга прямо: таким людям навыки нужны. Без самовалидации обучение не встанет — иначе выйдет, что стыдящие были правы.</p>
+        </article>
+
+        <h3 class="sec">Боли</h3>
+        <table>
+          <thead><tr><th>Как звучит</th><th>Откуда в главе</th></tr></thead>
+          <tbody>
+            <tr><td>Стыдно, что так чувствую. Мне говорят сменить отношение</td><td>Инвалидирующая среда, вторичный стыд</td></tr>
+            <tr><td>Не понимаю, что чувствую. Как туман</td><td>Тип «всмотреться в туман»</td></tr>
+            <tr><td>Либо давлю, либо несёт</td><td>Подавление vs море дисконтроля</td></tr>
+            <tr><td>Вспыхиваю из-за ерунды, когда не выспалась / болею / тяжёлый день</td><td>Последняя капля, ЗАБОТА</td></tr>
+            <tr><td>Знаю умом, что безопасно — телом нет</td><td>Интерпретация vs факты; ревность, повышение</td></tr>
+            <tr><td>Избегаю разговор, работу, лечение, потом хуже</td><td>Побуждение избегания</td></tr>
+            <tr><td>Пробовала навык — в пике не сработал, значит я безнадёжная</td><td>Точка срыва + починка навыка</td></tr>
+            <tr><td>Тушу пожары, приятного почти нет</td><td>Рецепт несчастья</td></tr>
+            <tr><td>Ночью катастрофа, утром стыдно за мысли</td><td>Полуночные мысли</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Хотелки</h3>
+        <ul>
+          <li>Понимать, что чувствую, не жить в тумане</li>
+          <li>Отличать «это по делу» от накрутки</li>
+          <li>Не взрываться на людей, которых не хочу терять</li>
+          <li>Делать важное, даже когда внутри страх / грусть / стыд</li>
+          <li>Не стыдиться самого факта чувства</li>
+          <li>Иметь что делать, когда эмоция есть — не только «возьми себя в руки»</li>
+          <li>Чтобы в жизни было не только тушение: приятное и ценности</li>
+        </ul>
+
+        <h3 class="sec">Какой результат честно обещать</h3>
+        <p>Из целей модуля, не из маркетинга:</p>
+        <ul>
+          <li>Уметь назвать эмоцию и оценить силу</li>
+          <li>Понять, зачем она возникла (три функции)</li>
+          <li>Проверить, совпадает ли с фактами</li>
+          <li>Выбрать: противоположное действие или решение проблемы</li>
+          <li>Снизить частоту срывов «из-за ерунды» через тело и маленькие победы</li>
+          <li>В сильной волне — не давить и не делать хуже; знать, когда сложное уже не берётся</li>
+        </ul>
+        <p>Не обещать: спокойствие 24/7, «больше никогда не злиться», кризис 9/10, счастье как в майской вывеске.</p>
+
+        <h3 class="sec">Сегменты для контента</h3>
+        <table>
+          <thead><tr><th>Сегмент</th><th>Как узнать</th><th>Первый заход</th></tr></thead>
+          <tbody>
+            <tr><td>Давлю</td><td>Стыдно чувствовать, делает вид что ничего нет</td><td>Подавление раздувает вторичные. Назвать ≠ сдаться</td></tr>
+            <tr><td>Срываюсь</td><td>Гнев на близких, потом вина</td><td>Гнев часто вторичен. Не атаковать / отойти</td></tr>
+            <tr><td>Туман</td><td>Не может назвать</td><td>Словарь + 0–100</td></tr>
+            <tr><td>Избегаю, цели стоят</td><td>Кровать, не иду на разговор / работу</td><td>Противоположное: делать то, чего боишься</td></tr>
+            <tr><td>Меня стыдили</td><td>«Просто смени отношение»</td><td>Самовалидация как условие</td></tr>
+            <tr><td>Последняя капля</td><td>Срыв после бессонной / голодной</td><td>ЗАБОТА. Не характер</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Возражения, которые глава уже закрывает</h3>
+        <table>
+          <thead><tr><th>Скажут</th><th>Ответ главы</th></tr></thead>
+          <tbody>
+            <tr><td>Если научусь влиять — значит, меня правильно стыдили</td><td>Сначала самовалидация</td></tr>
+            <tr><td>Подавлять неестественно / надо всё выплёскивать</td><td>Оба мифа</td></tr>
+            <tr><td>Эмоции никуда не денутся</td><td>Волна. Цель — страдать меньше, не убить</td></tr>
+            <tr><td>Это биология, ничего не изменить</td><td>Биология есть. Навык всё равно нужен</td></tr>
+            <tr><td>Сначала уберу плохое, потом радость</td><td>Избегая боль, вычёркиваешь радость</td></tr>
+            <tr><td>В пике ваши практики бесполезны</td><td>Согласны: сложное в точке срыва не работает. Кризис-набор этот курс не обещает</td></tr>
+            <tr><td>Я не хочу менять эту эмоцию</td><td>Тогда не меняем её</td></tr>
+            <tr><td>Если объяснимо — значит правильно</td><td>Объяснимо ≠ по фактам</td></tr>
+            <tr><td>Да, но…</td><td>Четыре варианта: решить / изменить реакцию / принять / сделать хуже</td></tr>
+          </tbody>
+        </table>
+
+        <article class="card" style="margin-top:10px">
+          <h3>Кому курс не подходит</h3>
+          <ul>
+            <li>Хочет, чтобы эмоции исчезли навсегда</li>
+            <li>Ищет замену врачу, таблеткам, работе с травмой</li>
+            <li>В остром кризисе ждёт набор «когда уже несёт»</li>
+            <li>Не хочет менять ни одну свою эмоцию</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel p8">
+        <h2>Запуск: результат, названия, офферы</h2>
+        <p class="lead">Одна вкладка. Сверху вниз: какой результат хочет человек, рабочий концепт (ещё не закрыт), названия, офферы курса и эфира, четыре концепта, смыслы в презу. Эталоны Арины, Полины, Кейко, Томаса, Тимочко и прошлого эфира Наташи здесь как ритм. Не как восемь лендов сразу. На одну страницу берём одну строку.</p>
+        <nav class="toc p0">
+          <a href="#p8-result">Результат</a>
+          <a href="#p8-concept">Концепт</a>
+          <a href="#p8-names">Названия</a>
+          <a href="#p8-offers">Офферы</a>
+          <a href="#p8-angles">Четыре входа</a>
+          <a href="#p8-meanings">Смыслы в презу</a>
+        </nav>
+
+        <h3 class="chapter" id="p8-result">1. Какой результат хочет человек</h3>
+        <div class="prose">
+          <p>У Арины человек хочет деньги, бартер и бренды. У Кейко — печь и зарабатывать из дома. У Томаса — капитал. У Полины — не упустить ребёнка. У прошлого эфира Наташи — перестать ждать, когда станет хорошо, и жить сейчас.</p>
+          <p>Здесь человек не хочет слово «регуляция». Он хочет, чтобы сильные эмоции перестали рулить поведением. Не глушить. Не срываться. Идти к целям и не взрываться на тех, кого не хочет терять.</p>
+        </div>
+        <div class="quote">
+          Научиться влиять на то, какие эмоции возникают, когда они возникают и как их выражать. Чтобы они меньше мешали целям и отношениям.
+          <small>Это результат из главы 9. Не спокойствие круглосуточно. Не «больше никогда не злиться». Не кризис 9 из 10.</small>
+        </div>
+        <div class="grid2">
+          <article class="card">
+            <h3>Как ещё сказать тот же результат</h3>
+            <ul>
+              <li>Перестать глушить и не срываться.</li>
+              <li>Иметь шаг вместо «возьми себя в руки».</li>
+              <li>Отличить факт от накрутки и выбрать действие.</li>
+              <li>Не стыдить себя за само чувство.</li>
+              <li>Реже взрываться «из-за ерунды».</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Чего в результате нет</h3>
+            <ul>
+              <li>Цифры дохода. У Арины и Кейко они честные для их ниши. У нас нет.</li>
+              <li>Срока «за 2 месяца стань X». Срок курса Наташа ещё не дала.</li>
+              <li>Шкалы, зоны, «Градус» как имя продукта. Это склейка с другим курсом.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="chapter" id="p8-concept">2. С какой боли заходим</h3>
+        <div class="prose">
+          <p>Это не название курса. Название — в таблице ниже. Здесь только: какую ситуацию человек уже узнаёт в себе.</p>
+          <p>Человек про себя так и говорит: либо давлю чувства, либо меня несёт. Третьего как будто нет. Курс как раз про третье: влиять. Назвать, что это за чувство. Проверить, совпадает ли оно с фактами. Выбрать, что делать. Не ждать, пока отпустит. Не становиться «спокойнее характером».</p>
+          <p>Пока это наш заход, не финал. После анкеты можно зайти с другой боли. Сам курс от этого не меняется: научиться влиять, чтобы эмоции меньше рулили.</p>
+          <p>Если формулировка «глушить и срываться» слишком жёсткая для тех, кто уже с Наташей, на ленд ставим запас: «Как перестать ждать, пока отпустит».</p>
+          <p>Картинки ниже (термостат, первое чувство, порог) — не другие курсы. Их можно в сторис и эфир, если этот заход не зайдёт.</p>
+        </div>
+
+        <h3 class="chapter" id="p8-names">3. Названия. Одно место</h3>
+        <table>
+          <thead><tr><th></th><th>Рабочее</th><th>Запас</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Курс</td>
+              <td>Как перестать глушить эмоции и не срываться</td>
+              <td>Как перестать ждать, пока отпустит</td>
+            </tr>
+            <tr>
+              <td>Вторая строка курса</td>
+              <td>и научиться влиять на них, даже когда внутри злость, страх или вина</td>
+              <td>и начать влиять на эмоцию, а не сидеть в ней</td>
+            </tr>
+            <tr>
+              <td>Закрытый 16.09</td>
+              <td>Почему вы боретесь не с той эмоцией</td>
+              <td>Что вы чувствуете за секунду до злости</td>
+            </tr>
+            <tr>
+              <td>Открытый 30.09</td>
+              <td>Почему вы взрываетесь «из-за ерунды»</td>
+              <td>Что делать вместо «возьми себя в руки»</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="hint">В H1 нет слов: регуляция, ДПТ, противоположное действие, первичная, термостат, градус.</p>
+
+        <h3 class="chapter" id="p8-offers">4. Офферы курса. Шесть готовых блоков на сайт</h3>
+        <div class="prose">
+          <p>Каждый блок можно копировать на страницу целиком: заголовок, вторая строка, лид, «вам подойдёт», «что вы будете уметь», кнопка. Обещание внутри одно и то же. Меняется первая фраза, за которую человек себя узнаёт.</p>
+          <p>Вариант 1 идёт на ленд предзаписи. Вариант 2 берём вместо первого, если «глушить и срываться» слишком резко для тёплой базы. Варианты 3–6 живут в рекламе, письмах и сторис. На одной странице держим один голос.</p>
+        </div>
+
+        <article class="ocard pick">
+          <span class="tag">Вариант 1 · основной · ленд предзаписи</span>
+          <p class="oh1">Как перестать глушить эмоции и не срываться</p>
+          <p class="oh2">и начать влиять на них, даже когда внутри злость, страх или вина</p>
+          <p class="olead">Курс Натальи Зайцевой, врача-психотерапевта, КПТ- и ДПТ-терапевта. Короткие практики, которые слушают в наушниках: по дороге, в перерыве, на кухне. Здесь не будет «возьми себя в руки» и «стань спокойнее».</p>
+          <div class="f"><b>Вам подойдёт</b><ul>
+            <li>Вы давите чувство до последнего, а потом вас прорывает.</li>
+            <li>Вы срываетесь на близких и после крутите вину.</li>
+            <li>Вы понимаете умом, что бояться нечего, и всё равно не делаете.</li>
+            <li>Вы не всегда можете назвать, что именно чувствуете.</li>
+          </ul></div>
+          <div class="f"><b>Что будете уметь</b><ul>
+            <li>Называть эмоцию и её силу вместо «мне просто плохо».</li>
+            <li>Отличать факт от мысли о факте.</li>
+            <li>Выбирать шаг: изменить своё действие или изменить ситуацию.</li>
+            <li>Держать порог тела, чтобы реже взрываться «из-за ерунды».</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Записаться на курс</span></div>
+          <div class="f"><b>Честная рамка</b>Цель курса: меньше страданий, а не жизнь без эмоций. Курс не заменяет лечение и работу с врачом.</div>
+          <div class="f"><b>Ритм эталона</b>Наташа, май: тупик словами человека, жизнь после, метод в лиде.</div>
+        </article>
+
+        <article class="ocard">
+          <span class="tag grey">Вариант 2 · мягкий · для тёплой базы</span>
+          <p class="oh1">Как перестать ждать, пока отпустит</p>
+          <p class="oh2">и начать влиять на эмоцию, а не сидеть в ней</p>
+          <p class="olead">Время само по себе не учит обращаться с чувствами. Курс даёт понятные шаги для минуты, когда злость, страх или вина уже пришли.</p>
+          <div class="f"><b>Вам подойдёт</b><ul>
+            <li>Вы терпите и ждёте, когда состояние пройдёт само.</li>
+            <li>Вы отменяете планы, потому что «сегодня не то настроение».</li>
+            <li>Вы пробовали дышать и считать, но в момент об этом не помните.</li>
+          </ul></div>
+          <div class="f"><b>Что будете уметь</b><ul>
+            <li>Замечать эмоцию раньше, чем она выберет за вас поведение.</li>
+            <li>Понимать, зачем она пришла: к действию, сказать другим, сигнал себе.</li>
+            <li>Делать один шаг вместо ожидания.</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Оставить заявку</span></div>
+          <div class="f"><b>Когда берём</b>Если Наташе «глушить и срываться» кажется резким для своей аудитории.</div>
+        </article>
+
+        <article class="ocard">
+          <span class="tag grey">Вариант 3 · ежедневный ритм · реклама и письма</span>
+          <p class="oh1">Как влиять на свои эмоции за 10 минут в день</p>
+          <p class="oh2">без «возьми себя в руки» и без вины, что вы мало работаете над собой</p>
+          <p class="olead">За вспышкой часто стоит не характер, а второе чувство под первым или усталость тела. Курс показывает, что делать с обоими.</p>
+          <div class="f"><b>Вам подойдёт</b><ul>
+            <li>Вы слышали «просто смени отношение» и злитесь на этот совет.</li>
+            <li>У вас нет часа на себя, есть десять минут.</li>
+            <li>Вы устали чувствовать себя человеком со слабым характером.</li>
+          </ul></div>
+          <div class="f"><b>Что будете уметь</b><ul>
+            <li>Разбирать свою реакцию по частям, а не оценивать себя целиком.</li>
+            <li>Видеть первое чувство под злостью или обидой.</li>
+            <li>Поднимать порог заранее: сон, еда, движение, маленькие «я могу».</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Начать за 10 минут в день</span></div>
+          <div class="f"><b>Ритм эталона</b>Полина: «за 15 минут в день», снятие вины «вы недостаточно делаете».</div>
+        </article>
+
+        <article class="ocard">
+          <span class="tag grey">Вариант 4 · с нуля · холодный трафик</span>
+          <p class="oh1">От «не понимаю, что со мной» до первого рабочего шага</p>
+          <p class="oh2">разбираем эмоции по порядку: назвать, проверить, выбрать действие</p>
+          <p class="olead">Курс для тех, кто начинает с нуля. Без терминов в первом уроке. С понятным порядком: что делать сначала, что потом, чего не брать в пике.</p>
+          <div class="f"><b>Вам подойдёт</b><ul>
+            <li>Внутри «всё сразу», и вы не понимаете, что это.</li>
+            <li>Вы читали много статей и не знаете, с чего начать.</li>
+            <li>Вы боитесь, что «копаться в чувствах» сделает хуже.</li>
+          </ul></div>
+          <div class="f"><b>Что будете уметь</b><ul>
+            <li>Назвать чувство и оценить его силу.</li>
+            <li>Проверить, совпадает ли оно с фактами, или его раскрутила мысль.</li>
+            <li>Выбрать одно из двух: менять своё действие или менять ситуацию.</li>
+            <li>Понимать, где эмоция уже слишком сильная для сложных шагов.</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Пройти с начала</span></div>
+          <div class="f"><b>Ритм эталона</b>Кейко: «с нуля до первых заказов», топ ошибок новичка, что нужно для старта.</div>
+        </article>
+
+        <article class="ocard">
+          <span class="tag grey">Вариант 5 · «даже если» · для тех, кто уже пробовал</span>
+          <p class="oh1">Как влиять на свои эмоции, даже если раньше ничего не помогало</p>
+          <p class="oh2">когда техники не срабатывают, чаще дело в половине шага, а не в вас</p>
+          <p class="olead">Улыбнуться и сказать «всё нормально» мало. Курс показывает, как доводить шаг до конца и почему в пике сложное не берётся.</p>
+          <div class="f"><b>Вам подойдёт</b><ul>
+            <li>Вы говорите «я всё это знаю, но не работает».</li>
+            <li>Вы пробовали приёмы в момент, когда уже несло.</li>
+            <li>Вы бросаете практику через три дня.</li>
+          </ul></div>
+          <div class="f"><b>Что будете уметь</b><ul>
+            <li>Доводить действие до конца, а не обрывать на полпути.</li>
+            <li>Отличать «навык не подходит» от «стало слабее, но не сразу».</li>
+            <li>Выбирать шаг по силе чувства, а не по силе воли.</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Посмотреть программу</span></div>
+          <div class="f"><b>Ритм эталона</b>Томас: «даже если никогда не пробовали», ошибки новичков. Год в заголовке не ставим.</div>
+        </article>
+
+        <article class="ocard">
+          <span class="tag grey">Вариант 6 · если сейчас / по итогу · сторис и бот</span>
+          <p class="oh1">Как перестать терпеть вспышку и начать с ней что-то делать</p>
+          <p class="oh2">если сейчас вы либо давите в себе, либо срываетесь и потом стыдитесь</p>
+          <p class="olead">По итогу курса: вы называете чувство, знаете свою развилку и понимаете, какие шаги оставить на «до», а не на пик.</p>
+          <div class="f"><b>Если сейчас</b><ul>
+            <li>Вы срываетесь на детях или партнёре и потом не спите.</li>
+            <li>Вы молчите неделями, а потом высказываете всё сразу.</li>
+            <li>Вы стыдитесь самого чувства, не только реакции.</li>
+          </ul></div>
+          <div class="f"><b>По итогу</b><ul>
+            <li>Вы отделяете стыд «я плохая» от вины за конкретный поступок.</li>
+            <li>Вы разбираете свою ситуацию, а не слушаете лекцию про эмоции вообще.</li>
+            <li>Вы знаете, что делать до пика, чтобы пик приходил реже.</li>
+          </ul></div>
+          <div class="f"><b>Кнопка</b><span class="pill">Хочу так же</span></div>
+          <div class="f"><b>Ритм эталона</b>Тимочко: «если сейчас чувствуешь» плюс «по итогу ты». Деньги из хвоста убираем.</div>
+        </article>
+
+        <div class="callout">Во всех шести блоках нет слов «регуляция», «ДПТ», «противоположное действие», «первичная эмоция», «шкала», «зона», «градус». Нет цены, срока и историй учениц: этих данных у нас пока нет.</div>
+
+        <h3 class="sec">Эталоны как есть. Бесплатные вебы, не только курсы</h3>
+        <p class="prose">Это чужие результаты. Не копировать в ленд Наташи. Смотреть грамматику: роль или how, цифра или срок, боль в оффере, подарок за регистрацию, «после эфира вы».</p>
+        <table>
+          <thead><tr><th>Кто</th><th>Название</th><th>Оффер-результат</th></tr></thead>
+          <tbody>
+            <tr><td>Наташа, май</td><td>Как перестать ждать, когда станет хорошо, и начать жить уже сейчас</td><td>Приёмы 10–15 минут в день. Подарок: практика «Пошаговое осознание ощущений».</td></tr>
+            <tr><td>Полина</td><td>Как формировать нужные навыки у ребёнка за 15 минут в день</td><td>После: системно и без страха упустить. Снять тревогу «недостаточно делаете». Подарок: «какие кружки нужны детям 1–4».</td></tr>
+            <tr><td>Полина</td><td>5 шагов к системному развитию ребёнка от 1 до 4 лет</td><td>Легко, без стресса и страха что-то упустить. Тест в подарок при регистрации.</td></tr>
+            <tr><td>Полина, креатив</td><td>За истериками часто стоит не характер, а потребность</td><td>Как читать сигналы ребёнка.</td></tr>
+            <tr><td>Полина, креатив</td><td>Не нужно пять кружков и топовая школа</td><td>Стратегия, которая работает именно для вас.</td></tr>
+            <tr><td>Полина, креатив</td><td>Если ребёнок не учится управлять собой — этим займутся гаджеты</td><td>Как развить саморегуляцию и волю.</td></tr>
+            <tr><td>Полина, курс</td><td>Как развивать ребёнка всего по 10 минут в день и при этом ничего не упустить</td><td>Тот же результат, что на вебе. Курс «Система раннего развития».</td></tr>
+            <tr><td>Кейко, веб</td><td>Домашний кондитер</td><td>С нуля до первых заказов. Печь, находить клиентов, из дома от 100 000 ₽/мес. С чего начать, топ ошибок, инвентарь −50%, первые клиенты. Подарок: рецепт капкейков.</td></tr>
+            <tr><td>Кейко, веб</td><td>Как стать гуру макарон</td><td>Секреты на своей кухне. Ошибки, тренды, зачем в ассортименте, как продавать и считать цену.</td></tr>
+            <tr><td>Кейко, веб</td><td>Зефирная флористика</td><td>Реалистичные композиции и от 70 000 ₽/мес.</td></tr>
+            <tr><td>Кейко, веб</td><td>Основы декора тортов</td><td>С нуля: базовые техники + тренды. Выделяться и продавать в 2 раза дороже.</td></tr>
+            <tr><td>Кейко, курс</td><td>Стань домашним кондитером с нуля за 2 месяца</td><td>Роль + срок. На вебе тот же вход, без срока «2 месяца».</td></tr>
+            <tr><td>Арина</td><td>Как в 2026 стать топовым UGC-креатором, получать по бартеру всё что угодно и работать с брендами</td><td>Закрыто для своих. Не нужны подписчики. Навык контента.</td></tr>
+            <tr><td>Томас</td><td>How to start making real money in crypto from scratch</td><td>Даже если никогда не торговали. 7 ошибок. День 1 / день 2.</td></tr>
+            <tr><td>Тимочко</td><td>Как прокачать мышление, чтобы выйти на новый уровень в деньгах</td><td>Если сейчас чувствуешь… По итогу ты…</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Офферы эфира. Тот же результат, меньше обещание</h3>
+        <p class="prose">За вечер уносят: один разбор ситуации, одна развилка, понимание что вспышка «из-за ерунды» часто про порог. Не «станете другим человеком за два часа».</p>
+        <table>
+          <thead><tr><th>Ритм</th><th>Название эфира</th><th>Оффер одной строкой</th></tr></thead>
+          <tbody>
+            <tr><td>Рабочий закрытый</td><td>Почему вы боретесь не с той эмоцией</td><td>Что стоит за злостью и «я снова вспылила». Что делать первым.</td></tr>
+            <tr><td>Рабочий открытый</td><td>Почему вы взрываетесь «из-за ерунды»</td><td>За вспышкой часто не характер, а порог. Что поднимать до момента.</td></tr>
+            <tr><td>Полина</td><td>За злостью часто стоит не характер, а другое чувство</td><td>После: отпустите стыд за само чувство. Конкретные шаги на ближайшие дни.</td></tr>
+            <tr><td>Кейко, бесплатный веб</td><td>С нуля до первой развилки</td><td>С чего начать. Топ ошибок: улыбнулась, и не помогло. Какие практики не брать в пике.</td></tr>
+            <tr><td>Арина</td><td>Что бы я разобрала первой, если бы сейчас вспылила</td><td>Одна ситуация до первого чувства. Потом развилка. Не лекция про все эмоции.</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Подарок за регистрацию: практика «Зачем вам эта эмоция». Три функции. На ленде: «Регистрируйтесь и сразу получите практику „Зачем вам эта эмоция“».</p>
+
+        <h3 class="chapter" id="p8-angles">5. Четыре концепта. Один продукт, разные входы</h3>
+        <p class="prose">Это не четыре курса. Это четыре способа сказать один результат. Рабочий вход сейчас: тупик «давлю или срываюсь». Остальные — прогрев, сегменты, второй эфир.</p>
+        <table>
+          <thead><tr><th>Концепт</th><th>Какой результат несёт</th><th>На что опирается в главе 9</th><th>Когда брать</th></tr></thead>
+          <tbody>
+            <tr><td>Тупик: глушить или срываться</td><td>Перестать жить в двух крайностях. Иметь шаг.</td><td>Подавление и вспышка как попытки регуляции. Развилка факты / действие / проблема.</td><td>Рабочий. Ленд предзаписи.</td></tr>
+            <tr><td>Термостат</td><td>Влиять на силу чувства, не стать спокойнее характером.</td><td>Регуляция как температура в комнате. 0–100. Не выключить отопление.</td><td>Если база боится слова «срываться».</td></tr>
+            <tr><td>Первое чувство</td><td>Бить ту эмоцию, которая первая. Не стыд за вспышку.</td><td>Первичная и вторичная. Гнев часто вторичен к страху. В книге это второй проход.</td><td>Закрытый эфир 16.09.</td></tr>
+            <tr><td>Громче, чтобы услышали</td><td>Сначала признать чувство. Иначе навык читается как «замолчи».</td><td>Инвалидирующая среда. «Просто измени отношение». Самовалидация как условие обучения.</td><td>Сегмент «мне говорят сменить отношение».</td></tr>
+            <tr><td>Порог</td><td>Не взрываться «из-за ерунды». Тело, не характер.</td><td>Сон, еда, болезнь, последняя капля. Точка срыва как граница.</td><td>Открытый эфир 30.09.</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="chapter" id="p8-meanings">6. Смыслы в презу, прогрев и контент</h3>
+        <p class="prose">У Арины преза идёт не «полезными советами», а рельсами: раньше/сейчас, это не то что думали, барьер входа ложный, одно условие, схема, где сольёшься, потом продукт. У Наташи в мае: время не лечит, нет навыка не значит слабость, короткая практика, система тренировок. Ниже те же рельсы, заполненные главой 9. Без доходов и без «профессия №1».</p>
+        <table>
+          <thead><tr><th>Рельс эталона</th><th>Как у них</th><th>Как у нас, глава 9</th></tr></thead>
+          <tbody>
+            <tr><td>Результат на титуле</td><td>Арина: топ UGC + бартер + бренды. Кейко: с нуля до заказов и 100 000 ₽.</td><td>Влиять на эмоции, чтобы они не рулили поведением. Не глушить и не срываться.</td></tr>
+            <tr><td>Раньше / сейчас</td><td>Арина: подписчики → контент. Реклама у блогеров сломалась.</td><td>Раньше: «просто смени отношение» / перетерпеть. Сейчас: назвать, факты, ветка. Силой воли чувство не выключается.</td></tr>
+            <tr><td>Это НЕ</td><td>UGC ≠ бартер в сторис. Не нужны подписчики.</td><td>Это не «стань спокойнее». Не набор «когда уже несёт». Не замена врачу.</td></tr>
+            <tr><td>Барьер входа ложный</td><td>Можно без аудитории, нужен навык контента.</td><td>Не нужно становиться менее чувствительной. Часть людей чувствует сильнее с рождения. Нужен навык, не другой характер.</td></tr>
+            <tr><td>Одно условие</td><td>Навык создавать контент.</td><td>Сначала признать чувство. Без этого обучение не встанет.</td></tr>
+            <tr><td>Почему сейчас</td><td>Перелом рынка, профессия №1, ИИ.</td><td>Честно из воронки: следующий модуль после осознанности. Рынка «эмоции 2026» в главе нет. Не выдумывать.</td></tr>
+            <tr><td>Схема пути</td><td>Арина: 5 шагов в топ UGC, возвращаются весь вечер.</td><td>Назвать → 0–100 → факты → ветка → тело. Шкала не равна ступеням курса.</td></tr>
+            <tr><td>Где сольёшься один</td><td>Outreach. Конкуренция.</td><td>Половина противоположного действия. Шаг в пике, где сложное уже не берётся. «Техника не работает».</td></tr>
+            <tr><td>После эфира / снятие вины</td><td>Полина: отпустите тревогу, что недостаточно делаете.</td><td>Нет навыка ≠ нет мотивации. Вспышка «из-за ерунды» часто про порог, не про характер.</td></tr>
+            <tr><td>Время не лечит</td><td>Наташа, май: ждать «когда станет хорошо» не работает.</td><td>Ждать, пока отпустит, тоже не работает. Нужен шаг сегодня, не геройство в пике.</td></tr>
+            <tr><td>Боль и страх в оффере</td><td>Томас: даже если никогда не торговали. Кейко: не знаете с чего начать, боитесь инвентаря.</td><td>Даже если сейчас только давите или срываетесь. Даже если «уже пробовали, не помогло».</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Набор смыслов, с которым можно работать в контенте</h3>
+        <ol class="theses">
+          <li>Эмоции не враги. Они что-то делают: действие, сообщение другим, сигнал себе.</li>
+          <li>Назвать и поставить 0–100 уже влиять.</li>
+          <li>Часто запускает мысль о событии, не само событие.</li>
+          <li>Объяснимо ещё не значит по фактам.</li>
+          <li>Два вопроса: по фактам ли, эффективно ли. Четыре ответа, не «просто успокойся».</li>
+          <li>Половина шага не работает. Пришла на вечеринку и стоит в углу.</li>
+          <li>Стыд: «я плохая». Вина: «поступок плохой».</li>
+          <li>Сон, еда, болезнь — порог, не характер.</li>
+          <li>Выше своей точки срыва сложный навык недоступен. Это не «ты сорвалась».</li>
+        </ol>
+        <div class="callout">Длинные слоты под сборку слайдов (reframe, барьеры, бронь) лежат во вкладке 10. Сначала эта вкладка. Потом 10, если собираете презу.</div>
+      </section>
+
+      <section class="panel p9">
+        <h2>Запуск</h2>
+        <p class="lead">Даты и рабочая анкета. Анкета не глава 9. Текст вопросов ниже.</p>
+        <div class="cal">
+          <div class="d"><b>~27.08–03.09</b>Лучшие условия «своим»</div>
+          <div class="d"><b>01.09</b>Анкета предзаписи. Прогрев до 16.09</div>
+          <div class="d"><b>16.09</b>Закрытый эфир</div>
+          <div class="d"><b>21.09</b>Регистрация на открытый эфир</div>
+          <div class="d"><b>30.09</b>Открытый эфир</div>
+          <div class="d"><b>30.09–05.10</b>Дожим</div>
+          <div class="d"><b>05.10</b>Старт курса</div>
+          <div class="d"><b>+1 неделя</b>Повторы открытого</div>
+        </div>
+        <h3 class="sec">Воронка</h3>
+        <p>Этап 1: анкета → ленд 3–4 экрана → бот + email → продажа без эфира. Кто не купил → эфир как дожим. Лучшие условия один раз.</p>
+        <p>Этап 2: трафик → предзапись → прогрев → закрытый 16.09.</p>
+        <p>Этап 3: регистрация на открытый → ленд веба → 30.09 → повторы неделю.</p>
+
+        <h3 class="sec">Анкета GetCourse</h3>
+        <p>Рабочий текст. Тот же в <code>АНКЕТА_ВОПРОСЫ.md</code> и <a href="АНКЕТА_GETCOURSE.html">АНКЕТА_GETCOURSE.html</a>.</p>
+        <p class="hint">Подарок в этом тексте: 7 дней из платного курса осознанности. Это не глава 9. Телефона, возраста и «где читаете» в этой версии нет. Сноски про врача в тексте нет: закрыть на ленде или добавить в конец GetCourse.</p>
+        <p><button class="btn" type="button" id="copyQs">Скопировать список</button></p>
+
+        <div class="quote">
+          Спасибо, что откликнулись на мою просьбу и решили поучаствовать в опросе. Он займёт у вас не более 3–5 минут. В знак благодарности за уделённое время я хочу подарить вам 7-дневный доступ к уроку и практике из моего платного курса по осознанности. На нём вы узнаете, что такое эмоции, какие они бывают и из каких частей состоят. А практика поможет вам лучше понимать, какие эмоции вы испытываете в ответ на разные события.
+        </div>
+
+        <div class="q"><div class="num">1 · обязательно</div><h3>Как вас зовут?</h3></div>
+        <div class="q"><div class="num">2 · обязательно</div><h3>Ваш email</h3></div>
+        <div class="q"><div class="num">3</div><h3>Чем вы занимаетесь, какой у вас род деятельности?</h3></div>
+        <div class="q"><div class="num">4 · шкала 0–10</div><h3>Как бы вы оценили способность управлять своими эмоциями в целом по шкале от 0 до 10, где 0 — вообще не умею ими управлять, 10 — делаю это всегда легко</h3></div>
+        <div class="q"><div class="num">5 · да / нет</div><h3>Вы всегда понимаете, какую эмоцию испытываете?</h3></div>
+        <div class="q">
+          <div class="num">6 · несколько вариантов</div>
+          <h3>Выберите эмоции, с которыми у вас чаще всего возникают проблемы</h3>
+          <p class="hint">Можете выбрать несколько вариантов.</p>
+          <ul>
+            <li>страх / тревога</li>
+            <li>гнев / обида / злость / раздражение</li>
+            <li>отвращение</li>
+            <li>грусть / печаль</li>
+            <li>стыд</li>
+            <li>вина</li>
+            <li>ревность</li>
+            <li>зависть</li>
+            <li>любовь / интерес</li>
+            <li>счастье / удовлетворённость / удовольствие</li>
+          </ul>
+        </div>
+        <div class="q"><div class="num">7 · развёрнутый</div><h3>С какими проблемами вы сталкиваетесь из-за этих эмоций?</h3></div>
+        <div class="q"><div class="num">8 · развёрнутый</div><h3>Что вы делаете на эмоциях, а потом больше всего об этом жалеете?</h3></div>
+        <div class="q"><div class="num">9 · развёрнутый</div><h3>В каких ситуациях вам особенно не хватает способности управлять своими эмоциями?</h3></div>
+        <div class="q"><div class="num">10 · развёрнутый</div><h3>Что в вашей жизни изменилось бы, если бы сильные эмоции перестали управлять вашим поведением?</h3></div>
+        <div class="q"><div class="num">11 · развёрнутый</div><h3>Что вы больше всего хотите научиться делать иначе в момент сильной эмоции?</h3></div>
+        <div class="q"><div class="num">12 · развёрнутый</div><h3>Каких эмоций вам не хватает в жизни?</h3></div>
+        <div class="q"><div class="num">13 · развёрнутый</div><h3>Что вы начали бы делать, если бы ваши эмоции всегда вам помогали и никогда не мешали?</h3></div>
+        <div class="q"><div class="num">14 · развёрнутый</div><h3>Каких личных целей вам мешают достичь ваши эмоции?</h3></div>
+        <div class="q"><div class="num">15 · развёрнутый</div><h3>Что вам сейчас сильнее всего мешает управлять своими эмоциями?</h3></div>
+        <div class="q"><div class="num">16 · развёрнутый</div><h3>Есть ли что-то ещё, что бы вам хотелось рассказать про свои эмоции, а мы не спросили? Если есть, напишите это здесь</h3></div>
+        <div class="quote">Спасибо!</div>
+
+        <h3 class="sec">Зачем эти вопросы</h3>
+        <table>
+          <thead><tr><th>№</th><th>Что спрашиваем</th><th>Куда ответ</th></tr></thead>
+          <tbody>
+            <tr><td>1–2</td><td>Имя, email</td><td>Контакт</td></tr>
+            <tr><td>3</td><td>Род деятельности</td><td>Сегменты и время на практики</td></tr>
+            <tr><td>4</td><td>Самооценка 0–10</td><td>Старт. Не путать со шкалой 0–100 из главы и не с термометром 0–10 другого курса</td></tr>
+            <tr><td>5</td><td>Понимает ли, какую эмоцию испытывает</td><td>Туман «не знаю, что чувствую» — нормальный старт в главе</td></tr>
+            <tr><td>6</td><td>С какими эмоциями проблемы, несколько вариантов</td><td>Десять чувств из словаря главы, рядом бытовые слова. Любовь и счастье в списке есть. Если человек выбирает только «проблемы», плюс ловит вопрос 12</td></tr>
+            <tr><td>7</td><td>Какие проблемы из-за этих эмоций</td><td>Язык для ленда</td></tr>
+            <tr><td>8</td><td>Что делает, потом жалеет</td><td>Вспышка, давление, избегание — попытки регуляции в главе</td></tr>
+            <tr><td>9</td><td>Ситуации, где не хватает навыка</td><td>Сцены для эфира</td></tr>
+            <tr><td>10</td><td>Что изменилось бы, если сильные эмоции перестали рулить поведением</td><td>Картина жизни после. Цель модуля: меньше страдать, не убить чувства</td></tr>
+            <tr><td>11</td><td>Что хочет делать иначе в пике</td><td>Оффер эфира и курса</td></tr>
+            <tr><td>12</td><td>Каких эмоций не хватает</td><td>Вторая сторона словаря: не только то, что мешает</td></tr>
+            <tr><td>13</td><td>Что начал бы делать, если бы эмоции помогали</td><td>Цели и «жизнь, которую стоит жить»</td></tr>
+            <tr><td>14</td><td>Каким целям мешают</td><td>Связка эмоция → цель</td></tr>
+            <tr><td>15</td><td>Что мешает управлять сейчас</td><td>Возражения. В главе нет навыка ≠ нет мотивации</td></tr>
+            <tr><td>16</td><td>Что не спросили</td><td>Свободное поле</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Кризис эта анкета не отсечёт. Телефон и возраст в этой версии не спрашиваем.</p>
+
+        <div class="copybox" id="qsPlain">Спасибо, что откликнулись на мою просьбу и решили поучаствовать в опросе.
+
+Он займёт у вас не более 3–5 минут.
+
+В знак благодарности за уделённое время я хочу подарить вам 7-дневный доступ к уроку и практике из моего платного курса по осознанности.
+
+На нём вы узнаете, что такое эмоции, какие они бывают и из каких частей состоят.
+
+А практика поможет вам лучше понимать, какие эмоции вы испытываете в ответ на разные события.
+
+1. Как вас зовут?
+2. Ваш email
+3. Чем вы занимаетесь, какой у вас род деятельности?
+4. Как бы вы оценили способность управлять своими эмоциями в целом по шкале от 0 до 10, где 0 — вообще не умею ими управлять, 10 — делаю это всегда легко
+5. Вы всегда понимаете, какую эмоцию испытываете?
+6. Выберите эмоции, с которыми у вас чаще всего возникают проблемы (можете выбрать несколько вариантов)
+   страх / тревога
+   гнев / обида / злость / раздражение
+   отвращение
+   грусть / печаль
+   стыд
+   вина
+   ревность
+   зависть
+   любовь / интерес
+   счастье / удовлетворённость / удовольствие
+7. С какими проблемами вы сталкиваетесь из-за этих эмоций?
+8. Что вы делаете на эмоциях, а потом больше всего об этом жалеете?
+9. В каких ситуациях вам особенно не хватает способности управлять своими эмоциями?
+10. Что в вашей жизни изменилось бы, если бы сильные эмоции перестали управлять вашим поведением?
+11. Что вы больше всего хотите научиться делать иначе в момент сильной эмоции?
+12. Каких эмоций вам не хватает в жизни?
+13. Что вы начали бы делать, если бы ваши эмоции всегда вам помогали и никогда не мешали?
+14. Каких личных целей вам мешают достичь ваши эмоции?
+15. Что вам сейчас сильнее всего мешает управлять своими эмоциями?
+16. Есть ли что-то ещё, что бы вам хотелось рассказать про свои эмоции, а мы не спросили? Если есть, напишите это здесь.
+
+Спасибо!</div>
+            </section>
+
+      <section class="panel p10">
+        <h2>Архив слотов</h2>
+        <p class="lead">Не читать первым. Рабочий слой: вкладка 0 (что это) и вкладка 8 (результат, названия, офферы, смыслы). Здесь старые длинные карточки под сборку слайдов: reframe, схема, барьеры. Что нельзя достать из главы 9 — помечено красным и не заполнено. «Градус» как имя продукта сюда не возвращать.</p>
+
+        <h3 class="sec">Чем отличаются</h3>
+        <table>
+          <thead><tr><th>Концепт</th><th>Механизм из книги</th><th>Кому попадёт первым</th><th>Сила</th></tr></thead>
+          <tbody>
+            <tr><td><b>1 · Термостат</b></td><td>Интенсивность: повысить или понизить, когда нужно</td><td>Цели, дела, «эмоция мешает идти»</td><td>Ближе всех к определению Линехан. Самый безопасный</td></tr>
+            <tr><td><b>2 · Первое чувство</b></td><td>Первичная и вторичная эмоция</td><td>«Срываюсь, потом вина»</td><td>Самый сильный интеллектуальный сдвиг</td></tr>
+            <tr><td><b>3 · Громче, чтобы услышали</b></td><td>Инвалидирующая среда и самовалидация</td><td>«Мне говорят сменить отношение»</td><td>Самый эмоциональный. И самый рискованный</td></tr>
+            <tr><td><b>4 · Порог</b></td><td>Уязвимость и последняя капля</td><td>«Взрываюсь из-за ерунды»</td><td>Самый низкий порог входа</td></tr>
+          </tbody>
+        </table>
+
+        <article class="conc">
+          <h3>Концепт 1 · Термостат</h3>
+          <p class="princ">Организующий принцип: не «стать спокойной», а влиять на градус</p>
+
+          <div class="slot">
+            <b>Reframe</b>
+            <p><b>Думают:</b> задача — перестать так сильно чувствовать. Спокойные люди — эталон, я до него не дотягиваю.</p>
+            <p><b>На самом деле:</b> книга сравнивает регуляцию с регулированием температуры. Смысл в том, чтобы повышать или понижать интенсивность, когда это нужно, как делают комнату теплее или прохладнее. Регуляция нужна только для тех эмоций, которые мешают вашим целям. Критерии прямо из главы: действие по эмоции в ваших интересах, выражение приближает к цели, влияние на других вам на пользу, сообщение стоит услышать.</p>
+            <p><b>Барьер входа:</b> не нужно становиться менее чувствительной. Часть людей всегда будет чувствовать сильнее — это биология. Нужен градусник и ручка, не другой характер.</p>
+          </div>
+
+          <div class="slot">
+            <b>Сдвиг способа</b>
+            <p>Сломалось: сила воли и «взять себя в руки». Книга прямо — эмоцию нельзя изменить напрямую, силой воли остановить переживание не получается, даже когда отчаянно этого хочешь.</p>
+            <p>Приходит: влияние через детали системы. Поменял одну составляющую — может сдвинуться вся реакция.</p>
+            <p><span class="none">Окно «почему сейчас» — нет в книге.</span> Из воронки честно только одно: следующий модуль после майского.</p>
+          </div>
+
+          <div class="slot">
+            <b>Схема пути</b>
+            <ol class="steps">
+              <li><b>Назвать.</b> Из тумана в слово. Знание — сила, это заголовок раздела книги</li>
+              <li><b>Поставить градус.</b> 0–100 до и после. Без шкалы не видно, работает ли навык</li>
+              <li><b>Проверить факты.</b> «Он ненавидит» или «он раздражён»</li>
+              <li><b>Выбрать ветку.</b> Противоположное действие или решение проблемы</li>
+              <li><b>Держать порог.</b> ЗАБОТА каждый день, чтобы градус не подскакивал с нуля</li>
+            </ol>
+            <p class="hint"><b>Где сольёшься сам:</b> шкала кажется формальностью, человек её пропускает — и потом не может отличить «навык не работает» от «стало с 90 до 60». Второй провал: делает противоположное действие пять секунд вместо «достаточно долго».</p>
+          </div>
+
+          <div class="slot">
+            <b>Сегменты · кто сейчас</b>
+            <table>
+              <tbody>
+                <tr><td>Не просит повышение</td><td>Знает умом, что не опасно. Спросить страшно</td></tr>
+                <tr><td>Откладывает важное</td><td>Побуждение избегания вместо шага к цели</td></tr>
+                <tr><td>Злость перед делом</td><td>Пробка перед экзаменом: эмоция по фактам, но вредит цели</td></tr>
+                <tr><td>Туман</td><td>Не может назвать, значит не может и менять</td></tr>
+                <tr><td>Всё или ничего</td><td>Либо ноль эмоций, либо накрыло. Середины нет</td></tr>
+              </tbody>
+            </table>
+            <p class="hint"><span class="none">«Что изменилось в жизни» — нет в книге.</span> Историй учениц Наташи нет, в главе только учебные ситуации. На эфир брать разбор ситуации, не кейс.</p>
+          </div>
+
+          <div class="slot">
+            <b>Два барьера → два компонента</b>
+            <p><b>Барьер 1.</b> Не знаю, какую деталь крутить → уроки по деталям системы и развилке.</p>
+            <p><b>Барьер 2.</b> В моменте, когда эмоция уже есть, ничего не вспоминается → короткие голосовые под конкретную эмоцию, слушать где угодно.</p>
+            <p><b>Имя механизма:</b> «Градус». Не «курс по эмоциональной регуляции».</p>
+          </div>
+
+          <div class="slot">
+            <b>Название события</b>
+            <p>Тип: закрытый эфир для тех, кто в списке. Результат: одна ситуация → две эмоции, человек уходит с развилкой. Эксклюзив: лучшие условия один раз.</p>
+            <p><b>На ленд и в бот:</b> Закрытый эфир: почему вы боретесь не с той эмоцией. Условия только для этого списка.</p>
+          </div>
+
+          <div class="slot">
+            <b>Вывеска · подарок · главный смысл</b>
+            <p>Вывеска: «Как перестать глушить эмоции и не срываться». Подарок: практика «Зачем вам эта эмоция». Смысл на ленд: влиять можно на градус, не на характер.</p>
+          </div>
+
+          <div class="slot">
+            <b>Бронь</b>
+            <p><span class="none">Нет в книге.</span> Сумму, возврат и лимит мест даёт только Наташа.</p>
+          </div>
+        </article>
+
+        <article class="conc">
+          <h3>Концепт 2 · Первое чувство</h3>
+          <p class="princ">Организующий принцип: страдание раздувает вторая эмоция, не первая</p>
+
+          <div class="slot">
+            <b>Reframe</b>
+            <p><b>Думают:</b> я слишком много чувствую. Надо уменьшить громкость всего.</p>
+            <p><b>На самом деле:</b> сильный дистресс чаще результат вторичных реакций на первичную эмоцию. Первичные обычно адаптивны и соответствуют ситуации. Гнев часто вторичен к страху. Книга описывает механизм жёстко: годами подавляя первичные эмоции, человек автоматически перепрыгивает через них и вырабатывает привычку сразу выдавать вторичную. А если первичную не назвать, её нельзя изменить.</p>
+            <p><b>Барьер входа:</b> не нужно разбирать всю жизнь. Нужно поймать, что было за полсекунды до злости.</p>
+          </div>
+
+          <div class="slot">
+            <b>Сдвиг способа</b>
+            <p>Сломалось: работать с тем чувством, которое видно. Человек борется с гневом, а под ним страх — гнев возвращается.</p>
+            <p>Приходит: сначала слой. Книга: прожить первичную безоценочно — и способность запускать вторичные угасает. Это описано как вариант экспозиции.</p>
+            <p><span class="none">Окно — нет в книге.</span></p>
+          </div>
+
+          <div class="slot">
+            <b>Схема пути</b>
+            <ol class="steps">
+              <li><b>Заметить второе.</b> Стыд за страх, злость на себя за слёзы, подавленность из-за подавленности</li>
+              <li><b>Найти первое.</b> Что было до. Назвать угрозу, на которую реагирую</li>
+              <li><b>Побыть с первым.</b> Наблюдать, описать, не оценивать и не давить</li>
+              <li><b>Проверить факты первого.</b> Работать с исходной эмоцией, не с надстройкой</li>
+              <li><b>Выбрать ветку.</b> Противоположное действие или решение проблемы</li>
+            </ol>
+            <p class="hint"><b>Где сольёшься сам:</b> вторичная приходит так быстро, что первичной человек не замечает — и уверен, что «там ничего нет». Второй провал: книга сама предупреждает, что первичная и вторичная перегружают тех, кто впервые в модуле. Значит на эфире это один пример, не лекция.</p>
+          </div>
+
+          <div class="slot">
+            <b>Сегменты · кто сейчас</b>
+            <table>
+              <tbody>
+                <tr><td>Срываюсь, потом вина</td><td>Гнев сверху, страх снизу</td></tr>
+                <tr><td>Стыдно за сам страх</td><td>Вторичный стыд на нормальную реакцию</td></tr>
+                <tr><td>Злюсь на свои слёзы</td><td>Эмоция на эмоцию, круг</td></tr>
+                <tr><td>Годами давлю</td><td>Перепрыгивает через первичную, привычка</td></tr>
+                <tr><td>Не понимаю, откуда накрыло</td><td>Побуждающее событие внутреннее: мысль или предыдущее чувство</td></tr>
+              </tbody>
+            </table>
+            <p class="hint"><span class="none">Результатов учениц нет.</span></p>
+          </div>
+
+          <div class="slot">
+            <b>Два барьера → два компонента</b>
+            <p><b>Барьер 1.</b> Не различаю слои → уроки по первичной и вторичной, словарь эмоций.</p>
+            <p><b>Барьер 2.</b> Не успеваю заметить в моменте → разбор своих ситуаций по форме: событие, мысль, тело, побуждение, действие. В книге это домашняя работа на бланках, у нас — короткий разбор своими словами.</p>
+            <p><b>Имя механизма:</b> «Слой». Или «Первое чувство».</p>
+          </div>
+
+          <div class="slot">
+            <b>Название события</b>
+            <p>Тип: закрытый эфир. Результат: что вы чувствуете за секунду до того, как разозлились. Эксклюзив: лучшие условия один раз.</p>
+            <p><b>На ленд и в бот:</b> Закрытый эфир: почему вы боретесь не с той эмоцией. Разбираем одну ситуацию до первого чувства.</p>
+          </div>
+
+          <div class="slot">
+            <b>Вывеска · подарок · главный смысл</b>
+            <p>Вывеска курса та же. Вход этого концепта — «вы боретесь не с той эмоцией». Подарок: практика «Зачем вам эта эмоция».</p>
+          </div>
+
+          <div class="slot">
+            <b>Бронь</b>
+            <p><span class="none">Нет в книге.</span></p>
+          </div>
+        </article>
+
+        <article class="conc">
+          <h3>Концепт 3 · Громче, чтобы услышали</h3>
+          <p class="princ">Организующий принцип: инвалидирующая среда, где эмоция становится единственным доказательством</p>
+
+          <div class="slot">
+            <b>Reframe</b>
+            <p><b>Думают:</b> я истеричка. Раздуваю из ничего, порчу людям вечер, потом стыдно.</p>
+            <p><b>На самом деле:</b> в главе есть отдельный механизм. Когда чувства человека обесценивают, ему трудно принимать свои проблемы всерьёз. Один из способов противодействовать — усилить интенсивность эмоции. Дальше замыкается: если в следующий раз отреагировать спокойно, выйдет, что окружающие были правы и чувство было неуместным. Если ситуация окажется не такой плохой, приходит стыд за то, что причинил столько неприятностей. Так функция эмоции постепенно сводится к самовалидации — доказать себе, что тебе правда плохо.</p>
+            <p><b>Барьер входа:</b> учиться влиять на эмоции — не признание, что стыдившие были правы. Книга ставит самовалидацию условием обучения, а не бонусом. Иначе навык не встанет.</p>
+            <p class="hint">Осторожно. Книга прямо предупреждает: доносить эту идею людям с высокой интенсивностью трудно, потому что сама идея звучит инвалидирующе. Нужны забота и терпение. На ленде это значит: без «вы сами себя накручиваете».</p>
+          </div>
+
+          <div class="slot">
+            <b>Сдвиг способа</b>
+            <p>Сломалось: совет «просто смени отношение». Из-за него люди отказываются учиться влиять — иначе получится, что их обесценивали справедливо.</p>
+            <p>Приходит: сначала признать, что чувство есть, потом навык. Порядок нельзя переставить.</p>
+            <p><span class="none">Окно — нет в книге.</span></p>
+          </div>
+
+          <div class="slot">
+            <b>Схема пути</b>
+            <ol class="steps">
+              <li><b>Признать.</b> Чувство есть. Это не спор о том, права я или нет</li>
+              <li><b>Назвать.</b> Своё слово вместо чужой оценки «ты преувеличиваешь»</li>
+              <li><b>Проверить факты.</b> Отдельно от вопроса «имею ли я право»</li>
+              <li><b>Выразить или менять.</b> Если по фактам и эффективно — выразить. Если нет — противоположное действие</li>
+              <li><b>Не громче.</b> Перестать доказывать интенсивностью, потому что появился другой способ быть услышанной</li>
+            </ol>
+            <p class="hint"><b>Где сольёшься сам:</b> человек слышит «учись контролировать» как «ты была неправа» и закрывается. Второй провал: эмоции трактуются как факты. Книга даёт формулу — «если я чувствую правоту, значит это правильно». Пока так, проверка фактов воспринимается как нападение.</p>
+          </div>
+
+          <div class="slot">
+            <b>Сегменты · кто сейчас</b>
+            <table>
+              <tbody>
+                <tr><td>Мне говорят сменить отношение</td><td>Живёт среди тех, у кого «всё под контролем»</td></tr>
+                <tr><td>Стыдно, сколько шума наделала</td><td>Стыд после вспышки, круг усиления</td></tr>
+                <tr><td>Если не буду резко, никто не услышит</td><td>Эмоция как единственное доказательство</td></tr>
+                <tr><td>Чувствую — значит так и есть</td><td>Эмоция как факт</td></tr>
+                <tr><td>Боюсь стать удобной</td><td>Регуляция читается как «замолчи»</td></tr>
+              </tbody>
+            </table>
+            <p class="hint"><span class="none">Историй нет.</span> И здесь особенно нельзя выдумывать — тема про обесценивание.</p>
+          </div>
+
+          <div class="slot">
+            <b>Два барьера → два компонента</b>
+            <p><b>Барьер 1.</b> Не отличаю «признать чувство» от «согласиться, что была неправа» → уроки, где самовалидация идёт первым шагом.</p>
+            <p><b>Барьер 2.</b> Дома некому валидировать → голосовые, где сначала звучит признание чувства, потом навык. Формат из стикеров, механизм из книги.</p>
+            <p><b>Имя механизма:</b> «Сначала признать».</p>
+          </div>
+
+          <div class="slot">
+            <b>Название события</b>
+            <p>Тип: закрытый эфир. Результат: почему «просто успокойся» не работает и что ставить первым. Эксклюзив: лучшие условия один раз.</p>
+            <p><b>На прогрев, не на H1 ленда:</b> Почему «просто смени отношение» не работает — и что ставить первым.</p>
+          </div>
+
+          <div class="slot">
+            <b>Вывеска · подарок · главный смысл</b>
+            <p>Вывеска курса та же. Этот вход — в сторис и бот, не в H1. Подарок тот же: «Зачем вам эта эмоция». Смысл: сначала признать, потом влиять.</p>
+          </div>
+
+          <div class="slot">
+            <b>Бронь</b>
+            <p><span class="none">Нет в книге.</span></p>
+          </div>
+        </article>
+
+        <article class="conc">
+          <h3>Концепт 4 · Порог</h3>
+          <p class="princ">Организующий принцип: уязвимость тела решает, взорвётесь ли из-за ерунды</p>
+
+          <div class="slot">
+            <b>Reframe</b>
+            <p><b>Думают:</b> у меня плохой характер, я не умею держать себя. Другие же справляются.</p>
+            <p><b>На самом деле:</b> в разбалансированном теле эмоциональная уязвимость возрастает. Вспышка «из-за ерунды» — последняя капля на фоне недосыпа, голода, болезни, алкоголя и тяжёлого дня. Отсутствие навыка существенно отличается от отсутствия мотивации. Сравнение книги: научиться регулировать эмоции — как научиться играть в гольф. Научиться может каждый, кому-то это даётся намного проще.</p>
+            <p><b>Барьер входа:</b> начинать не с «работы над собой», а с порога. Сон, еда, одно приятное дело в день, одно «я могу».</p>
+          </div>
+
+          <div class="slot">
+            <b>Сдвиг способа</b>
+            <p>Сломалось: пытаться собраться в моменте вспышки. Книга: последействие эмоции сужает внимание и повышает чувствительность к угрозе, эмоции поддерживают сами себя. В точке срыва сложный навык недоступен.</p>
+            <p>Приходит: работа до момента. Копилка приятного как стена между собой и «морем дисконтроля». Репетиция трудной ситуации заранее.</p>
+            <p><span class="none">Окно — нет в книге.</span></p>
+          </div>
+
+          <div class="slot">
+            <b>Схема пути</b>
+            <ol class="steps">
+              <li><b>Поднять порог.</b> ЗАБОТА: здоровье, активность, умеренность, отдых 7–9 часов, тарелка 3–4 раза</li>
+              <li><b>Копить плюс.</b> Одно приятное в день и не травить его мыслью «это кончится»</li>
+              <li><b>Одно «я могу».</b> Трудно, но выполнимо. Не «невозможно», иначе будет провал и меньше уверенности</li>
+              <li><b>Отрепетировать.</b> Описать трудную ситуацию, выбрать навык, проиграть в уме, расслабиться</li>
+              <li><b>Знать свою точку срыва.</b> Не героизм в пике. Проверка: не могу или не хочу, потому что трудно</li>
+            </ol>
+            <p class="hint"><b>Где сольёшься сам:</b> регулярность требует самоорганизации, а её у эмоционально перегруженного человека обычно нет — книга это отдельно отмечает про упражнения. Второй провал: берут «невозможную» планку, получают провал и вывод «мне это не подходит».</p>
+          </div>
+
+          <div class="slot">
+            <b>Сегменты · кто сейчас</b>
+            <table>
+              <tbody>
+                <tr><td>Последняя капля</td><td>Вспышка после бессонной или голодной</td></tr>
+                <tr><td>Тушу пожары</td><td>Приятного почти нет, живёт в режиме аварии</td></tr>
+                <tr><td>Избегаю боли</td><td>Вместе с болью вычеркнула и радость</td></tr>
+                <tr><td>Ничего не помогает</td><td>Навык пробовала в пике, вывод «я безнадёжная»</td></tr>
+                <tr><td>Начинаю и бросаю</td><td>Планка сразу невыполнимая</td></tr>
+                <tr><td>Ночные катастрофы</td><td>Полуночные мысли, утром стыдно за них</td></tr>
+              </tbody>
+            </table>
+            <p class="hint"><span class="none">Историй нет.</span></p>
+          </div>
+
+          <div class="slot">
+            <b>Два барьера → два компонента</b>
+            <p><b>Барьер 1.</b> Не знаю, что именно поднимает порог → уроки по ЗАБОТА, мастерству и «заранее».</p>
+            <p><b>Барьер 2.</b> Знаю, но не делаю регулярно → ежедневный минимум с отметкой. В книге это рабочие листы для записи практики АВС и ЗАБОТА по дням недели.</p>
+            <p><b>Имя механизма:</b> «Порог».</p>
+          </div>
+
+          <div class="slot">
+            <b>Название события</b>
+            <p>Тип: открытый эфир. Результат: почему вы взрываетесь из-за ерунды. Эксклюзив слабее, чем у закрытого — не натягивать.</p>
+            <p><b>На ленд открытого:</b> Почему вы взрываетесь «из-за ерунды». За вспышкой часто стоит не характер, а порог.</p>
+          </div>
+
+          <div class="slot">
+            <b>Вывеска · подарок · главный смысл</b>
+            <p>Вывеска курса та же. Вход этого концепта — «не характер, а порог». Подарок тот же.</p>
+          </div>
+
+          <div class="slot">
+            <b>Бронь</b>
+            <p><span class="none">Нет в книге.</span></p>
+          </div>
+        </article>
+
+        <h3 class="sec">Куда какой</h3>
+        <table>
+          <thead><tr><th>Место</th><th>Концепт</th><th>Почему</th></tr></thead>
+          <tbody>
+            <tr><td>Ленд предзаписи</td><td>1 · Термостат</td><td>Совпадает со стикером про цели, не обещает лишнего, легко проверить анкетой</td></tr>
+            <tr><td>Закрытый эфир 16.09</td><td>2 · Первое чувство</td><td>Тёплая база выдержит сложный сдвиг. Он и даёт ощущение «я такого не слышала»</td></tr>
+            <tr><td>Прогрев и сторис</td><td>3 · Громче, чтобы услышали</td><td>Самый живой язык. В прогреве можно вести аккуратно, на ленде рискованно</td></tr>
+            <tr><td>Открытый эфир 30.09</td><td>4 · Порог</td><td>Холодный трафик заходит через быт, а не через теорию слоёв</td></tr>
+          </tbody>
+        </table>
+        <div class="callout">Не смешивать заголовки двух концептов на одной странице. Вывеска курса одна для всех четырёх, меняется только вход.</div>
+
+        <h3 class="sec">Чего ещё нет</h3>
+        <table>
+          <thead><tr><th>Слот</th><th>Откуда возьмётся</th></tr></thead>
+          <tbody>
+            <tr><td>Рыночное окно «почему сейчас»</td><td>Не из книги. Либо решение Наташи, либо не делать этот слайд</td></tr>
+            <tr><td>Кейсы «было → стало»</td><td>3–5 живых историй Наташи под сегменты</td></tr>
+            <tr><td>Бронь: сумма, возврат, места</td><td>Наташа</td></tr>
+            <tr><td>Цены и тарифы</td><td>Наташа</td></tr>
+            <tr><td>Срок и число уроков</td><td>Наташа. В книге объём тренинга, не расписание</td></tr>
+            <tr><td>Финальное имя курса</td><td>Рабочее уже есть во вкладке 8. После анкеты только проверить, не режет ли «глушить и не срываться» тёплую базу</td></tr>
+            <tr><td>Проверка болей цифрами</td><td>Ответы GetCourse с 01.09</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel p11">
+        <h2>Примеры и опоры</h2>
+        <p class="lead">Всё, что в главе уже сформулировано как история, метафора или исследование. Это материал для эфира и уроков: он не требует придумывания, только пересказа своим голосом.</p>
+
+        <h3 class="sec">Истории, которые держат целый урок</h3>
+        <div class="grid2">
+          <article class="card">
+            <h3>Спущенное колесо</h3>
+            <p>У вас спустило колесо на трассе. Вы стоите у машины и надеетесь, что кто-то остановится. Мимо едет ваш лучший друг, один в машине. Вы машете, зовёте по имени. Он смотрит на вас, прибавляет скорость и проезжает мимо. Что вы чувствуете?</p>
+            <p>Обычно называют злость, боль, огорчение. И мысли: «какая мерзость», «друзья всегда останавливаются», «он меня всегда ненавидел».</p>
+            <p>Продолжение: позже вы узнаёте, что в машине был ребёнок, которого вы не увидели, ребёнок был серьёзно болен, и друг спешил в больницу, чтобы спасти ему жизнь. Что вы чувствуете теперь?</p>
+            <div class="callout">Единственное, что на самом деле изменилось, — это интерпретация события.</div>
+          </article>
+          <article class="card">
+            <h3>Змея в офисе</h3>
+            <p>Вы открываете дверь своего кабинета и видите под ногами ядовитую змею. Захлопываете дверь и боитесь открыть снова. Обоснован ли страх? Да.</p>
+            <p>Менеджер вызывает службу, змею забирают, в здании её больше нет. Вам не сказали. Вы подходите к двери и боитесь открыть. Обоснован ли страх сейчас?</p>
+            <p>Почти все отвечают «да» — потому что путают «объяснимо» и «обосновано фактами». Страх объясним незнанием. Но фактам он больше не соответствует.</p>
+            <p class="hint" style="margin-top:8px">Это ключевое различение всего второго блока. Реакция может быть полностью объяснимой и при этом не соответствовать фактам.</p>
+          </article>
+          <article class="card">
+            <h3>Туннели</h3>
+            <p>История самой Линехан. Она внезапно стала бояться водить машину в туннелях. Начала заезжать во все туннели, какие могла найти, убеждая себя, что обвалиться они не могут. Не сработало — потому что в Сиэтле бывают землетрясения и туннель действительно может обвалиться. Убеждая себя в безопасности, она избегала опасности, а не проходила через неё.</p>
+            <p>Тогда она спросила себя: в чём опасность? Представила, что туннель уже обвалился на неё, что она выпрыгивает из машины, надевает костюм супергероя, спешит на помощь другим и выбирается наружу. Страх упал с 80 до 30, но не до нуля.</p>
+            <p>Она снова спросила: в чём опасность? И увидела первичный страх — не обвал, а то, что окажется в ловушке, будет ужасная боль, огонь и никто не придёт. Дальше практиковала радикальное принятие боли и смерти. Через несколько повторений страх исчез полностью.</p>
+            <div class="callout">Для людей характерно неправильно понимать то, чего они на самом деле боятся.</div>
+          </article>
+          <article class="card">
+            <h3>Стакан воды</h3>
+            <p>Джо впервые поёт соло на университетском концерте. Он простудился и боится, что голос пропадёт на минуту в середине выступления.</p>
+            <p>Сначала он представляет, как успешно поёт. Помогает, но тревога остаётся. Тогда он представляет другое: выходит на сцену со стаканом воды, ставит его на пол перед собой. Поёт, голос внезапно пропадает, он наклоняется, поднимает стакан, делает глоток и продолжает петь.</p>
+            <p>В реальности вся тревога ушла, и он спел партию целиком.</p>
+            <p class="hint" style="margin-top:8px">Разница между «представь, что всё будет хорошо» и «представь, как ты справляешься с тем, чего боишься».</p>
+          </article>
+        </div>
+
+        <h3 class="sec">Метафоры главы</h3>
+        <table>
+          <thead><tr><th>Образ</th><th>Что объясняет</th></tr></thead>
+          <tbody>
+            <tr><td>Термостат</td><td>Регуляция — это возможность прибавить или убавить интенсивность, как сделать комнату теплее или прохладнее. Не выключить отопление</td></tr>
+            <tr><td>Всадник и конь</td><td>Нужно и отделиться от эмоции, и слиться с ней. Борешься — конь сопротивляется. Не осознаёшь себя — становишься придатком к коню</td></tr>
+            <tr><td>Волна и серфинг</td><td>Эмоция поднимается и опускается, большинство длится секунды–минуты. Задача — удержать равновесие, а не остановить волну</td></tr>
+            <tr><td>Стена из песка</td><td>Подавление не защищает: волны просочатся и оставят лужу, потому что не смогут вернуться в море</td></tr>
+            <tr><td>Одуванчики</td><td>Три года борьбы с тем, что не устраняется. Совет департамента: научитесь любить эти одуванчики</td></tr>
+            <tr><td>Копилка</td><td>Накопление хороших событий как монетки в копилку. Потеря переживается легче, когда есть чем её уравновесить</td></tr>
+            <tr><td>Суфлёр в будке</td><td>Побуждающее событие — подсказка, а не спусковой крючок. Событие не обязательно приведёт к реакции</td></tr>
+            <tr><td>Дорога среди бездорожья</td><td>Ценность даёт направление, но не имеет конечной точки</td></tr>
+            <tr><td>Море дисконтроля</td><td>При очень сильной эмоции рациональный разум не имеет шанса на существование</td></tr>
+            <tr><td>Последняя капля</td><td>Факторы уязвимости: то же событие в другой день не задело бы. Просят взаймы десятый раз, когда у тебя нет денег</td></tr>
+            <tr><td>Гольф</td><td>Регуляции эмоций может научиться каждый, но кому-то это даётся намного проще</td></tr>
+            <tr><td>Упал с лошади — садись снова</td><td>Пословица, на которой держится противоположное действие</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Примеры, которые объясняют интерпретацию</h3>
+        <ul>
+          <li><b>Джейкоб в торговом центре.</b> Вы видите лучшего друга на лестнице, машете, зовёте — он не реагирует. Можно прочесть как «он предпочитает приятеля». А можно учесть, что центр переполнен и он просто не услышал.</li>
+          <li><b>Сьюзен и Дженни.</b> Одно и то же событие: Мэри их не любит. Сьюзен злится, Дженни сильно боится. Сьюзен думает: «я много для неё сделала, она должна это ценить». Дженни думает: «если я не нравлюсь Мэри, то, возможно, я не понравлюсь никому».</li>
+          <li><b>Факт и интерпретация в одну строку.</b> Человек на улице смотрит на вас (факт) — он маньяк (интерпретация). Ночью скрипнула половица (факт) — кто-то в доме (интерпретация). Партнёр уделил кому-то внимание (факт) — у меня соперник (интерпретация). Пропустила мяч в игре (факт) — я неудачница (интерпретация). Не захотела делиться едой (факт) — я эгоистка (интерпретация).</li>
+          <li><b>Оружие.</b> Люди не боялись бы оружия, если бы не знали, что оно может убивать. Многие интерпретации основаны на приобретённых убеждениях, а не на восприятии.</li>
+        </ul>
+
+        <h3 class="sec">Примеры подкрепления и уязвимости</h3>
+        <ul>
+          <li><b>Джон и Кэти.</b> Джон просит Кэти перестать делать то, что его раздражает. Она не реагирует, пока он не разозлится. Если так каждый раз, Джону становится трудно оставаться спокойным: Кэти подкрепляет его гнев.</li>
+          <li><b>Джулия и Билли.</b> Мать предупреждает сына об опасности. Если она сделает вид, что ей не страшно, ребёнок решит, что ситуация не такая опасная. Иногда выражать эмоцию — правильно.</li>
+          <li><b>Второе отвержение.</b> Если нас отверг один человек, а затем так же поступил второй, во втором случае реакция будет значительно сильнее.</li>
+          <li><b>Боль плюс требование.</b> Если человек испытывает много физической боли или к нему предъявляют много несправедливых требований, он будет очень сильно злиться на любое дополнительное требование.</li>
+          <li><b>Далёкое прошлое.</b> Взрослый человек может реагировать на другого так, будто это его родитель — обычно если тот сделал или сказал что-то похожее. Что-то в настоящем вызывает реакцию из прошлого, даже когда мы не осознаём, что это напоминание.</li>
+        </ul>
+
+        <h3 class="sec">Исследования из главы</h3>
+        <p>Линехан отдельно пишет, что приводить данные исследований при обучении навыкам очень важно. В главе они собраны во врезках «Данные исследований». Это то, чем можно честно отвечать на «а это вообще работает».</p>
+        <table>
+          <thead><tr><th>Что показано</th><th>Зачем это в курсе</th></tr></thead>
+          <tbody>
+            <tr><td>Мозг меняется вследствие изменений поведения. Пациенты с большим депрессивным расстройством, получавшие антидепрессанты или проходившие интерперсональную терапию, имели схожие изменения в работе мозга через 12 недель</td><td>Ответ на «у меня это врождённое, тут только таблетки». Различия в мозге не обязательно постоянны</td></tr>
+            <tr><td>Точность в описании эмоции работает лучше, чем попытки управлять эмоцией общим способом. Тревогу скорее снижает наблюдение конкретной ситуации, а не общего впечатления</td><td>Обоснование дневника эмоций и словаря вместо «просто успокойся»</td></tr>
+            <tr><td>Люди, которые могут точно называть свои эмоции, испытывают меньше отрицательных эмоций</td><td>Прямое обоснование первого блока курса</td></tr>
+            <tr><td>Гипотеза лицевой обратной связи: испытуемые держали карандаш во рту так, чтобы улыбка была возможна или заблокирована. Те, у кого улыбка была возможна, сообщали о более положительных переживаниях</td><td>Почему выражение лица — рабочий инструмент, а не самообман</td></tr>
+            <tr><td>Если невербальное выражение не совпадает со словами, окружающие почти всегда доверяют невербальному</td><td>Механизм «меня понимают неправильно»</td></tr>
+            <tr><td>Попытки блокировать или подавлять эмоции только усугубляют положение. Избегание эмоциональных переживаний становится причиной многих тревожных расстройств</td><td>Почему курс не про контроль</td></tr>
+            <tr><td>Поведенческая активация показала такую же эффективность, как сочетание КПТ с медикаментами, на протяжении полугода</td><td>Обоснование противоположного действия при подавленности</td></tr>
+            <tr><td>Воображаемое действие активизирует в мозге те же области, что и реальное. Теннисисты улучшают игру, практикуясь в воображении; ассертивность растёт от мысленной практики</td><td>Обоснование навыка «справляться заранее»</td></tr>
+            <tr><td>Счастье определяется не абсолютной, а относительной ценностью события — по сравнению с окружающими и со своим прошлым опытом</td><td>Почему зависть неэффективна даже когда обоснована, и почему её общий результат — горечь</td></tr>
+            <tr><td>Дефицит сна вызывает множество эмоциональных проблем. Ограниченный приём пищи ведёт к неконтролируемому поглощению, озабоченности едой и повышенной эмоциональности</td><td>Обоснование блока ЗАБОТА</td></tr>
+            <tr><td>Простое отстаивание своих ценностей смягчает психологическую реакцию на стресс</td><td>Обоснование работы с ценностями, а не только с техниками</td></tr>
+            <tr><td>Выражения лица для базовых эмоций общие для разных культур. Лицо содержит больше нервов, чем любая другая часть тела</td><td>Универсальность эмоций как аргумент против «я неправильная»</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Научная рамка модуля</h3>
+        <p>Модель эмоциональной регуляции в ДПТ <b>трансдиагностична</b>: она основана на данных об эффективности ДПТ при целом ряде аффективных расстройств. Она совместима с моделью Унифицированного протокола Дэвида Барлоу, который решает ту же задачу — дефицит навыков эмоциональной регуляции — через пять механизмов:</p>
+        <ol>
+          <li>Повышение осознанности к эмоциям в настоящем моменте.</li>
+          <li>Повышение когнитивной гибкости.</li>
+          <li>Выявление и предотвращение паттернов эмоционального избегания и неадаптивного поведения при сильных эмоциях.</li>
+          <li>Повышение осознанности и толерантности к физическим ощущениям, сопровождающим эмоции.</li>
+          <li>Применение эмоционально-фокусированных методов экспозиции.</li>
+        </ol>
+        <p class="hint">Практически: курс не привязан к диагнозу, и это можно говорить прямо. Он про навык, которого не хватает при очень разных состояниях.</p>
+
+        <h3 class="sec">Формулировки, которые книга требует держать</h3>
+        <ul>
+          <li>Общая задача — <b>снижение эмоциональных страданий, а не избавление от эмоций</b>. Одни люди всегда будут переживать эмоции сильнее, чем другие.</li>
+          <li>Работаем с теми эмоциями, которые хочет менять <b>сам человек</b>, а не его окружение. Если он не хочет менять ни одну — над изменением не работаем. В книге для этого есть отдельный лист «за и против»: хочу ли я вообще управлять этой эмоцией.</li>
+          <li>Стыд по поводу своего психического расстройства в большинстве культур — <b>оправданная</b> эмоция. Книга не предлагает это оспорить: она предлагает валидировать несправедливость этого.</li>
+          <li>Навыкам эмоциональной регуляции можно обучаться только в контексте эмоциональной самовалидации. Без неё человек будет отвергать даже свои собственные попытки — потому что успех означал бы, что осуждавшие были правы.</li>
+          <li>Вначале регуляция требует много усилий. Со временем, при большом количестве практики, она становится легче и происходит автоматически.</li>
+        </ul>
+      </section>
+
+      <section class="panel p12">
+        <h2>Сверка с главой 9</h2>
+        <p class="lead">Карта источников этого хаба. Не содержание курса. Читать, когда нужно отделить книгу от склейки. Источник истины по главе: OCR <code>LINEHAN_GL9_EXTRACT.txt</code>, страницы 597–751. Анализ и этот хаб рядом не класть.</p>
+
+        <h3 class="sec">Как собирали хаб</h3>
+        <p>Не «глава 9 → страница». Цепочка такая:</p>
+        <ol class="steps">
+          <li>PDF главы 9 прогнали через OCR. Это сырой текст книги, с битыми переносами.</li>
+          <li>По OCR написали <code>LINEHAN_GL9_АНАЛИЗ.md</code>. Уже не книга: каркас главы плюс оффер, эталон Арины, мост в главу 10, стык с майским курсом.</li>
+          <li>Этот HTML собрали из анализа, не вторым проходом по OCR раздел за разделом. Сетку вкладок взяли с майского хаба осознанности.</li>
+          <li>В первую вкладку раньше дописали концепт со скрина Наташи: термометр Glenbrook. 21.08.2026 этот слой из рабочего текста снят. Остался в сверке и во вкладках 8, 10, 13.</li>
+          <li>Служебные пометки («дыра», «OCR», «не для учеников») вычистили. Хаб стал выглядеть как готовый материал без указания, откуда кусок.</li>
+        </ol>
+        <p class="hint">В одном файле три слоя, и они не подписаны: книга, продукт Наташи, чужие ленды.</p>
+
+        <h3 class="sec">Где глава 9, а где нет</h3>
+        <table>
+          <thead><tr><th>Вкладки</th><th>Откуда</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>Рабочий текст из главы 9. Старая склейка со шкалой Glenbrook снята из этой вкладки 21.08.2026</td></tr>
+            <tr><td>2–6 и 11</td><td>В основном глава 9. Цитаты, модель из 10 деталей, функции, факты, противоположное действие, тело и волна</td></tr>
+            <tr><td>7</td><td>Портрет из главы, но боли и сегменты уже упакованы как маркетинг</td></tr>
+            <tr><td>8 и 10</td><td>Полина, Арина, Кейко, Тимочко, Томас, Лана, Филимонова. Грамматика чужих лендов, смысл якобы из 9-й</td></tr>
+            <tr><td>9</td><td>Календарь + анкета из файла запуска, 21.08.2026. Подарок в тексте — из курса осознанности</td></tr>
+            <tr><td>1</td><td>Сводка из анализа, не сырой OCR</td></tr>
+            <tr><td>13</td><td>Не глава. Логика созвона про стрессоустойчивость, содержание из 9-й. Черновик: <code>ЧЕРНОВИК_ПРЕЗА_ЭМОЦИИ.md</code></td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Рабочий текст теперь вкладка 0. Склейка со шкалой Glenbrook из неё снята. Проверять оставшуюся склейку: вкладки 8, 10, 13.</p>
+
+        <h3 class="sec">Что добавили не из главы 9</h3>
+        <table>
+          <thead><tr><th>Кусок в хабе</th><th>Откуда на самом деле</th></tr></thead>
+          <tbody>
+            <tr><td>Картинка Glenbrook и лестница 0–10 с ACCEPTS / ТРУД / IMPROVE</td><td>Скрин Наташи. В главе 9 шкала другая: интенсивность 0–100, точка срыва личная, кризис-набор не учат</td></tr>
+            <tr><td>«состояние → цифра → зона → шаг» и «неделя — одно чувство, внутри шаги по силе»</td><td>Голосовые Наташи про другой продукт. Глава 9 идёт блоками навыков: понять, изменить, уязвимость, сильная волна</td></tr>
+            <tr><td>Подарок «7 дней курса осознанности» во вступлении анкеты</td><td>Не глава 9. Решение этого запуска</td></tr>
+            <tr><td>«Возьми себя в руки», «из-за ерунды», «боретесь не с той эмоцией»</td><td>Заголовки эфира и хаба, не формулировки Линехан. В главе: «просто изменить отношение к ситуации»</td></tr>
+            <tr><td>Четыре варианта «да, но»</td><td>В главе 9 они есть, но Линехан прямо пишет: это из главы 6, здесь только напоминание</td></tr>
+            <tr><td>Барлоу и Унифицированный протокол</td><td>Не выдумка. Линехан сама ссылается в начале 9-й. Это цитата главы, не чужой курс</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Где глава сжата, даже без чужого источника</h3>
+        <table>
+          <thead><tr><th>В хабе</th><th>В главе 9</th></tr></thead>
+          <tbody>
+            <tr><td>Словарь: десять эмоций, счастье есть, удивления и интереса нет</td><td>Два списка. Функции отдельных эмоций: десять, с счастьем. Универсальные: «около 10–12», в скобках двенадцать, там радость, удивление, интерес, без слова «счастье». Хаб взял первый список и выдаёт его как единственный</td></tr>
+            <tr><td>Первичная / вторичная стоит в костяке курса</td><td>Этот кусок дополнительный: на первом проходе перегружает, его дают тем, кто идёт второй раз</td></tr>
+            <tr><td>«Четыре клетки: по фактам × эффективно» нарисованы как лестница зон 8–10 / 6–7 / 4–5</td><td>Развилка в книге есть. Раскладки эмоций по цифрам Glenbrook нет</td></tr>
+            <tr><td>Гид противоположного действия как будто на все десять</td><td>Раздаточный материал 11: девять эмоций. Счастья в этом гиде нет</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Как проверять дальше</h3>
+        <ul>
+          <li>Вкладки 2–6: взять заголовок блока, найти тот же раздел в OCR, посчитать пункты. Если в книге 6 причин «почему трудно управлять», в хабе должно быть 6.</li>
+          <li>Вкладки 0, 8, 9, 10, 13 сначала пометить: «не глава». Сверять с книгой бессмысленно, пока не снять чужой слой. Вкладку 13 сверять с созвоном про устойчивость и с главой 9 по отдельности.</li>
+          <li>Анализ <code>LINEHAN_GL9_АНАЛИЗ.md</code> сам уже смешан. Им пользоваться как оглавлением, не как источником истины.</li>
+        </ul>
+        <p class="hint">Эта вкладка фиксирует сверку на 21.08.2026. Построчной правки остальных вкладок здесь ещё нет.</p>
+      </section>
+
+      <section class="panel p13">
+        <h2>Логика эфира · как на устойчивости, про эмоции</h2>
+        <p class="lead">Не копия выгрузки стрессоустойчивости. Ход мысли Наташи с того созвона, содержание из главы 9. Полная карта блоков: <code>ЧЕРНОВИК_ПРЕЗА_ЭМОЦИИ.md</code>. Glenbrook, СТОП, ТРУД, слон с дедлайном и 2 в 1 сюда не класть.</p>
+
+        <div class="callout">Бесплатный эфир учит подобрать ветку под <b>эту</b> эмоцию: какая она, первая ли, по фактам ли, эффективно ли по ней действовать. Курс учит эти шаги делать, когда уже накрыло. Стрессоустойчивость: одна фраза на границе, не окно кассы.</div>
+
+        <h3 class="sec">Инверсия, из-за которой курсы связаны</h3>
+        <div class="grid2">
+          <article class="card">
+            <h3>Устойчивость · созвон</h3>
+            <p>Инструменты неспецифические. Тревога, гнев, вина: без разницы. Берёшь по силе. Селектор на экране: цифра 0–10. Плоская мысль зрителя: одно дыхание на всё.</p>
+          </article>
+          <article class="card">
+            <h3>Эмоции · глава 9</h3>
+            <p>Шаги специфические. Стыд и вина разные. Страх и гнев путают. Половина противоположного действия не работает. Селектор: имя чувства, потом 0–100 внутри него. Плоская мысль: «возьми себя в руки».</p>
+          </article>
+        </div>
+        <p class="hint">Если склеить селекторы, зритель снова бьёт одним приёмом и злость, и стыд. Связь курсов: один выбирает по силе, другой по чувству. Не два названия одного набора.</p>
+
+        <h3 class="sec">Машины с созвона → этот продукт</h3>
+        <table>
+          <thead><tr><th>Как она мыслит</th><th>Здесь</th><th>Не переносить</th></tr></thead>
+          <tbody>
+            <tr><td>Нормальная температура. Крайности ломают жизнь</td><td>Меньше страдать, не стерилизовать. Давить → откат</td><td>Горячее = этот курс, холодное = осознанность как два тарифа вечера</td></tr>
+            <tr><td>Две картины, один человек. План с первой минуты</td><td>Вспылила + стыд. Давит / туман / «из-за ерунды»</td><td>Слон / дедлайн как второй продукт</td></tr>
+            <tr><td>Первая ошибка = неверный подбор, не «приём плохой»</td><td>Не та эмоция. Или не та ветка. Или лечишь характер, а срыв про тело</td><td>Пиковый приём на слабое чувство как герой teach</td></tr>
+            <tr><td>Селектор на экране. Ситуация из чата → «это, это»</td><td>Назвать, 0–100, четыре клетки. Протокол не разворачивать</td><td>Зоны 8–10 / 6–7 / 4–5 с ACCEPTS</td></tr>
+            <tr><td>Веб = карта. Курс = тренировка в пике. Шкала ≠ ступени курса</td><td>Один разбор → развилка. Курс: повторы. Неделя = чувство: её голосовой, не порядок книги</td><td>Курс как «пройти клетки 1–2–3»</td></tr>
+            <tr><td>Два окна, потому что два продукта</td><td>Один герой. Второй teach оставляем. Второе окно не выдумывать</td><td>Касса СУ или 2 в 1</td></tr>
+            <tr><td>«N инструментов» = формула названия</td><td>Считать из главы: 4 клетки, 6 вопросов, 10 в словаре функций, 9 в гиде</td><td>Десять техник Glenbrook</td></tr>
+            <tr><td>ДПТ не только для тяжеляка. Подарок «досидите» не нужен</td><td>Оставить. Буст оплаты: слот пустой</td><td>Кейсы Валентины / Алёны / Ольги</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Две картины</h3>
+        <div class="plates">
+          <div class="plate">
+            <b>Картина 1 · закрытый 16.09</b>
+            <p>Вспылила на того, кого не хочет потерять. Потом стыд или вина. Кажется, проблема в злости. Часто злость вторична к страху.</p>
+          </div>
+          <div class="plate">
+            <b>Картина 2 · открытый 30.09</b>
+            <p>Давит. Туман «не знаю, что чувствую». Слышала «просто смени отношение». Взрывается «из-за ерунды», когда тело уже на пороге.</p>
+          </div>
+        </div>
+        <p class="hint">На устойчивости обе картины сидели в одном эфире, потому что вечером продавались два курса. Здесь продукт один, дат две. Это тот же ход, разрезанный по календарю.</p>
+
+        <h3 class="sec">Первая ошибка · выбрать одну на вечер</h3>
+        <p>На созвоне про устойчивость названа целиком одна: приём не той интенсивности. Здесь три провала главы 9. На вебе не размножать в «ошибки №2 и №3», пока Наташа не назовёт.</p>
+        <ol class="steps">
+          <li><b>Не та эмоция.</b> Бьёшь злость, под ней страх. Или стыдишься того, что испугалась. Герой закрытого эфира.</li>
+          <li><b>Не та ветка.</b> Гасишь страх за ребёнка на дороге: чувство по фактам, нужна проблема. Или противоположное действие наполовину: пришла на вечеринку и стоит в углу.</li>
+          <li><b>Не тот слой.</b> Лечишь характер, а срыв «из-за ерунды» часто про сон, еду, болезнь. Герой открытого эфира.</li>
+        </ol>
+        <p class="hint">Не делать героем «взяла ТРУД на тройку». Это ошибка другого курса.</p>
+
+        <h3 class="sec">Селектор на экране</h3>
+        <p>До развилки: назвать своими словами и поставить 0–100. Туман «не знаю» — нормальный старт.</p>
+        <table>
+          <thead><tr><th></th><th>По фактам</th><th>Не по фактам</th></tr></thead>
+          <tbody>
+            <tr><td>Действовать по чувству эффективно</td><td>Решать проблему / выразить</td><td>Осознанность к текущей эмоции, принять последствия</td></tr>
+            <tr><td>Действовать по чувству вредит цели</td><td>Противоположное действие целиком и достаточно долго</td><td>Изменить мысли по фактам. Если знание не сдвинуло — противоположное действие</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Два независимых вопроса, четыре ответа, не три ветки. На вебе одна ситуация из чата → одна эмоция → один класс шага. Страх первым, если нет фактической опасности: в книге это самая простая эмоция для старта. Гнев сразу за страхом: их путают. Цифра 0–100 отвечает «насколько сильно», не «какой набор главы 10 брать». Выше личной точки срыва сложный навык этой главы не встаёт.</p>
+
+        <h3 class="sec">План с первой минуты</h3>
+        <ol class="steps">
+          <li>Боретесь не с той эмоцией.</li>
+          <li>Карта: назвать, факты, развилка.</li>
+          <li>Практика.</li>
+          <li>Почему взрываетесь «из-за ерунды».</li>
+          <li>Как тренировать, чтобы шаг вставал в пике.</li>
+        </ol>
+        <p class="hint">К плану возвращаемся. Кто зашёл позже, видит: вторая картина ещё будет.</p>
+
+        <h3 class="sec">Три пути сборки</h3>
+        <div class="grid3">
+          <article class="card">
+            <h3>A. Один вечер как СУ</h3>
+            <p>Оба teach в одном эфире. Касса один раз: курс эмоций. После продажи всё равно идём в порог, иначе обманули картину 2. Второе окно под другой курс нельзя.</p>
+          </article>
+          <article class="card">
+            <h3>B. Два вечера, как в календаре</h3>
+            <p>16.09: не та эмоция + селектор + касса. В плане обещать 30.09. 30.09: порог + реприза развилки + та же касса. Рекомендуемый: продукт один, даты уже стоят.</p>
+          </article>
+          <article class="card">
+            <h3>C. Два окна и второй продукт</h3>
+            <p>Копия кассы устойчивости. Украдёт сентябрь. На том созвоне она сама запретила третье окно под эмоции. Здесь зеркало: СУ не окно.</p>
+          </article>
+        </div>
+
+        <h3 class="sec">Карта блоков · путь A, если собирать одним вечером</h3>
+        <table>
+          <thead><tr><th>#</th><th>Блок</th><th>На экране</th></tr></thead>
+          <tbody>
+            <tr><td>1–3</td><td>Сбор, титул, орг</td><td>Не вопрос про счастье. Около двух часов, если берём её хронометраж с СУ</td></tr>
+            <tr><td>4–5</td><td>Для кого + план</td><td>Готов заниматься. Не таблетка. Не кризис без команды. Пять пунктов плана</td></tr>
+            <tr><td>6–8</td><td>Пре-продажа, about, не только тяжеляк</td><td>Промо этого запуска, не цифры 18.06. Врач, КПТ, ДПТ</td></tr>
+            <tr><td>9–11</td><td>Ошибка, селектор, teach</td><td>Не та эмоция. Четыре клетки. Чат → класс шага, не протокол</td></tr>
+            <tr><td>12–13</td><td>Мост + касса</td><td>Понять ≠ уметь. Половина шага не работает. Курс эмоций. Без 2 в 1</td></tr>
+            <tr><td>14–16</td><td>Порог, граница, повтор CTA</td><td>АВС_ЗАБОТА коротко. «Помните, в начале». СУ: одна фраза. Тот же курс</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Практика в обеих частях. В главе 9 на занятии: лицо и руки для гнева; спрятать vs отпустить. Живым куском веба брать только после Наташи.</p>
+
+        <h3 class="sec">Вопросы в чат</h3>
+        <div class="q"><span class="num">1</span><h3>Какую эмоцию сейчас назвали бы своими словами</h3><p>Если туман: так и напишите. Это уже регуляция.</p></div>
+        <div class="q"><span class="num">2</span><h3>С какой силы 0–100 уже не справляетесь</h3></div>
+        <div class="q"><span class="num">3</span><h3>Каким целям или отношениям это мешает</h3></div>
+        <div class="q"><span class="num">4</span><h3>Напишите ситуацию</h3><p>Ответ: какая эмоция, первая ли, какая клетка, какой класс шага. Не протокол.</p></div>
+        <div class="q"><span class="num">5</span><h3>Что чувствуете после вспышки или после того, как подавили</h3><p>Ловит вторичную.</p></div>
+        <p class="hint">Не склеивать в один слайд «не справляетесь / в чём проблема / чему мешает / почему хотите научиться». На созвоне это был обрывок, не четыре слайда.</p>
+
+        <h3 class="sec">Веб vs курс</h3>
+        <table>
+          <thead><tr><th>Эфир</th><th>Курс</th></tr></thead>
+          <tbody>
+            <tr><td>Понять, какая ветка при этой эмоции и этой клетке</td><td>Натренировать шаги, чтобы вставали в пике</td></tr>
+            <tr><td>Перечислить классы шагов по ситуации из чата</td><td>Неделя за эмоцией; внутри недели по силе. В книге порядок блоков другой. На вебе не спорить с ней про недели</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="sec">Название</h3>
+        <p>С созвона: «N инструментов для чего-то». Цифра была примером. Если ту же формулу: N из главы, хвост про эмоции.</p>
+        <ul>
+          <li>Уже в хабе, без цифры: почему вы боретесь не с той эмоцией</li>
+          <li>4 клетки для эмоции, которую вы путаете</li>
+          <li>6 вопросов, прежде чем «взять себя в руки»</li>
+        </ul>
+        <p class="hint">Не писать «10 инструментов», если внутри десять техник главы 10. Счастья в гиде противоположного действия нет. Универсальный список эмоций в книге: около 10–12, там радость, удивление, интерес.</p>
+
+        <div class="callout">Не ставить Glenbrook якорем. Не обещать кризис-набор 9/10. Не менять эмоцию, которую человек сам не хочет менять. Не схлопывать «по фактам?» и «эффективно ли?». Первичная/вторичная в книге: второй проход. На закрытом эфире это крючок, не оглавление двенадцати недель.</div>
+
+        <h3 class="sec">Ещё открыто</h3>
+        <p>Сетка 16.09 / 30.09 / 05.10 в хабе есть. Нет: хронометраж этого эфира, живые практики, хвост названия с цифрой, буст оплаты, цена, места, кейсы именно этого курса, VIP, подтверждение Наташи что первичная/вторичная на первом эфире не перегрузит.</p>
+      </section>
+    </div>
+  </div>
+  <script>
+    var btn = document.getElementById("copyQs");
+    if (btn) btn.addEventListener("click", function () {
+      var t = document.getElementById("qsPlain").innerText;
+      navigator.clipboard.writeText(t).then(function () {
+        btn.textContent = "Скопировано";
+        setTimeout(function () { btn.textContent = "Скопировать список"; }, 1600);
+      });
+    });
+  </script>
+</body>
+</html>

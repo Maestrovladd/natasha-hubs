@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Хабы Наташи</title>
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --paper: #fff;
+      --ink: #17222d;
+      --muted: #4c5e70;
+      --line: #e6dfd3;
+      --accent: #0f4f92;
+      --radius: 14px;
+      --shadow: 0 10px 24px rgba(20, 33, 45, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.45;
+      background:
+        radial-gradient(circle at 8% 0%, #efe6d8 0%, transparent 42%),
+        radial-gradient(circle at 93% 5%, #e6effb 0%, transparent 34%),
+        var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 36px 16px 56px;
+    }
+    h1 { margin: 0; font-size: 28px; letter-spacing: -0.03em; }
+    .lead { margin: 8px 0 22px; color: var(--muted); }
+    .list { display: grid; gap: 12px; }
+    a.card {
+      display: block;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 18px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.card:hover { border-color: #c9daef; }
+    .kicker {
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .card b { display: block; font-size: 20px; margin: 4px 0 6px; color: var(--accent); }
+    .card span { color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Хабы Наташи</h1>
+    <p class="lead">Рабочие страницы запусков. Открываются в браузере по ссылке.</p>
+    <div class="list">
+      <a class="card" href="osoznannost/">
+        <div class="kicker">май 2026</div>
+        <b>Осознанность</b>
+        <span>Тренажёры. Единый инструмент запуска.</span>
+      </a>
+      <a class="card" href="emotsii/">
+        <div class="kicker">сентябрь 2026</div>
+        <b>Эмоции</b>
+        <span>Хаб запуска. Якорь на названия: #p8-names</span>
+      </a>
+      <a class="card" href="stress/">
+        <div class="kicker">июль 2026</div>
+        <b>Стресс</b>
+        <span>Стрессоустойчивость. Единый хаб.</span>
+      </a>
+      <a class="card" href="shzo/">
+        <div class="kicker">Школа здоровых отношений</div>
+        <b>ШЗО</b>
+        <span>Хаб продукта. Якорь «как это работает»: #b-how</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
