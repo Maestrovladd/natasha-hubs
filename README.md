@@ -8,3 +8,4 @@
 - Стресс: https://maestrovladd.github.io/natasha-hubs/stress/
 - ШЗО: https://maestrovladd.github.io/natasha-hubs/shzo/
 - ШЗО · смысловая карта: https://maestrovladd.github.io/natasha-hubs/shzo/karta.html
+- ШЗО · как грели Школу: https://maestrovladd.github.io/natasha-hubs/shzo/progrev.html
