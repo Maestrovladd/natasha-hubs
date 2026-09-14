@@ -64,6 +64,12 @@
       font-size: 12.5px; font-weight: 600; cursor: pointer;
     }
     .switch.book { font-size: 13.5px; padding: 10px 12px; }
+    a.switch { text-decoration: none; color: inherit; }
+    a.switch.map {
+      background: color-mix(in oklab, var(--accent) 10%, var(--paper));
+      border-color: color-mix(in oklab, var(--accent) 35%, var(--line));
+      color: var(--accent);
+    }
     .switch:focus-visible { outline: 3px solid oklch(0.75 0.06 32); outline-offset: 2px; }
     .nav-more {
       border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px;
@@ -408,6 +414,7 @@
         <p>Сверху вниз. Сначала костяк ЦА и продукта. Потом подробности в раскрывашках.</p>
       <div class="switches">
         <p class="nav-kicker">Книга</p>
+        <a class="switch book map" href="karta.html">Смысловая карта</a>
         <label class="switch book" for="tab36">1. Люди</label>
         <label class="switch book" for="tab37">2. Продукт</label>
         <label class="switch book" for="tab38">3. ДНК</label>
@@ -457,7 +464,7 @@
     <div class="main">
       <section class="hero">
         <h2>Школа здоровых отношений</h2>
-        <p>Наталья Зайцева. PsyFactum. Сначала костяк людей и продукта. Потом раскрывашки: сценарии, модули подробно, 232 разбора.</p>
+        <p>Наталья Зайцева. PsyFactum. Смысловая карта слева сверху, отдельной страницей. Дальше книга: люди, продукт, ДНК, как продавали, сайт и эфир, лид магнит.</p>
       </section>
             <section class="panel p36 dna">
         <h2>1. Люди</h2>

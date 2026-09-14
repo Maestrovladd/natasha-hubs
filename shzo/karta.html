@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Смысловая карта. Школа здоровых отношений</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9f8f5; color: #1a1a18; line-height: 1.5; }
+  .page { max-width: 980px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  h1 { font-size: 28px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.03em; line-height: 1.2; color: #1a1a18; }
+  .subtitle { font-size: 15px; color: #666; margin-bottom: 2.5rem; }
+  .section { margin-bottom: 2.8rem; }
+  .section-label { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: #1a1a18; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 2px solid #1a1a18; line-height: 1.25; }
+  .grid { display: grid; gap: 10px; }
+  .g2 { grid-template-columns: 1fr 1fr; }
+  .g3 { grid-template-columns: 1fr 1fr 1fr; }
+  .g4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .card { background: #fff; border: 1px solid #e8e6e0; border-radius: 12px; padding: 14px 16px; }
+  .card-label { font-size: 12px; font-weight: 700; color: #6b6a66; margin-bottom: 6px; line-height: 1.3; }
+  .card:not(:has(.card-title)) > .card-label { font-size: 16px; font-weight: 800; color: #1a1a18; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .card-title { font-size: 16px; font-weight: 800; color: #1a1a18; margin-bottom: 8px; line-height: 1.3; letter-spacing: -0.02em; }
+  .highlight > .card-label { font-size: 16px; font-weight: 800; color: #1a1a18; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .card-desc { font-size: 13px; color: #555; line-height: 1.6; }
+  .theses { margin-top: 8px; padding-left: 18px; }
+  .theses li { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 6px; }
+  .theses li:last-child { margin-bottom: 0; }
+  .vs-col .theses { margin-top: 0; }
+  .vs-col .theses li { color: #333; }
+  .highlight .theses { margin-top: 8px; }
+  .card .theses { margin-top: 6px; }
+  .src { font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #aaa; margin-top: 10px; margin-bottom: 2px; }
+  .card > .src:first-child { margin-top: 0; }
+  .quote { font-style: italic; font-size: 13px; color: #666; line-height: 1.5; }
+  .quote:before { content: '«'; }
+  .quote:after { content: '»'; }
+  .gloss { font-size: 12px; color: #888; line-height: 1.55; margin-top: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .tag { font-size: 11px; padding: 3px 9px; border-radius: 20px; }
+  .t-red { background: #fdecea; color: #b52a1c; }
+  .t-amber { background: #fef3e2; color: #8c4e0b; }
+  .t-green { background: #eaf5e2; color: #2e6e10; }
+  .t-teal { background: #e0f5ef; color: #0a6644; }
+  .t-purple { background: #eeeefe; color: #4b3bb0; }
+  .t-gray { background: #f0ede8; color: #5a5955; }
+  .highlight { background: #fff; border: 1px solid #e8e6e0; border-radius: 12px; padding: 16px 20px; }
+  .big { font-size: 15px; font-weight: 500; line-height: 1.55; color: #1a1a18; }
+  .arrow-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 13px; color: #666; margin-top: 10px; }
+  .arr { color: #ccc; }
+  .vs { display: flex; gap: 10px; }
+  .vs-col { flex: 1; border-radius: 10px; padding: 14px; }
+  .vs-bad { background: #fdecea; border: 1px solid #f5c0bc; }
+  .vs-good { background: #e0f5ef; border: 1px solid #9edecb; }
+  .vs-col-label { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.3; }
+  .vs-bad .vs-col-label { color: #b52a1c; }
+  .vs-good .vs-col-label { color: #0a6644; }
+  .vs-item { font-size: 13px; line-height: 1.7; color: #333; }
+  .pick { border-color: #9edecb; background: #f4fbf8; }
+  hr { border: none; border-top: 1px solid #e8e6e0; margin: 2rem 0; }
+  .note { font-size: 12px; color: #888; line-height: 1.55; margin-bottom: 12px; }
+  .back-hub { display:inline-block; margin-bottom: 16px; font-size: 13px; font-weight: 700; color: #0f4f92; text-decoration: none; }
+  .back-hub:hover { text-decoration: underline; }
+  @media (max-width: 680px) {
+    .g2, .g3, .g4 { grid-template-columns: 1fr; }
+    .vs { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back-hub" href="./">Хаб Школы здоровых отношений</a>
+  <h1>Смысловая карта Школы здоровых отношений</h1>
+  <div class="subtitle">Наталья Зайцева, врач-психотерапевт. Чистовик для команды. Люди и язык собраны из материалов Школы: 232 домашних, 61 сценарий куратора, отзывы канала, живая страница. Как человек сейчас приходит отдельно: решение от 25 августа 2026, не вечная полка.</div>
+
+  <div class="section">
+    <h2 class="section-label">Как мы хотим продавать</h2>
+    <div class="highlight pick">
+      <div class="big">Не три формата работы с Натальей. Одна Школа. Три сцены одного дома: муж, ребёнок, родные. Все сходятся к одной точке: перестать жить в конфликтах и напряжении, вернуть близость и уважение, научиться говорить без крика, давления и чувства вины.</div>
+      <div class="src">Живая страница курса. Этот абзац не переписывать</div>
+      <div class="quote">Я создала эту программу, чтобы помочь людям перестать жить в конфликтах и напряжении, вернуть близость и уважение в отношения и научиться общаться без крика, давления и чувства вины.</div>
+      <p class="card-desc" style="margin-top:12px">Школа не про то, чтобы спасти брак любой ценой. Сохранить можно. Уйти можно. Отодвинуть человека из близких в знакомые можно. Тёплым станет не каждый дом, и этого она не обещает.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как устроена линейка. Одна Школа, не все курсы Натальи</h2>
+    <p class="note">Осознанность, стресс, эмоции, сон и консультации это другие полки. Школа не знакомства, не психиатр и не кризисный центр. Если в одном дыхании смешать полки, человек не поймёт, куда ему идти. Эта карта только про Школу.</p>
+    <div class="grid g3">
+      <div class="card">
+        <div class="card-label">Что это</div>
+        <h3 class="card-title">Двенадцать недель, урок каждый день</h3>
+        <ul class="theses">
+          <li>Шестьдесят видео по десять-пятнадцать минут.</li>
+          <li>К каждому уроку лист про своих людей: мужа, ребёнка, маму, коллег.</li>
+          <li>Двенадцать заданий сдают письменно. Остальные можно пройти по чужим примерам.</li>
+          <li>Даже треть программы, по её словам, уже даёт сдвиг.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Два способа учиться</div>
+        <h3 class="card-title">Самой и с проверкой двенадцати работ</h3>
+        <ul class="theses">
+          <li>Последние цены с ленда: 16 900 самостоятельно, 26 900 с проверкой. Дата и сумма меняются. Брать с живой страницы.</li>
+          <li>Живого чата на текущей странице нет.</li>
+          <li>Оплатили, на следующий день в 10:00 по Москве открывается урок. Брони нет.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Четыре двери на сайте, внутри одна программа</div>
+        <h3 class="card-title">Пара, дети и родные, работа, навык говорить</h3>
+        <ul class="theses">
+          <li>С 2021 она говорила: школа охватит все сферы, не только пару.</li>
+          <li>Работа 10 процентов заданий как главная сцена. На первый баннер не ставить, в программе она нужна.</li>
+          <li>Не пять разных курсов. Не отдельный продукт «про нарцисса».</li>
+        </ul>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:10px">
+      <div class="card-label">Чему учат на заданиях. Это можно обещать</div>
+      <ul class="theses">
+        <li>Назвать, что происходит.</li>
+        <li>Увидеть своё, не только чужое.</li>
+        <li>Отличить насилие от «просто неприятно».</li>
+        <li>Попросить и отказать.</li>
+        <li>Не ставить ребёнка между взрослыми.</li>
+        <li>Решить: ближе, так, или хватит.</li>
+      </ul>
+      <p class="card-desc" style="margin-top:10px">Красивые финалы в канале бывают: письмо с любовью, сын обнимает, или развод через год и «спасибо». Так бывало. Каждому дому это не обещают. Куратор сказала: красивый финал «сын обнимает» на эту работу не похож.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">О ком эта Школа</h2>
+    <div class="highlight">
+      <div class="big">К Наталье приходит женщина, которая уже много раз садилась с мужем серьёзно поговорить. После разговора ничего не меняется. Он снова в другой комнате. Она снова с телефоном. Ребёнок снова слышит тот же тон.</div>
+      <div class="src">Так Наталья говорит об этом на сайте</div>
+      <div class="quote">Вы уже сто раз серьёзно поговорили. Кухня та же.</div>
+      <div class="gloss">Кухня та же значит: разговор был, а вечер после него такой же, как вчера. Та же квартира, тот же стол, то же молчание или тот же крик. Не про ремонт и не про посуду.</div>
+      <p class="card-desc" style="margin-top:12px">Эта женщина не слишком много хочет. Ей не хватает не силы характера. Ей не хватает умения сказать своё так, чтобы её услышали:</p>
+      <ul class="theses">
+        <li>без крика</li>
+        <li>без молчания на неделю</li>
+        <li>без чувства, что она во всём виновата</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Зачем Наталья создала Школу</h2>
+    <div class="highlight pick">
+      <div class="card-label">Школа здоровых отношений · двенадцать недель</div>
+      <div class="big">Помочь людям перестать жить в конфликтах и напряжении, вернуть близость и уважение в отношения и научиться общаться без крика, давления и чувства вины. Инструменты, чтобы строить отношения, в которых комфортно обоим.</div>
+      <p class="card-desc" style="margin-top:12px">Так Наталья написала на сайте.</p>
+      <ul class="theses">
+        <li>Школа не про то, чтобы спасти брак любой ценой</li>
+        <li>Про то, чтобы жить с людьми без постоянной войны и без вечной вины</li>
+        <li>Брак можно сохранить, можно уйти, можно отодвинуть человека</li>
+        <li>Тёплым станет не каждый дом, и Школа этого не обещает</li>
+      </ul>
+    </div>
+    <div class="grid g3" style="margin-top:10px">
+      <div class="card">
+        <div class="card-label">Как устроена учёба</div>
+        <h3 class="card-title">Один короткий урок каждый день</h3>
+        <ul class="theses">
+          <li>Шестьдесят видео по десять-пятнадцать минут</li>
+          <li>К каждому уроку лист про своих людей: мужа, ребёнка, маму, коллег</li>
+          <li>Двенадцать заданий сдают письменно</li>
+          <li>Остальные можно пройти по чужим примерам, если стыдно писать про свой дом</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Что меняется</div>
+        <h3 class="card-title">Она начинает видеть, что происходит, и иначе говорить</h3>
+        <ul class="theses">
+          <li>Называет вещи своими словами</li>
+          <li>Замечает не только его, но и своё</li>
+          <li>Отличает жестокость от просто неприятного разговора</li>
+          <li>Просит и отказывает без крика</li>
+          <li>В канале бывают красивые финалы: сын сам пришёл обнять, жена написала мужу письмо</li>
+          <li>Так бывало. Каждому дому это не обещают</li>
+        </ul>
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Я вижу, что делаю. И могу это менять.</div>
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Жить на троечку очень даже хорошо.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Чем Школа не является</div>
+        <h3 class="card-title">Муж сам не станет другим за двенадцать недель</h3>
+        <ul class="theses">
+          <li>Не знакомства и не обещание нового партнёра</li>
+          <li>Не кризисный центр, если дома опасно</li>
+          <li>Не курсы Натальи про тревогу, сон и эмоции: это другие программы</li>
+          <li>Живого чата сейчас нет</li>
+          <li>На более дорогом варианте врач проверяет двенадцать работ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Кто приходит</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="card-label">Кто она</div>
+        <h3 class="card-title">Почти всегда женщина</h3>
+        <ul class="theses">
+          <li>На отзывах сайта ей от 21 до 44 лет, есть и мать сына двадцати лет</li>
+          <li>Возраст не главное: дома плохо уже несколько лет, не две недели после ссоры</li>
+          <li>В заданиях есть и мужчины, открытые истории почти всегда женские</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Что она уже пробовала</div>
+        <h3 class="card-title">Разговор, молчание, психолог</h3>
+        <ul class="theses">
+          <li>Уже устраивала серьёзный разговор</li>
+          <li>Потом молчала неделями и взрывалась</li>
+          <li>В 63 работах из 232 сами пишут, что ходили к психологу</li>
+          <li>Психолог слушал. Что сказать завтра вечером за столом, не сказал</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Чего она хочет</div>
+        <h3 class="card-title">Чтобы её поняли, и чтобы вечер прошёл иначе</h3>
+        <ul class="theses">
+          <li>Куратор группы: не понимают, как донести своё, чтобы партнёр понял, без молчания и без крика</li>
+          <li>Не просят идеальную семью</li>
+          <li>Просят другой завтрашний вечер</li>
+          <li>И чтобы после него не чувствовать себя чудовищем</li>
+        </ul>
+        <div class="src">Куратор группы</div>
+        <div class="quote">Трудности именно в том, как донести точку зрения, не уходя в молчание, не повышая голос.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Что болит</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-label">Холод дома · почти каждая третья работа</div>
+        <h3 class="card-title">Живут вместе, а как будто порознь</h3>
+        <ul class="theses">
+          <li>Он молчит</li>
+          <li>Она говорит, его не слышат</li>
+          <li>На работе и в гостях всё выглядит нормально</li>
+          <li>Дома пусто</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Жили соседями.</div>
+        <div class="gloss">Соседями значит: одна квартира, а вечером каждый сам по себе. Как люди с одной лестничной клетки, только это муж и жена.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">На людях нормально.</div>
+        <div class="gloss">При гостях улыбаются. Когда гости уходят, снова тишина или снова ор.</div>
+        <div class="tags">
+          <span class="tag t-red">он молчит</span>
+          <span class="tag t-red">нас не слышат</span>
+          <span class="tag t-red">месяц тишины</span>
+          <span class="tag t-red">вечером пусто</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Свой крик · почти каждая третья работа</div>
+        <h3 class="card-title">Она орёт и ненавидит свой голос</h3>
+        <ul class="theses">
+          <li>К шести вечера снова срыв</li>
+          <li>Потом спор, кто первый начал</li>
+          <li>В каждой второй работе сын или дочь рядом, даже когда писала про мужа</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Ненавижу свой голос.</div>
+        <div class="gloss">Она не про тембр. Она про то, что сама орёт на ребёнка или на мужа и потом стыдится этого весь вечер.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Не понимаю, как разговаривать с собственным ребёнком. Всё чаще слышу крик.</div>
+        <div class="gloss">Ей кажется, что сын на другой планете. Часто это её голос к шести, который она уже не узнаёт.</div>
+        <div class="src">Из разбора домашнего задания</div>
+        <div class="quote">Ты первый начал кричать.</div>
+        <div class="gloss">После срыва она ищет, кто виноват первым. Пока спор про очередь, разговор про просьбу так и не начинается.</div>
+        <div class="tags">
+          <span class="tag t-amber">срыв к вечеру</span>
+          <span class="tag t-amber">ты первый начал</span>
+          <span class="tag t-amber">ребёнок слышит</span>
+          <span class="tag t-amber">ящик, наушники, сборы в школу</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Психолог уже был · каждая четвёртая. Контроль тоже</div>
+        <h3 class="card-title">Ходила, платила, дома ничего не сдвинулось</h3>
+        <ul class="theses">
+          <li>Уже сидела в кабинете психолога</li>
+          <li>Или он смотрит чеки, пароли, переписку, пишет «где ты»</li>
+          <li>Стыдно сдавать домашнее: вдруг уличат, что орёт она сама</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Я просто хотела понять, что делаю не так.</div>
+        <div class="gloss">Она уже была у психолога. Искала ошибку в себе, а лист на завтрашний вечер так и не получила.</div>
+        <div class="src">Из отзыва, который Наталья публиковала в канале</div>
+        <div class="quote">В девяноста девяти процентах после Школы я разведусь. Это последняя попытка.</div>
+        <div class="gloss">Последняя попытка значит: она даёт браку ещё один шанс и заранее допускает, что уйдёт. Школа не обещает, что брак сохранится. Женщина уже назвала себе правду вслух.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Пошла от отчаяния. Десять лет спасали брак, жили соседями.</div>
+        <div class="gloss">Не «решила заняться собой». Уже годы кабинета и серьёзных разговоров. Вечер тот же, поэтому пришла сюда.</div>
+        <div class="tags">
+          <span class="tag t-purple">психолог уже был</span>
+          <span class="tag t-purple">последняя попытка</span>
+          <span class="tag t-red">чеки и пароли</span>
+          <span class="tag t-red">где ты</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Сцены, которые повторяются</div>
+        <h3 class="card-title">Одни и те же вечера, разные дома</h3>
+        <ul class="theses">
+          <li>Он собирается к друзьям без неё</li>
+          <li>После декрета требует чеки из пакета</li>
+          <li>Ссора на кухне, сын слышит</li>
+          <li>Мама у двери с сумкой: «ты гробишь жизнь»</li>
+          <li>После звонка родных весь день испорчен</li>
+          <li>На работе тот же крик, что дома</li>
+        </ul>
+        <div class="src">Из отзыва, который Наталья публиковала</div>
+        <div class="quote">Он не пил, не курил, на все руки мастер, ни разу руку не поднял. И всё равно что-то не так.</div>
+        <div class="gloss">Он не бьёт значит: побоев нет, и отсюда вывод «я слишком много хочу». А дома уже годы чеки, молчание, контроль, унижение. Нет ремня ещё не значит, что дома здорово.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Дали отношениям год на исправление.</div>
+        <div class="gloss">Поставили срок в календаре. Год прошёл, близости нет. Календарь выглядел как дело, а говорить иначе так и не научились.</div>
+        <div class="src">Что говорит мама. Из домашних работ</div>
+        <div class="quote">Глупая дура, гробишь жизнь.</div>
+        <div class="gloss">Сумка у двери или пачка звонков. После этого дочь выключает телефон и ещё сутки внутри, даже если разговор занял пять минут.</div>
+        <div class="tags">
+          <span class="tag t-red">он не бьёт</span>
+          <span class="tag t-amber">год на исправление</span>
+          <span class="tag t-red">гробишь жизнь</span>
+          <span class="tag t-gray">сто сообщений где ты</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Чего она хочет на самом деле</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="card-label">Самое сильное</div>
+        <h3 class="card-title">Чтобы меня поняли</h3>
+        <ul class="theses">
+          <li>Донести своё без крика и без молчания</li>
+          <li>Чтобы слушали, не перебивали и не обесценивали</li>
+          <li>Чтобы можно было всё обсудить, и никто не уходил в другую комнату на неделю</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Чтобы меня слушали, чтобы меня не перебивали, чтобы учитывали моё мнение, чтобы не обесценивали.</div>
+        <div class="gloss">Не просит идеальную семью. Просит обычный разговор, в котором её слышат до конца.</div>
+        <div class="tags">
+          <span class="tag t-teal">чтобы слышали</span>
+          <span class="tag t-teal">не перебивали</span>
+          <span class="tag t-teal">не обесценивали</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Про завтра</div>
+        <h3 class="card-title">Чтобы вечер прошёл иначе</h3>
+        <ul class="theses">
+          <li>Не идеальная семья из фильма</li>
+          <li>Чтобы завтра за столом было не так, как вчера</li>
+          <li>И чтобы после этого не ненавидеть себя</li>
+        </ul>
+        <div class="src">Из домашней работы</div>
+        <div class="quote">Хотелось бы, чтобы он был внимательнее ко мне.</div>
+        <div class="gloss">Не «стань другим человеком». Чтобы вечером заметил её, а не только телевизор и телефон.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Про правду</div>
+        <h3 class="card-title">Понять, что у нас происходит</h3>
+        <ul class="theses">
+          <li>Если он не поднимал руку: это ещё любовь или уже нет</li>
+          <li>Назвать факты</li>
+          <li>Перестать оправдывать заботой, «он же мужчина» и «я первая начала»</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Думала, муж арбузер и он однозначно не прав.</div>
+        <div class="gloss">Пока картина такая, чинить свою речь незачем. Она пришла чинить его. Своё обычно видит уже внутри курса.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Хочу научиться различать насильственное.</div>
+        <div class="gloss">Ей не хватает слов. Холод, контроль и просто неприятный разговор пока свалены в одну кучу.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Про выбор</div>
+        <h3 class="card-title">Остаться или уйти и не чувствовать себя чудовищем</h3>
+        <ul class="theses">
+          <li>Сохранить отношения можно</li>
+          <li>Уйти можно</li>
+          <li>Отодвинуть человека из близких в знакомые тоже можно</li>
+          <li>Школа не обещает сохранить любой дом</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Не способна на добрые, тёплые, доверительные отношения. С собой очень сильно что-то не так.</div>
+        <div class="gloss">После тяжёлых отношений кажется, что сломана она. Школа не обещает нового партнёра. Учит видеть, что происходит, и говорить иначе.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Про дом</div>
+        <h3 class="card-title">Чтобы дома хотелось быть</h3>
+        <ul class="theses">
+          <li>Меньше крика</li>
+          <li>Чтобы сын не орал</li>
+          <li>Попросить о помощи без вины</li>
+          <li>После звонка мамы жить дальше, а не лежать пластом</li>
+          <li>Наталья говорит: пройти курс не на пятёрку тоже считается</li>
+        </ul>
+        <div class="src">Из домашней работы</div>
+        <div class="quote">Мне хотелось бы, чтобы ко мне обратились с вопросом: а не можешь ли ты помочь?</div>
+        <div class="gloss">Не приказ и не молчаливое ожидание, что она сама догадается. Обычная просьба, без вины за то, что устала.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Как выпускницы называют итог</div>
+        <h3 class="card-title">Вижу, что делаю, и могу это менять</h3>
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Я вижу, что делаю. И могу это менять.</div>
+        <div class="gloss">Муж не становится другим за двенадцать недель. Меняется она: видит своё поведение и умеет его остановить.</div>
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Мне больше не приходится обманывать себя.</div>
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Жить на троечку очень даже хорошо.</div>
+        <div class="gloss">Не идеал из коротких роликов. Прошла не на пятёрку и этого хватило, чтобы вечер стал другим.</div>
+        <div class="tags">
+          <span class="tag t-green">вижу, что делаю</span>
+          <span class="tag t-green">не обманываю себя</span>
+          <span class="tag t-green">на троечку</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как они сами это называют</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="src">Так Наталья говорит на сайте</div>
+        <div class="quote">Вы уже сто раз серьёзно поговорили. Кухня та же.</div>
+        <div class="gloss">Разговор был. Вечер после него такой же, как вчера. Тот же стол, то же молчание или тот же крик. Не про ремонт и не про посуду.</div>
+        <div class="tags">
+          <span class="tag t-gray">кухня та же</span>
+          <span class="tag t-gray">сто раз поговорили</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Жили соседями.</div>
+        <div class="gloss">Одна квартира, а вечером каждый сам по себе. Как люди с одной лестничной клетки, только это муж и жена.</div>
+        <div class="tags">
+          <span class="tag t-red">соседи</span>
+          <span class="tag t-red">вечером пусто</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">На людях нормально. Вечером пусто.</div>
+        <div class="gloss">При гостях улыбаются. Когда гости уходят, снова тишина или снова ор.</div>
+        <div class="tags">
+          <span class="tag t-red">на людях нормально</span>
+          <span class="tag t-red">маска падает</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Из отзыва, который Наталья публиковала</div>
+        <div class="quote">Он не пил, не курил, на все руки мастер, ни разу руку не поднял. И всё равно что-то не так.</div>
+        <div class="gloss">Нет побоев, поэтому ей кажется, что жаловаться стыдно. А дома уже годы контроля, молчания, унижения.</div>
+        <div class="tags">
+          <span class="tag t-red">он не бьёт</span>
+          <span class="tag t-red">что-то не так</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Из отзыва в канале Натальи</div>
+        <div class="quote">Это последняя попытка.</div>
+        <div class="gloss">Она уже почти готова уйти и даёт отношениям ещё один шанс. Это не гарантия, что брак сохранится.</div>
+        <div class="tags">
+          <span class="tag t-amber">последняя попытка</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Дали отношениям год на исправление.</div>
+        <div class="gloss">Поставили срок: ещё год, и он сам изменится. Год прошёл, близости нет.</div>
+        <div class="tags">
+          <span class="tag t-amber">год на исправление</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Что она говорит себе</div>
+        <div class="quote">Я слишком много хочу.</div>
+        <div class="gloss">Она просит обычного уважения и чтобы её слышали, а себе говорит, что истеричка. Часто потому что он не пьёт и не бьёт.</div>
+        <div class="tags">
+          <span class="tag t-gray">я слишком много хочу</span>
+          <span class="tag t-gray">хорошие жёны не ноют</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Ненавижу свой голос.</div>
+        <div class="gloss">Стыд за свой крик. Часто на ребёнка. Не про красоту голоса.</div>
+        <div class="tags">
+          <span class="tag t-amber">свой крик</span>
+          <span class="tag t-amber">стыд весь вечер</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Пошла от отчаяния. Десять лет спасали брак, жили соседями.</div>
+        <div class="gloss">Не новый интерес к психологии. Годы кабинета и разговоров. Вечер тот же.</div>
+        <div class="tags">
+          <span class="tag t-purple">от отчаяния</span>
+          <span class="tag t-purple">десять лет</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Не способна на добрые, тёплые, доверительные отношения. С собой очень сильно что-то не так.</div>
+        <div class="gloss">После тяжёлых отношений кажется, что сломана она. Тёплый дом ей уже не светит, думает она.</div>
+        <div class="tags">
+          <span class="tag t-purple">со мной что-то не так</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как думают уже внутри курса</div>
+        <div class="quote">У других хуже, чего я ношусь со своими детскими травмами.</div>
+        <div class="gloss">Стыдно сдавать домашнее. Кажется, её боль мелкая, а чужая настоящая. Из-за этого молчит в чате неделями.</div>
+        <div class="tags">
+          <span class="tag t-gray">у других хуже</span>
+          <span class="tag t-gray">стыдно писать</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как думают уже внутри курса</div>
+        <div class="quote">Очень страшно, что я всё не так делаю.</div>
+        <div class="gloss">Боится снова бросить, как кабинет. Боится тупых вопросов. Боится, что уличат: орёт она сама.</div>
+        <div class="tags">
+          <span class="tag t-gray">всё не так делаю</span>
+          <span class="tag t-gray">тупые вопросы</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Думала, муж арбузер и он однозначно не прав.</div>
+        <div class="gloss">Пока она белая и пушистая, а ломает только он, чинить свою речь незачем. Своё обычно видит уже внутри курса.</div>
+        <div class="tags">
+          <span class="tag t-amber">я белая</span>
+          <span class="tag t-amber">он не прав</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Из разбора домашнего задания</div>
+        <div class="quote">Ты первый начал кричать.</div>
+        <div class="gloss">После срыва спор, кто виноват первым. Пока считают очередь, просьба так и не звучит.</div>
+        <div class="tags">
+          <span class="tag t-amber">ты первый начал</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Куратор группы про тех, кто приходит</div>
+        <div class="quote">Не понимают, как донести свою точку зрения, чтобы партнёр понял. Не уходя в молчание, не повышая голос.</div>
+        <div class="gloss">Это самая частая просьба. Не идеальная семья. Умение сказать своё так, чтобы услышали.</div>
+        <div class="tags">
+          <span class="tag t-teal">донести своё</span>
+          <span class="tag t-teal">без молчания</span>
+          <span class="tag t-teal">без крика</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Мой девиз после школы: выбери снова. Куда-то делась реакция замри.</div>
+        <div class="gloss">Опирается на то, что происходит сейчас, а не на весь прошлый опыт. В конце разговора говорит «договорились?» и человек отвечает, не обижается.</div>
+        <div class="tags">
+          <span class="tag t-green">выбери снова</span>
+          <span class="tag t-green">договорились?</span>
+          <span class="tag t-green">ушла реакция замри</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Что ей говорят дома, когда она пытается назвать это</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="src">Как оправдывают контроль. Из домашних работ</div>
+        <div class="quote">Ой, ну а что вы хотите? Это же мужчина! Они все такие собственники!</div>
+        <div class="gloss">Чеки, пароли, «где ты» называют заботой и характером. Любовью тоже оправдывают. И ещё год ждут, что само рассосётся.</div>
+        <div class="tags">
+          <span class="tag t-red">это же мужчина</span>
+          <span class="tag t-red">собственники</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как оправдывают слежку. Из домашних работ</div>
+        <div class="quote">Я же ничего плохого не делаю. Просто смотрю.</div>
+        <div class="gloss">Телефон, переписка, геолокация. Пока она двадцать минут в магазине, приходит пачка сообщений «где ты».</div>
+        <div class="tags">
+          <span class="tag t-red">просто смотрю</span>
+          <span class="tag t-red">где ты</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">После срыва. Из домашних работ</div>
+        <div class="quote">Это ты виновата. Довела меня.</div>
+        <div class="gloss">Ор или тишина списывают на неё. Завтра она заходит в разговор уже виноватой, ещё ничего не сказав.</div>
+        <div class="tags">
+          <span class="tag t-red">ты довела</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Когда ремня нет. Из домашних работ</div>
+        <div class="quote">Я же его не ударил. Значит, ничего такого.</div>
+        <div class="gloss">Ремень перед лицом или угроза тоже «ничего такого», потому что удара не было. Она начинает верить, что жаловаться рано.</div>
+        <div class="tags">
+          <span class="tag t-red">я же не ударил</span>
+          <span class="tag t-red">ничего такого</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как обесценивают слова. Из домашних работ</div>
+        <div class="quote">Это просто слова. Я же всё для тебя делаю.</div>
+        <div class="gloss">Оскорбление или давление называют шуткой или заботой. Факт вечером растворяется, остаётся только её «излишняя чувствительность».</div>
+        <div class="tags">
+          <span class="tag t-red">просто слова</span>
+          <span class="tag t-red">я всё для тебя</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Как называют унижение шуткой. Из домашних работ</div>
+        <div class="quote">Мы просто любим друг друга подкалывать.</div>
+        <div class="gloss">При гостях это выглядит как юмор. Дома она уже не смеётся, а себе говорит, что слишком серьёзная.</div>
+        <div class="tags">
+          <span class="tag t-amber">просто подкалываем</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Что говорит мама. Из домашних работ</div>
+        <div class="quote">Ты никуда не поедешь. Глупая дура, гробишь жизнь.</div>
+        <div class="gloss">Сумка у двери или пачка звонков. Дочь выключает телефон и ещё сутки внутри. Хочет после этого жить дальше, а не три часа приходить в себя.</div>
+        <div class="tags">
+          <span class="tag t-red">гробишь жизнь</span>
+          <span class="tag t-red">никуда не поедешь</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Перед праздником. Из домашних работ</div>
+        <div class="quote">Давай ты не будешь никому портить праздник.</div>
+        <div class="gloss">Её просьбу отодвигают, чтобы всем было удобно. После стола она снова одна со своим, и снова думает, что слишком много хочет.</div>
+        <div class="tags">
+          <span class="tag t-amber">не порти праздник</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как выпускницы называют сдвиг</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Я вижу, что делаю. И могу это менять.</div>
+        <div class="gloss">Не «он стал другим». Она видит своё поведение и умеет его остановить.</div>
+        <div class="tags">
+          <span class="tag t-green">вижу, что делаю</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Мне больше не приходится обманывать себя.</div>
+        <div class="gloss">Больше не говорит себе, что всё нормально, пока дома холодно или ор.</div>
+        <div class="tags">
+          <span class="tag t-green">не обманываю себя</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Жить на троечку очень даже хорошо.</div>
+        <div class="gloss">Прошла не на пятёрку. Этого хватило. Наталья тоже говорит: даже треть программы уже даёт результат.</div>
+        <div class="tags">
+          <span class="tag t-green">на троечку</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы</div>
+        <div class="quote">Когда в конце я говорю «договорились?», человек отвечает «договорились» и не обижается.</div>
+        <div class="gloss">Не ещё один серьёзный разговор в пустоту. Есть конец разговора, и оба остаются в нём.</div>
+        <div class="tags">
+          <span class="tag t-green">договорились?</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы. Шла без куратора</div>
+        <div class="quote">Сын в десять раз меньше стал кричать. Сам приходит обнять.</div>
+        <div class="gloss">Так бывало. Каждому дому это не обещают. Другого ребёнка к пятнице Школа не обещает.</div>
+        <div class="tags">
+          <span class="tag t-green">сын обнимает</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы. Десять лет жили соседями</div>
+        <div class="quote">Я очень хочу туда поехать именно с тобой.</div>
+        <div class="gloss">Так сказал муж, когда подарил поездку. Так бывало. Каждой паре это не обещают.</div>
+        <div class="tags">
+          <span class="tag t-green">именно с тобой</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Цитата выпускницы. Шла без куратора</div>
+        <div class="quote">Знания плюс практика равно навык. Пользуюсь до сих пор. Без куратора, без своего разбора, только читала чат.</div>
+        <div class="gloss">Не инсайт на вебинаре. Привычка общения, которая осталась через год.</div>
+        <div class="tags">
+          <span class="tag t-green">без куратора тоже</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="src">Отзыв, который Наталья публиковала</div>
+        <div class="quote">Он не пил, не курил, руку не поднимал. После Школы открылись глаза. Через год развод. Спасибо.</div>
+        <div class="gloss">Развод как благодарность. Она это опубликовала. Сохранить любой ценой Школа не обещает.</div>
+        <div class="tags">
+          <span class="tag t-green">открылись глаза</span>
+          <span class="tag t-gray">уйти тоже исход</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="section">
+    <h2 class="section-label">Чем Школа отличается от того, что она уже пробовала</h2>
+    <div class="vs">
+      <div class="vs-col vs-bad">
+        <h3 class="vs-col-label">Как обычно бывает</h3>
+        <ul class="theses">
+          <li>Ещё один серьёзный разговор, а на следующий день всё как вчера</li>
+          <li>Психолог слушает, а что сказать за столом завтра, непонятно</li>
+          <li>Обещание «он сам изменится» и «мы спасем ваш брак»</li>
+          <li>Курс про любовь и гармонию из коротких роликов</li>
+          <li>Отдельный разбор «как жить с нарциссом» вместо умения жить с людьми</li>
+          <li>Советы терпеть умеючи, если на человека нападают каждый день</li>
+          <li>Энергии, визуализации, «просто думай хорошо»</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-good">
+        <h3 class="vs-col-label">Как у Натальи</h3>
+        <ul class="theses">
+          <li>Врач-психотерапевт и психиатр. Доказательная терапия, без энергий и визуализаций</li>
+          <li>Двенадцать недель, один урок в день, упражнение про своих людей</li>
+          <li>Сначала честно посмотреть, что происходит дома. Потом учиться просить, отказывать и договариваться</li>
+          <li>Про все отношения: муж, ребёнок, мама, работа, друзья, с собой. Не только про пару</li>
+          <li>Второй человек сам решает, меняться ему или нет</li>
+          <li>Можно пройти не идеально. Даже треть программы уже даёт результат</li>
+          <li>Дешевле года кабинета. Не замена врача и не замена кризисной службы, если дома опасно</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Главная мысль</h2>
+    <div class="grid g2">
+      <div class="highlight">
+        <div class="card-label">Почему одно и то же возвращается</div>
+        <ul class="theses">
+          <li>Холод с мужем, крик на ребёнка, звонок мамы и ор на работе кажутся разными жизнями</li>
+          <li>Это одна жизнь и одно умение, которого нет: говорить так, чтобы тебя услышали</li>
+          <li>Не уничтожая другого и не уничтожая себя</li>
+          <li>Если чинить только сегодняшний скандал, завтра будет новый</li>
+          <li>Скандал был следствием, не причиной</li>
+        </ul>
+      </div>
+      <div class="highlight">
+        <div class="card-label">Что ей важно услышать</div>
+        <ul class="theses">
+          <li>Если он не поднимал руку, это ещё не значит, что дома здорово</li>
+          <li>Вы не слишком много хотите</li>
+          <li>Часто просто нет умения просить, отказывать и договариваться так, чтобы было нормально обоим</li>
+        </ul>
+        <p class="gloss" style="margin-top:8px">Наталья учит смотреть на факты, а не на настроение. Отношения бывают здоровые, нездоровые или жестокие. «Он хороший, потому что не бьёт» сюда не входит.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как разные жалобы сходятся в одну Школу</h2>
+    <div class="grid g4">
+      <div class="card">
+        <div class="card-label">Она говорит</div>
+        <h3 class="card-title">Мы как соседи</h3>
+        <ul class="theses">
+          <li>Не умеет донести своё без молчания и без крика</li>
+          <li>«Нам надо поговорить» снова срывается</li>
+          <li>Школа учит её говорить, а не менять характер мужа за один вечер</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Жили соседями.</div>
+        <div class="gloss">Одна квартира, а вечером каждый сам по себе.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Она говорит</div>
+        <h3 class="card-title">Я ору на ребёнка</h3>
+        <ul class="theses">
+          <li>Стыдится своего голоса</li>
+          <li>Сын слышит ссору взрослых</li>
+          <li>Школа обещает другой разговор, не другого ребёнка к пятнице</li>
+          <li>Что орёт она сама, увидит уже внутри курса</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Ненавижу свой голос.</div>
+        <div class="gloss">Не про тембр. Про ор к шести и стыд весь вечер.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Она говорит</div>
+        <h3 class="card-title">Он же не бьёт</h3>
+        <ul class="theses">
+          <li>Чеки, пароли, месяц молчания, «ты меня довела»</li>
+          <li>Ей не хватает слов, чтобы назвать это</li>
+          <li>Боль может звучать как «нарцисс»</li>
+          <li>Учится она жить с людьми, а не ставить мужу диагноз</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Он не пил, не курил, руку не поднимал. И всё равно что-то не так.</div>
+        <div class="gloss">Нет ремня ещё не значит, что дома здорово.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Она говорит</div>
+        <h3 class="card-title">Психолог уже был</h3>
+        <ul class="theses">
+          <li>Её выслушали. Завтрашний вечер тот же</li>
+          <li>Сначала факты</li>
+          <li>Потом чего хочешь</li>
+          <li>Потом просьба</li>
+          <li>В конце «договорились?»</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Я просто хотела понять, что делаю не так.</div>
+        <div class="gloss">Кабинет слушал. Листа на завтрашний вечер не дал.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Сколько стоит и кому это не подойдёт</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-label">Два способа учиться</div>
+        <h3 class="card-title">Самой и с проверкой двенадцати заданий</h3>
+        <ul class="theses">
+          <li>На сайте недавно стояло 16 900 и 26 900 рублей. Цена и даты меняются</li>
+          <li>На дорогом варианте врач смотрит двенадцать работ</li>
+          <li>Живого чата нет</li>
+          <li>Оплатили, на следующий день в 10:00 по Москве открывается урок</li>
+        </ul>
+        <div class="src">Так Наталья отвечает, если человек ненавидит чаты</div>
+        <div class="quote">Сама ненавижу чужие чаты.</div>
+        <div class="gloss">Можно учиться без живого чата, по разборам на платформе и по чужим примерам.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Кому да. Кому нет</div>
+        <h3 class="card-title">Годы, конкретные люди, готов смотреть и на себя</h3>
+        <ul class="theses">
+          <li>Подойдёт, если дома плохо давно и люди известны поимённо</li>
+          <li>Разговор или психолог уже были, нужен навык на завтра</li>
+          <li>Выдержит урок каждый день</li>
+          <li>Не подойдёт при тяжёлой депрессии или травме, когда не тянет быт</li>
+          <li>Если жизни угрожает опасность: сначала защита, не Школа</li>
+          <li>Если запрос «переделайте его, во мне менять нечего», курс не поможет</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="section">
+    <h2 class="section-label">С какой боли она может прийти, и чему всё равно учится</h2>
+    <div class="vs">
+      <div class="vs-col vs-bad">
+        <h3 class="vs-col-label">С чего начинается разговор</h3>
+        <ul class="theses">
+          <li>Она узнаёт себя: дома холодно, она орёт, «он же не бьёт»</li>
+          <li>После тяжёлых отношений кажется, что сломана она</li>
+          <li>Иногда боль называют словом «нарцисс»</li>
+          <li>Бесплатная встреча нужна, чтобы она сказала «это про меня» и пришла послушать</li>
+          <li>Не чтобы продать ей отдельный курс про нарциссов</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-good">
+        <h3 class="vs-col-label">Чему она учится двенадцать недель</h3>
+        <ul class="theses">
+          <li>Школа здоровых отношений</li>
+          <li>Слова Натальи про конфликты, близость, уважение, разговор без крика и вины</li>
+          <li>Прийти можно с любой болью</li>
+          <li>Учится она строить отношения, в которых нормально обоим</li>
+          <li>Не вешать ярлык на мужа</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как человек сейчас идёт к Школе</h2>
+    <p class="note">Слой продаж. Решение команды от 25 августа 2026. Цена, даты эфира и бонусы меняются. Путь человека пока такой.</p>
+    <div class="highlight">
+      <div class="arrow-row" style="margin-top:0; color:#333">
+        <span>Письмо или пост</span>
+        <span class="arr">→</span>
+        <span>Короткая анкета</span>
+        <span class="arr">→</span>
+        <span>Бот Натальи и карта отношений</span>
+        <span class="arr">→</span>
+        <span>Письма Ксении</span>
+        <span class="arr">→</span>
+        <span>Закрытая встреча</span>
+        <span class="arr">→</span>
+        <span>Открытая встреча</span>
+        <span class="arr">→</span>
+        <span>Оплата и учёба на следующий день</span>
+      </div>
+      <ul class="theses">
+        <li>На странице предзаписи продаём не Школу целиком. Продаём шаг: анкета, карта, место на закрытой встрече.</li>
+        <li>Карта отношений это не тест личности. Семь сторон жизни, один человек, оценка от нуля до десяти. Десять минут за столом.</li>
+        <li>Бот пишет Наталья. Почту пишет Ксения, как на майском эфире: организация, ссылка, время.</li>
+        <li>Брони нет. Кто оплатил, начинает учиться.</li>
+        <li>Кто не купил, анкету заново не заполняет. Ему пишут ещё раз через две-четыре недели и зовут на следующую встречу.</li>
+        <li>Если дома опасно, сначала защита, не встреча.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Как может звучать приглашение на бесплатную встречу</h2>
+    <p class="card-desc" style="margin-bottom:10px">Курс один. Приглашение можно сказать по-разному, в зависимости от того, чем человек живёт прямо сейчас.</p>
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-label">Если не знает, с чего начать</div>
+        <h3 class="card-title">С нуля до отношений, в которых комфортно обоим</h3>
+        <ul class="theses">
+          <li>На встрече научитесь выходить из конфликтов</li>
+          <li>Возвращать близость и уважение</li>
+          <li>Говорить без крика, давления и вины</li>
+          <li>Даже если кабинет психолога уже был</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Если ест себя виной</div>
+        <h3 class="card-title">Как перестать жить в конфликтах и вернуть близость и уважение</h3>
+        <ul class="theses">
+          <li>После встречи станет ясно, с чего начать</li>
+          <li>Если серьёзный разговор уже сто раз срывался</li>
+          <li>Без мысли, что вы мало делаете для семьи</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Если нужны короткие слова</div>
+        <h3 class="card-title">Близость и уважение без жизни в конфликтах</h3>
+        <ul class="theses">
+          <li>Как перестать жить в напряжении</li>
+          <li>Научиться говорить без крика, давления и вины</li>
+          <li>На встрече разберём вашу сцену: дом, дети, родные или работа</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Если сразу про её вечера</div>
+        <h3 class="card-title">Холод дома, крик с детьми, напряжение на работе</h3>
+        <ul class="theses">
+          <li>Как вы живёте в конфликтах и теряете близость</li>
+          <li>Пошаговый план: перестать жить в напряжении и вернуть уважение</li>
+          <li>Без крика, давления и чувства вины</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Три темы встречи. На один заход берут одну</h2>
+    <div class="grid g3">
+      <div class="card pick">
+        <div class="card-label">Самая частая боль</div>
+        <h3 class="card-title">Как перестать жить в конфликтах, если дома уже как у соседей</h3>
+        <ul class="theses">
+          <li>После встречи станет ясно, с чего начать, чтобы вас услышали</li>
+          <li>Донести своё без молчания и без крика</li>
+          <li>Мужа за один вечер спокойным не сделаем</li>
+          <li>Так живёт почти каждая третья на курсе</li>
+          <li>Куратор группы говорила именно про это</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">На людях нормально. Вечером пусто.</div>
+        <div class="gloss">При гостях всё выглядит хорошо. Когда остаются вдвоём, тепла нет.</div>
+        <div class="tags">
+          <span class="tag t-red">соседи</span>
+          <span class="tag t-red">вечером пусто</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Если тяжело из-за своего крика</div>
+        <h3 class="card-title">С нуля до разговора без крика, в котором комфортно обоим</h3>
+        <ul class="theses">
+          <li>Научитесь доносить своё, не уходя в ор и не уходя в молчание</li>
+          <li>Даже если уже ненавидите, как звучите</li>
+          <li>Другого ребёнка к пятнице Школа не обещает</li>
+          <li>Так живёт почти каждая третья</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Не понимаю, как разговаривать с собственным ребёнком. Всё чаще слышу крик.</div>
+        <div class="gloss">Кажется, что сын на другой планете. Часто это её голос к шести.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Если он хороший, а дома плохо</div>
+        <h3 class="card-title">Близость и уважение, даже если руки не поднимал</h3>
+        <ul class="theses">
+          <li>Для тех, кого психолог уже слушал, а завтрашний вечер тот же</li>
+          <li>Контроль и кабинет звучат почти в каждой четвёртой работе</li>
+        </ul>
+        <div class="src">Из отзыва</div>
+        <div class="quote">Он не пил, не курил, руку не поднимал. И всё равно что-то не так.</div>
+        <div class="gloss">Нет побоев, и отсюда вывод «я слишком много хочу».</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Две бесплатные встречи</h2>
+    <div class="grid g2">
+      <div class="card pick">
+        <div class="card-label">Первая встреча</div>
+        <h3 class="card-title">Почему «он не бьёт» ещё не значит, что дома здорово</h3>
+        <ul class="theses">
+          <li>Что делать, если годы живёте как соседи, а любви как надо всё нет</li>
+          <li>Сразу после записи приходит карта своих отношений</li>
+          <li>На встрече учатся отличить холод от жестокости</li>
+          <li>Заполняют одну строку карты руками за пять-десять минут</li>
+          <li>Разбирают, какие ошибки почти все делают в серьёзном разговоре</li>
+          <li>Кто ещё не готов платить, идёт на вторую встречу</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Вторая встреча</div>
+        <h3 class="card-title">Почему первые недели про насилие, если вы пришли спасать брак</h3>
+        <ul class="theses">
+          <li>Иначе человек учится просить уже из мысли «я права, ломает он»</li>
+          <li>На встрече показывают весь путь</li>
+          <li>Карта своих отношений</li>
+          <li>Честный взгляд на жестокость, включая свою</li>
+          <li>Потом умение просить и отказывать</li>
+          <li>Потом решение остаться или уйти</li>
+          <li>Можно пройти не на пятёрку</li>
+          <li>В конце можно оплатить и начать</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Что человек получает руками, пока ещё не купил курс</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="card-label">Сразу после анкеты</div>
+        <h3 class="card-title">Карта своих отношений</h3>
+        <ul class="theses">
+          <li>Три поля, минута</li>
+          <li>Потом в боте лист: семь сторон жизни, оценка от нуля до десяти, один человек из её жизни</li>
+          <li>Это ещё не покупка курса</li>
+          <li>Это первый шаг руками сегодня</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">На первой встрече</div>
+        <h3 class="card-title">Разбирают одну строку её карты</h3>
+        <ul class="theses">
+          <li>Один человек из дома</li>
+          <li>Одна сторона жизни</li>
+          <li>Оценка, которую она уже поставила</li>
+          <li>После встречи есть что дописать, а не только ощущение «было интересно»</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">На второй встрече</div>
+        <h3 class="card-title">Как устроена Школа</h3>
+        <ul class="theses">
+          <li>Зачем так долго про насилие</li>
+          <li>Чем два способа учёбы отличаются</li>
+          <li>Учёба начинается сразу, не когда наберётся группа</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">С кем у неё тяжело. Одна Школа, не три разных курса</h2>
+    <div class="grid g4">
+      <div class="card">
+        <div class="card-label">Муж, жена, парень · больше трети работ</div>
+        <h3 class="card-title">Самый частый разговор</h3>
+        <ul class="theses">
+          <li>Чеки, тишина, «или я, или твои подруги»</li>
+          <li>С этого чаще всего начинается история</li>
+        </ul>
+        <div class="src">Как оправдывают дома. Из домашних работ</div>
+        <div class="quote">Я же ничего плохого не делаю. Просто смотрю.</div>
+        <div class="gloss">Чеки, пароли, «где ты». Называют это заботой.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Сын или дочь · в каждой второй работе рядом</div>
+        <h3 class="card-title">Не другая жизнь</h3>
+        <ul class="theses">
+          <li>Ящик с игрушками, наушники, свой крик</li>
+          <li>Это тот же вечер той же женщины, которая пришла из-за мужа</li>
+        </ul>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Не понимаю, как разговаривать с собственным ребёнком. Всё чаще слышу крик.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Мама и родные · примерно каждая восьмая</div>
+        <h3 class="card-title">Звонок, после которого день сломан</h3>
+        <ul class="theses">
+          <li>Сумка у двери</li>
+          <li>«Ты гробишь жизнь»</li>
+          <li>Хочет после разговора с мамой жить дальше, а не три часа приходить в себя</li>
+        </ul>
+        <div class="src">Что говорит мама. Из домашних работ</div>
+        <div class="quote">Ты никуда не поедешь. Глупая дура, гробишь жизнь.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Работа · примерно каждая десятая</div>
+        <h3 class="card-title">Тот же навык, другая комната</h3>
+        <ul class="theses">
+          <li>Ор начальника, планёрка</li>
+          <li>В программе это есть</li>
+          <li>Иначе человек с работой решит, что Школа только про мужа</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Когда она решается, и почему до этого не доходит</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-label">Когда решается</div>
+        <ul class="theses">
+          <li>Она вслух сказала «это последняя попытка»</li>
+          <li>Год, который дала на исправление, вышел</li>
+          <li>Ребёнок стал свидетелем ссоры</li>
+          <li>Кабинет психолога закрылся, а ясности нет: оставаться или уходить</li>
+          <li>Узнала себя в чужой истории и подумала: это же про меня</li>
+          <li>Ближе всего те, кто уже учился у Натальи</li>
+          <li>Дальше две разные жизни: женщина на грани развода и та, у кого тихий дом без побоев</li>
+          <li>Потом мать, которая орёт. После разрыва своя история</li>
+          <li>Родные не главный вход</li>
+        </ul>
+        <div class="src">Из отзыва в канале Натальи</div>
+        <div class="quote">Это последняя попытка.</div>
+        <div class="src">Как говорят женщины с курса</div>
+        <div class="quote">Дали отношениям год на исправление.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Почему боится</div>
+        <ul class="theses">
+          <li>Если честно посмотрит, придётся уходить</li>
+          <li>Пока она белая, а он однозначно не прав, чинить свою речь незачем</li>
+          <li>Боится, что снова бросит, как кабинет</li>
+          <li>Думает: нет побоев, значит рано</li>
+          <li>Страшно, что уроки каждый день, или ненавидит чаты</li>
+          <li>Сохранить можно, уйти можно, оба исхода честны</li>
+          <li>Что орёт она сама, увидит уже внутри курса</li>
+          <li>Это не ещё одна беседа, а порядок на завтрашний вечер</li>
+          <li>Можно пройти не идеально</li>
+          <li>Можно учиться без чата, по чужим примерам</li>
+        </ul>
+        <div class="src">Как думают уже внутри курса</div>
+        <div class="quote">Очень страшно, что я всё не так делаю.</div>
+        <div class="src">Из разбора. Три недели молчала в чате</div>
+        <div class="quote">Мне постоянно кажется, что задам тупые вопросы.</div>
+        <div class="src">Как думают уже внутри курса</div>
+        <div class="quote">У других хуже, чего я ношусь со своими детскими травмами.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Так говорить можно, так нельзя</h2>
+    <div class="vs">
+      <div class="vs-col vs-bad">
+        <div class="vs-col-label">Так продавать нельзя</div>
+        <ul class="theses">
+          <li>Три разных курса: про мужа, про ребёнка, про маму.</li>
+          <li>Отдельный продукт «нарцисс», если программа та же.</li>
+          <li>Смешать Школу с осознанностью, стрессом, эмоциями и сном в одну кучу.</li>
+          <li>Знакомства. Психиатр вместо курса. Кризисный центр вместо защиты.</li>
+          <li>«Он изменится сам за двенадцать недель.»</li>
+          <li>«Сын обнимает» и «письмо с любовью» как обещание каждому дому.</li>
+          <li>«Вернёте доверие» и «научитесь защищать границы», если это жёстче, чем она говорит в канале.</li>
+          <li>Бронь, «последний поток», новый брак за две недели.</li>
+          <li>Если дома опасно: Школа вместо защиты.</li>
+          <li>«Переделайте его, во мне менять нечего.»</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-good">
+        <div class="vs-col-label">Так она разрешает говорить</div>
+        <ul class="theses">
+          <li>Одна Школа. Три сцены одного дома.</li>
+          <li>Кухня та же после сотого серьёзного разговора.</li>
+          <li>Навык на завтрашний вечер, не ещё одна беседа в кабинете.</li>
+          <li>Назвать. Увидеть своё. Отличить. Заговорить. Решить.</li>
+          <li>Сохранить можно. Уйти можно. Отодвинуть человека можно.</li>
+          <li>Можно пройти не на пятёрку. «Жить на троечку очень даже хорошо.»</li>
+          <li>Нет ремня ещё не значит, что дома здорово.</li>
+          <li>В здоровых отношениях границы не нуждаются в защите. На них никто не нападает.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Что команде ещё нужно держать в руках</h2>
+    <p class="note">Из книги продукта и живой страницы. Не догадка.</p>
+    <div class="grid g2">
+      <div class="card">
+        <div class="card-label">На живой странице нет честного «кому нет»</div>
+        <p class="card-desc">В книге продукта этот блок есть: тяжёлая депрессия, когда не тянет быт, риск вреда, опасность жизни. На текущей странице его нет. Для честного обещания лучше вернуть.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Пункты сайта жёстче канала</div>
+        <p class="card-desc">«Вернёте доверие» и «защищать границы» на сайте звучат сильнее, чем она говорит людям. В новых текстах не копировать слепо.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Имена тарифов путались</div>
+        <p class="card-desc">На карточке «с проверкой», в оплате бывало «с куратором». Смысл один: самой или с проверкой двенадцати работ.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Поворот внутри курса не ставить первым кадром рекламы</div>
+        <p class="card-desc">Приходит чинить другого. На уроках про насилие считает своё. Это правда курса. На обложку первым кадром не ставить.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-label">Короткая версия для директора</h2>
+    <div class="highlight pick">
+      <div class="big">К Наталье приходит женщина, которая уже сто раз серьёзно поговорила. Кухня та же. Школа даёт глаза и рот: увидеть, что происходит дома, сказать своё без крика, без недели молчания и без вечной вины, и уже отсюда решать, оставаться, уходить или отодвинуть человека.</div>
+      <p class="card-desc" style="margin-top:12px">Двенадцать недель, урок в день, два способа учиться. Как человек сейчас приходит: анкета, карта в боте Натальи, письма Ксении, закрытая встреча, открытая встреча, оплата и сразу учёба. Брони нет.</p>
+      <p class="card-desc" style="margin-top:8px">Осознанность, эмоции и консультации сюда не клеить. Это другие полки.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
