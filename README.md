@@ -9,3 +9,4 @@
 - ШЗО: https://maestrovladd.github.io/natasha-hubs/shzo/
 - ШЗО · смысловая карта: https://maestrovladd.github.io/natasha-hubs/shzo/karta.html
 - ШЗО · как грели Школу: https://maestrovladd.github.io/natasha-hubs/shzo/progrev.html
+- ШЗО · лидмагнит слайды: https://maestrovladd.github.io/natasha-hubs/shzo/lidmagnit/?v=1
