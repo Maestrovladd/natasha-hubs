@@ -224,6 +224,23 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .panel.poster .logo span{color:#fff}
 .panel.poster .caps{font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:.94;color:#fff}
 .panel.poster .huge{font-size:clamp(40px,8.4vw,64px)}
+.duo{width:100%;display:flex;flex-direction:column;gap:8px;align-items:center}
+.duo b{display:block;width:100%;border-radius:22px;padding:22px 14px;font-weight:800;font-size:clamp(26px,6.2vw,36px);line-height:1.05;text-align:center}
+.duo b.w{background:#fff;color:#1A1A1A;border:1px solid #E4E8DC}
+.duo b.g{background:#7A8C52;color:#fff}
+.duo i{font-style:normal;font-weight:800;font-size:18px}
+.picframe{width:100%;border:3px solid #5C6B3E;border-radius:20px;padding:14px;background:#fff}
+.picframe img{width:100%;height:300px;object-fit:contain;display:block}
+.panel.dusk{background:#5C6B3E;color:#fff}
+.panel.dusk .logo{background:linear-gradient(#5C6B3E 70%,transparent);color:#fff}
+.panel.dusk .logo svg{stroke:#F5F7F1}
+.panel.dusk .logo span,.panel.dusk .caps{color:#fff}
+.panel.dusk .chip{background:#F5F7F1;color:#1A1A1A;border-radius:14px;padding:10px 18px;font-weight:800;font-size:clamp(32px,7vw,44px);line-height:1}
+.sayrow{width:100%;background:#fff;color:#1A1A1A;border:1px solid #E4E8DC;border-radius:18px;padding:16px 14px;font-weight:800;font-size:17px;line-height:1.35;text-align:left}
+.sayrow.hot{background:#7A8C52;color:#fff;border-color:transparent}
+.st.wide{padding:22px 16px;align-items:center}
+.st.wide b{width:72px;height:72px;font-size:32px}
+.st.wide span{font-size:22px;line-height:1.3}
 </style>
 </head>
 <body>
@@ -815,9 +832,11 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <p class="caps lead">Первый элемент – это деление заданий на</p>
-<p class="caps" style="font-size:clamp(36px,8vw,52px)"><span class="y">обязательные</span></p>
-<p class="caps lead">и</p>
-<p class="caps" style="font-size:clamp(32px,7vw,46px)"><span class="y">необязательные</span></p>
+<div class="duo">
+<b class="w">обязательные</b>
+<i>и</i>
+<b class="g">необязательные</b>
+</div>
 <p class="caps lead">и разные способы их выполнения.</p>
 </div>
 </section>
@@ -825,16 +844,16 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<img class="shot" style="width:220px" src="pic/lessons.png?v=4" alt="">
 <p class="caps lead">Второй элемент – это примеры выполнения заданий и заполнения рабочего листа.</p>
+<div class="picframe"><img src="pic/lessons.png?v=4" alt=""></div>
 </div>
 </section>
 
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
+<section class="panel dusk">
+<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F1" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <p class="caps lead">Третий элемент – это бонус, который получат</p>
-<p class="caps huge"><span class="y">не все</span></p>
+<div class="chip">не все</div>
 <p class="caps lead">Он будет доступен только тем, кто присоединиться к следующему потоку Школы здоровых отношений через эту анкету предзаписи.</p>
 </div>
 </section>
@@ -842,27 +861,36 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">Школа здоровых отношений существует с</p>
-<p class="caps" style="font-size:clamp(88px,20vw,128px);line-height:.85"><span class="y">2022</span></p>
-<p class="caps lead">года, и за это время мы провели три больших групповых потока с разборами ситуаций участников в общем чате.</p>
+<div class="rail">
+<div class="step">Школа здоровых отношений существует с 2022 года,</div>
+<div class="step">и за это время мы провели три больших групповых потока</div>
+<div class="step">с разборами ситуаций участников в общем чате.</div>
+</div>
 </div>
 </section>
 
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<img class="shot" style="width:180px" src="pic/book.png?v=4" alt="">
-<p class="caps lead">Мы выгрузили эти разборы и собрали их в один большой сборник. В нём</p>
-<p class="caps" style="font-size:clamp(88px,20vw,128px);line-height:.85"><span class="y">232</span></p>
-<p class="caps lead">примера выполнения заданий Школы разными людьми с разными проблемами в отношениях.</p>
+<img class="shot" style="width:120px" src="pic/book.png?v=4" alt="">
+<div class="inkoval">
+<svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+<path d="M48 128 C 36 48, 120 22, 200 26 C 300 16, 372 58, 364 128 C 378 198, 300 236, 198 232 C 90 240, 28 196, 48 128 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<p>Мы выгрузили эти разборы и собрали их в один большой сборник. В нём <span class="y">232</span> примера выполнения заданий Школы разными людьми с разными проблемами в отношениях.</p>
+</div>
 </div>
 </section>
 
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">При покупке Школы здоровых отношений вы получите этот сборник</p>
-<p class="caps huge"><span class="y">в подарок</span></p>
+<p class="caps lead">При покупке Школы здоровых отношений вы получите</p>
+<div class="eq">
+<div class="box">этот сборник</div>
+<div class="sign">=</div>
+<div class="box hot">в подарок</div>
+</div>
 <p class="caps lead">и сможете вдохновляться результатами других людей.</p>
 </div>
 </section>
@@ -870,17 +898,15 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">Четвёртый элемент – это возможность пройти Школу здоровых отношений <span class="y">с куратором</span>.</p>
-<p class="caps lead">Кураторы нашей Школы – это опытные врачи-психотерапевты и психологи, работающие в когнитивно-поведенческом направлении психотерапии.</p>
+<div class="sayrow">Четвёртый элемент – это возможность пройти Школу здоровых отношений с куратором.</div>
+<div class="sayrow hot">Кураторы нашей Школы – это опытные врачи-психотерапевты и психологи, работающие в когнитивно-поведенческом направлении психотерапии.</div>
 </div>
 </section>
 
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">Пятый элемент – это</p>
-<p class="caps huge"><span class="y">персональный менеджер</span></p>
-<p class="caps lead">на платформе.</p>
+<div class="st wide"><b>5</b><span>Пятый элемент – это персональный менеджер на платформе.</span></div>
 </div>
 </section>
 
@@ -888,7 +914,12 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <p class="caps lead">шестой элемент – это</p>
-<p class="caps huge"><span class="y">большой срок доступа</span></p>
+<div class="inkoval big">
+<svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+<path d="M48 128 C 36 48, 120 22, 200 26 C 300 16, 372 58, 364 128 C 378 198, 300 236, 198 232 C 90 240, 28 196, 48 128 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<p>большой срок доступа</p>
+</div>
 </div>
 </section>
 
