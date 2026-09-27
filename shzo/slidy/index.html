@@ -193,6 +193,23 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .part h2{font-weight:800;font-size:clamp(22px,4.8vw,28px);line-height:1.28;letter-spacing:-.03em;color:#1A1A1A}
 .part p{font-weight:600;font-size:17px;line-height:1.45;color:#3A4030}
 .part b{font-weight:800;color:#5C6B3E}
+.elx{width:100%;align-self:stretch;text-align:left;display:flex;flex-direction:column;gap:14px}
+.elx .frame{width:100%;border:8px solid #7A8C52;border-radius:28px;padding:22px 18px;font-weight:800;font-size:26px;line-height:1.28;color:#1A1A1A}
+.elx .plaque{width:100%;background:#fff;border:1px solid #E4E8DC;border-radius:24px;padding:16px;display:flex;align-items:center;gap:14px;font-weight:800;font-size:20px;line-height:1.3;color:#1A1A1A}
+.elx .plaque img{width:108px;height:108px;object-fit:contain;flex:none}
+.elx .band{width:100%;background:#7A8C52;color:#fff;border-radius:24px;padding:20px 18px;font-weight:800;font-size:26px;line-height:1.28}
+.elx .band mark{background:#fff;color:#5C6B3E;border-radius:8px;padding:0 6px}
+.elx .note{width:100%;font-weight:700;font-size:18px;line-height:1.4;color:#1A1A1A}
+.elx .say{width:100%;font-weight:800;font-size:22px;line-height:1.3;color:#1A1A1A;max-width:none}
+.elx .big{font-weight:800;font-size:clamp(96px,20vw,128px);line-height:.82;letter-spacing:-.045em;color:#7A8C52}
+.elx .rail2{width:100%;border-left:3px dashed #7A8C52;margin-left:8px;padding-left:18px;display:flex;flex-direction:column;gap:18px}
+.elx .rail2 p{position:relative;font-weight:800;font-size:18px;line-height:1.35;color:#1A1A1A}
+.elx .rail2 p::before{content:'';position:absolute;left:-26px;top:5px;width:13px;height:13px;border-radius:50%;background:#7A8C52}
+.elx .split{width:100%;display:flex;align-items:center;gap:16px}
+.elx .split b{font-weight:800;font-size:120px;line-height:.8;letter-spacing:-.05em;color:#7A8C52;flex:none}
+.elx .split p{font-weight:800;font-size:22px;line-height:1.25;color:#1A1A1A}
+.elx .kicker{font-weight:700;font-size:20px;line-height:1.3;color:#5C6B3E}
+.elx .punch{font-weight:800;font-size:clamp(36px,8vw,48px);line-height:1.05;color:#1A1A1A;border-bottom:7px solid #7A8C52;padding-bottom:4px}
 </style>
 </head>
 <body>
@@ -769,9 +786,8 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">1</span>
-<h2>Первый элемент – это деление заданий на обязательные и необязательные и разные способы их выполнения.</h2>
+<div class="elx">
+<div class="frame">Первый элемент – это деление заданий на обязательные и необязательные и разные способы их выполнения.</div>
 </div>
 </div>
 </section>
@@ -779,9 +795,8 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">2</span>
-<h2>Второй элемент – это примеры выполнения заданий и заполнения рабочего листа.</h2>
+<div class="elx">
+<div class="plaque"><img src="pic/lessons.png?v=2" alt=""><span>Второй элемент – это примеры выполнения заданий и заполнения рабочего листа.</span></div>
 </div>
 </div>
 </section>
@@ -789,10 +804,9 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">3</span>
-<h2>Третий элемент – это бонус, который получат <b>не все</b>.</h2>
-<p>Он будет доступен только тем, кто присоединиться к следующему потоку Школы здоровых отношений через эту анкету предзаписи.</p>
+<div class="elx">
+<div class="band">Третий элемент – это бонус, который получат не все</div>
+<p class="note">Он будет доступен только тем, кто присоединиться к следующему потоку Школы здоровых отношений через эту анкету предзаписи.</p>
 </div>
 </div>
 </section>
@@ -800,8 +814,10 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<h2>Школа здоровых отношений существует с <b>2022</b> года, и за это время мы провели <b>три</b> больших групповых потока с разборами ситуаций участников в общем чате.</h2>
+<div class="elx">
+<p class="say">Школа здоровых отношений существует с</p>
+<p class="big">2022</p>
+<p class="say">года, и за это время мы провели три больших групповых потока с разборами ситуаций участников в общем чате.</p>
 </div>
 </div>
 </section>
@@ -809,9 +825,11 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<h2>Мы выгрузили эти разборы и собрали их в один большой сборник. В нём <b>232</b> примера выполнения заданий Школы разными людьми с разными проблемами в отношениях.</h2>
-<img class="shot" style="width:200px;align-self:center" src="pic/book.png?v=2" alt="">
+<div class="elx">
+<img class="shot" style="width:160px;align-self:center" src="pic/book.png?v=2" alt="">
+<p class="say">Мы выгрузили эти разборы и собрали их в один большой сборник. В нём</p>
+<p class="big">232</p>
+<p class="say">примера выполнения заданий Школы разными людьми с разными проблемами в отношениях.</p>
 </div>
 </div>
 </section>
@@ -819,8 +837,8 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<h2>При покупке Школы здоровых отношений вы получите этот сборник <b>в подарок</b> и сможете вдохновляться результатами других людей.</h2>
+<div class="elx">
+<div class="band">При покупке Школы здоровых отношений вы получите этот сборник <mark>в подарок</mark> и сможете вдохновляться результатами других людей.</div>
 </div>
 </div>
 </section>
@@ -828,20 +846,20 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">4</span>
-<h2>Четвёртый элемент – это возможность пройти Школу здоровых отношений с куратором.</h2>
+<div class="elx">
+<div class="rail2">
+<p>Четвёртый элемент – это возможность пройти Школу здоровых отношений с куратором.</p>
 <p>Кураторы нашей Школы – это опытные врачи-психотерапевты и психологи, работающие в когнитивно-поведенческом направлении психотерапии.</p>
 </div>
 </div>
+</div>
 </section>
 
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">5</span>
-<h2>Пятый элемент – это персональный менеджер на платформе.</h2>
+<div class="elx">
+<div class="split"><b>5</b><p>Пятый элемент – это персональный менеджер на платформе.</p></div>
 </div>
 </div>
 </section>
@@ -849,9 +867,9 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="part">
-<span class="k">6</span>
-<h2>шестой элемент – это большой срок доступа.</h2>
+<div class="elx">
+<p class="kicker">шестой элемент – это</p>
+<p class="punch">большой срок доступа</p>
 </div>
 </div>
 </section>
