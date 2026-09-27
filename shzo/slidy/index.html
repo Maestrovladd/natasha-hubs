@@ -214,6 +214,9 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .inkoval{width:100%;position:relative;min-height:250px;display:grid;place-items:center}
 .inkoval svg{position:absolute;inset:0;width:100%;height:100%}
 .inkoval p{position:relative;z-index:1;width:72%;margin:0;text-align:center;font-family:Figtree,system-ui,sans-serif;font-weight:800;font-size:16px;line-height:1.32;letter-spacing:-.02em;text-transform:none;color:#1A1A1A}
+.inkoval.big{min-height:340px}
+.inkoval.big p{width:70%;font-size:clamp(28px,6vw,36px);line-height:1.08}
+.inkoval.big .y{color:#7A8C52}
 </style>
 </head>
 <body>
@@ -593,7 +596,12 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <div class="badge">5 недель</div>
-<p class="caps huge">И только после этого мы приступим к изучению того, <span class="y">а как надо</span></p>
+<div class="inkoval big">
+<svg viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true">
+<path d="M52 140 C 34 52, 130 18, 206 24 C 310 12, 378 64, 368 142 C 384 220, 300 266, 196 260 C 86 270, 24 214, 52 140 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<p>И только после этого мы приступим к изучению того, <span class="y">а как надо</span></p>
+</div>
 </div>
 </section>
 
