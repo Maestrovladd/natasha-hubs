@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Проба слайдов</title>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{--y:#7A8C52;--red:#FF3B30}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -218,6 +218,12 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .inkoval.big p{width:70%;font-size:clamp(28px,6vw,36px);line-height:1.08}
 .inkoval.big .y{color:#7A8C52}
 .redline{color:#FF3B30}
+.panel.poster{background:#000;color:#fff}
+.panel.poster .logo{background:linear-gradient(#000 70%,transparent);color:#fff}
+.panel.poster .logo svg{stroke:#E4FF3A}
+.panel.poster .logo span{color:#fff}
+.panel.poster .caps{font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:.94;color:#fff}
+.panel.poster .huge{font-size:clamp(40px,8.4vw,64px)}
 </style>
 </head>
 <body>
@@ -731,8 +737,8 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 </div>
 </section>
 
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
+<section class="panel poster">
+<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#E4FF3A" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <p class="caps lead">Это не защитит вас от</p>
 <p class="caps huge"><span class="redline">измен</span></p>
