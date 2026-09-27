@@ -149,10 +149,10 @@ html,body{height:100%;background:#000;color:#fff;font-family:Manrope,system-ui,s
 .lessonpic img{width:100%;height:auto;display:block}
 .lessontitle{width:100%;text-align:left;font-weight:800;font-size:28px;line-height:1.15;color:#1A1A1A}
 .lessonbody{width:100%;text-align:left;font-weight:600;font-size:18px;line-height:1.35;color:#5C6156}
-.kinds{width:100%;display:flex;flex-direction:column;gap:10px}
-.kinds h2{font-weight:800;font-size:22px;line-height:1;text-align:left;color:#1A1A1A}
-.kinds figure{margin:0;height:250px;background:#fff;border:1px solid #E4E8DC;border-radius:16px;overflow:hidden}
-.kinds img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block}
+.kinds{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;text-align:left}
+.kinds h2{font-weight:800;font-size:16px;line-height:1.1;text-align:left;color:#1A1A1A;margin:0 0 8px}
+.kinds figure{margin:0;height:auto;background:none;border:0;border-radius:0;overflow:visible}
+.kinds img{width:100%;height:auto;display:block}
 .sheet{background:#fff;color:#111;border-radius:22px;padding:16px 12px 14px;text-align:center;font-weight:800;font-size:15px;line-height:1.25}
 .sheet .mark{display:block;font-family:Oswald,sans-serif;font-weight:700;font-size:72px;line-height:.8;color:var(--red);margin-bottom:8px}
 .snake.tall{height:560px}
@@ -481,10 +481,14 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <div class="kinds">
+<div>
 <h2>обязательные</h2>
 <figure><img src="pic/task-must.png" alt=""></figure>
+</div>
+<div>
 <h2>необязательные</h2>
 <figure><img src="pic/task-maybe.png" alt=""></figure>
+</div>
 </div>
 </div>
 </section>
