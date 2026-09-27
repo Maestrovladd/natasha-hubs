@@ -300,10 +300,12 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .spanline span::before{left:0}
 .spanline span::after{right:0}
 .spanline b{font-weight:800;font-size:32px;line-height:1.15;color:#1A1A1A;text-align:center}
-.weeks{width:100%;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
-.weeks p{font-weight:800;font-size:40px;line-height:1;color:#1A1A1A}
-.weeks i{font-style:normal;font-weight:800;font-size:32px;line-height:1;color:#7A8C52}
-.weeks strong{margin-top:22px;font-weight:800;font-size:34px;line-height:1.15;color:#5C6B3E}
+.weeks{width:100%;display:flex;flex-direction:column;align-items:center}
+.weeks .wrow{width:100%;background:#fff;border:1px solid #E4E8DC;border-radius:22px;padding:16px 18px 14px;display:flex;align-items:baseline;justify-content:center;gap:10px}
+.weeks .wrow b{font-size:48px;font-weight:800;letter-spacing:-.045em;line-height:.85;color:#1A1A1A}
+.weeks .wrow span{font-size:20px;font-weight:700;color:#5C6B3E}
+.weeks i{width:34px;height:34px;margin:10px 0;border-radius:50%;background:#7A8C52;color:#F5F7F1;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:22px;line-height:1}
+.weeks strong{margin-top:16px;width:100%;background:#5C6B3E;color:#fff;border-radius:22px;padding:16px 14px;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.15;text-align:center}
 .st.wide{padding:22px 16px;align-items:center}
 .st.wide b{width:72px;height:72px;font-size:32px}
 .warncard{width:100%;background:#fff;border:1px solid #E4E8DC;border-radius:22px;padding:32px 20px;font-weight:800;font-size:22px;line-height:1.45;text-align:center;color:#1A1A1A}
@@ -539,11 +541,11 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
 <div class="weeks">
-<p>12 недель</p>
+<div class="wrow"><b>12</b><span>недель</span></div>
 <i>+</i>
-<p>12 недель</p>
+<div class="wrow"><b>12</b><span>недель</span></div>
 <i>+</i>
-<p>12 недель</p>
+<div class="wrow"><b>12</b><span>недель</span></div>
 <strong>почти 8 месяцев</strong>
 </div>
 </div>
