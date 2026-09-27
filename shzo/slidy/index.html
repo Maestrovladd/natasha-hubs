@@ -287,6 +287,9 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .doc .leadline{font-weight:800;font-size:clamp(26px,5.6vw,32px);line-height:1.22;color:#1A1A1A}
 .doc .leadline span{color:#5C6B3E}
 .doc .beside{display:flex;align-items:center;gap:12px;background:transparent;border:0;padding:0}
+.panel:has(.curators) .stack{margin:0;padding:0 12px 72px;flex:1;min-height:0;width:100%}
+.curators{width:100%;flex:1;min-height:0;display:flex}
+.curators img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:18px}
 .doc .beside p{font-weight:700;font-size:16px;line-height:1.4;color:#1A1A1A}
 .doc .beside img{width:116px;height:116px;object-fit:contain;flex:none}
 .mgrblock{width:100%;background:#7A8C52;color:#fff;border-radius:28px;padding:40px 22px;text-align:center;font-weight:800;font-size:30px;line-height:1.25}
@@ -508,12 +511,8 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="doc">
-<p class="leadline">Четвёртый элемент – это возможность пройти Школу здоровых отношений <span>с куратором</span>.</p>
-<div class="beside">
-<p>Кураторы нашей Школы – это опытные врачи-психотерапевты и психологи, работающие в когнитивно-поведенческом направлении психотерапии.</p>
-<img src="pic/tool.png?v=4" alt="">
-</div>
+<div class="curators">
+<img src="pic/curators.jpg" alt="">
 </div>
 </div>
 </section>
