@@ -306,6 +306,14 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .weeks .wrow span{font-size:20px;font-weight:700;color:#5C6B3E}
 .weeks i{width:34px;height:34px;margin:10px 0;border-radius:50%;background:#7A8C52;color:#F5F7F1;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:22px;line-height:1}
 .weeks strong{margin-top:16px;width:100%;background:#5C6B3E;color:#fff;border-radius:22px;padding:16px 14px;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.15;text-align:center}
+.layers{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start;text-align:left}
+.layers h3{margin:0 0 10px;text-align:center;font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1;color:#1A1A1A}
+.layers h3.sage{color:#7A8C52}
+.layers ul{list-style:none;margin:0;border-radius:22px;padding:16px 12px;display:flex;flex-direction:column;gap:11px}
+.layers .light{background:#fff;color:#1A1A1A;border:1px solid #E4E8DC}
+.layers .green{background:#7A8C52;color:#fff}
+.layers li{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;line-height:1.15}
+.layers svg{width:18px;height:18px;flex:none}
 .st.wide{padding:22px 16px;align-items:center}
 .st.wide b{width:72px;height:72px;font-size:32px}
 .warncard{width:100%;background:#fff;border:1px solid #E4E8DC;border-radius:22px;padding:32px 20px;font-weight:800;font-size:22px;line-height:1.45;text-align:center;color:#1A1A1A}
@@ -317,24 +325,30 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel active">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps" style="color:var(--y);font-size:clamp(32px,7vw,44px)">Внешний слой</p>
-<div class="cols">
-<div class="ly out">
-<ul class="ico">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6h14v9H9l-3 3v-3H5z"/></svg>слова</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 16c1.2-3 2-5 2.2-8"/><path d="M14 17c1-2.6 1.6-4.6 1.8-7.2"/></svg>поступки</li>
+<div class="layers">
+<div>
+<h3>Внешний</h3>
+<ul class="light">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6h14v9H8l-3 3v-3H5z"/></svg>слова</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l-3 12M15 6l-3 12"/></svg>поступки</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h12"/><path d="M13 7l5 5-5 5"/></svg>действия</li>
-</ul>
-<p>которые мы совершаем по отношению друг к другу на регулярной основе</p>
-</div>
-<div class="ly inn">
-<ul class="ico">
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="7"/><path d="M12 8v4l3 2"/></svg>навыки</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M4 12h10M4 16h13"/></svg>волшебные техники эффективной коммуникации</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14M5 12h14M5 17h14"/></svg>техники</li>
+</ul>
+</div>
+<div>
+<h3 class="sage">Внутренний</h3>
+<ul class="green">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>чувства</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 16a4 4 0 0 1-.4-8 5 5 0 0 1 9.6-1.2A3.5 3.5 0 0 1 17 16z"/></svg>мысли</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>воспоминания</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></svg>мнения и ожидания</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v6h6"/></svg>убеждения</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9.5 9a2.5 2.5 0 1 1 3.2 2.4c-.8.4-1.2.9-1.2 1.8"/><path d="M12 17h.01"/></svg>допущения</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14M5 12h14M5 17h14"/></svg>правила</li>
 </ul>
 </div>
 </div>
-<p class="caps mid">мы относим сюда же</p>
 </div>
 </section>
 
