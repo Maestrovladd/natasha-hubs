@@ -140,9 +140,10 @@ html,body{height:100%;background:#000;color:#fff;font-family:Manrope,system-ui,s
 .trio div{background:#1a1a1a;border:2px solid var(--red);border-radius:14px;padding:12px 6px;font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:16px;line-height:.95;color:var(--red)}
 .snake{position:relative;width:100%;height:520px}
 .snake svg{position:absolute;inset:0;width:100%;height:100%}
-.sn{position:absolute;width:132px;display:flex;flex-direction:column;align-items:center;gap:2px;transform:translate(-50%,-62%)}
-.sn .emo{font-size:42px;line-height:1}
-.sn b{font-weight:800;font-size:14px;line-height:1.15;text-align:center}
+.sn{position:absolute;width:118px;display:flex;flex-direction:column;align-items:center;gap:2px;transform:translate(-50%,-72%);z-index:1}
+.sn .emo{font-size:30px;line-height:1}
+.sn b{font-weight:800;font-size:13px;line-height:1.15;text-align:center}
+.weeknote{position:absolute;transform:translate(-50%,-50%);background:#FFF4B8;color:#1A1A1A;border-radius:8px;padding:6px 8px;font-weight:800;font-size:13px;line-height:1.15;text-align:center;z-index:2;max-width:92px}
 .sheet{background:#fff;color:#111;border-radius:22px;padding:16px 12px 14px;text-align:center;font-weight:800;font-size:15px;line-height:1.25}
 .sheet .mark{display:block;font-family:Oswald,sans-serif;font-weight:700;font-size:72px;line-height:.8;color:var(--red);margin-bottom:8px}
 .snake.tall{height:560px}
@@ -268,196 +269,6 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel active">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">Сейчас для меня</p>
-<div class="eq">
-<div class="box">отношения</div>
-<div class="sign">=</div>
-<div class="box hot">терапевтический инструмент</div>
-</div>
-<div class="rail">
-<div class="step">осознанно использую каждый день</div>
-<div class="step">чтобы влиять на других людей</div>
-<div class="step">и достигать нужных мне результатов</div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="node">я подхожу очень серьёзно к тому, что происходит между мной и моими клиентами</div>
-<div class="down">↓</div>
-<div class="side a">и стремлюсь к тому, чтобы наши отношения складывались максимально здоровыми</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps" style="font-size:clamp(48px,10vw,72px)">Но так было<br><span class="y">не всегда</span></p>
-<img class="sketch" src="pic/sketch-notalways.png?v=6" alt="">
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="num sm">20</div>
-<p class="caps lead">лет назад</p>
-<ul class="listsheet">
-<li><b>✓</b><span>когда я только-только начинала работать</span></li>
-<li><b>✓</b><span>я не придавала этому большого значения</span></li>
-<li><b>✓</b><span>и была сосредоточена на поиске эффективных методов психотерапии и работающих приёмов</span></li>
-</ul>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="chain">
-<div class="st"><b>1</b><span>Поэтому я очень много училась</span></div>
-<div class="down">↓</div>
-<div class="st"><b>2</b><span>вела огромное количество консультаций и сеансов</span></div>
-<div class="down">↓</div>
-<div class="st"><b>3</b><span>и нарабатывала своё техническое мастерство.</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<img class="sketch" style="max-height:280px" src="pic/sketch-leave.png?v=7" alt="">
-<div class="pile">
-<div class="row now"><b>×</b><span>Но почему-то параллельно с этим от меня уходили клиенты</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="pile">
-<div class="row"><b>×</b><span>Но почему-то параллельно с этим от меня уходили клиенты</span></div>
-<div class="row now"><b>×</b><span>у меня не получалось долго работать с людьми со сложными характерами</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<img class="sketch" style="max-height:200px" src="pic/sketch-apart.png?v=7" alt="">
-<div class="pile">
-<div class="row"><b>×</b><span>Но почему-то параллельно с этим от меня уходили клиенты</span></div>
-<div class="row"><b>×</b><span>у меня не получалось долго работать с людьми со сложными характерами</span></div>
-<div class="row now"><b>×</b><span>моя личная жизнь не складывалась так, как мне хотелось бы</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<img class="sketch" style="max-height:170px" src="pic/sketch-friend.png?v=7" alt="">
-<div class="pile">
-<div class="row"><b>×</b><span>Но почему-то параллельно с этим от меня уходили клиенты</span></div>
-<div class="row"><b>×</b><span>у меня не получалось долго работать с людьми со сложными характерами</span></div>
-<div class="row"><b>×</b><span>моя личная жизнь не складывалась так, как мне хотелось бы</span></div>
-<div class="row now"><b>×</b><span>я теряла друзей</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<img class="sketch" style="max-height:160px" src="pic/sketch-clash.png?v=7" alt="">
-<div class="pile">
-<div class="row"><b>×</b><span>Но почему-то параллельно с этим от меня уходили клиенты</span></div>
-<div class="row"><b>×</b><span>у меня не получалось долго работать с людьми со сложными характерами</span></div>
-<div class="row"><b>×</b><span>моя личная жизнь не складывалась так, как мне хотелось бы</span></div>
-<div class="row"><b>×</b><span>я теряла друзей</span></div>
-<p class="sum">было в целом много конфликтов и недопониманий вокруг</p>
-</div>
-</div>
-</section>
-
-<section class="panel road">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps mid ink">И у меня было две <span class="y">крайности</span>, которыми я объясняла себе происходящее.</p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">мне тогда никто не объяснил, что</p>
-<img class="sketch" style="max-height:220px" src="pic/sketch-belief.png?v=7" alt="">
-<div class="qpair">
-<div>
-<p>«дело не во мне»</p>
-<p>«и не в них»</p>
-</div>
-<b>→</b>
-<div class="answer hot">а в моих неправильных представлениях о том, что такое здоровые отношения</div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">Поэтому даже если бы можно было взять</p>
-<div class="node">все те навыки и техники, которыми я владею сейчас</div>
-<div class="down" style="color:var(--red)">↓</div>
-<p class="caps lead">и передать их мне тогда</p>
-<div class="corner talk">это бы ничего в глобальном смысле не изменило<img src="pic/knot.png?v=4" alt=""></div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">В отношениях мы можем выделить</p>
-<div class="num" style="font-size:86px">2</div>
-<p class="caps lead">слоя</p>
-<div class="cols">
-<div>
-<h3>Внешний</h3>
-<div class="sheet">
-<ul class="ico">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6h14v9H9l-3 3v-3H5z"/></svg>слова</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 16c1.2-3 2-5 2.2-8"/><path d="M14 17c1-2.6 1.6-4.6 1.8-7.2"/><path d="M6.5 16.5l2.2.6M12.4 17.4l2.2.6"/></svg>поступки</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h12"/><path d="M13 7l5 5-5 5"/></svg>действия</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="7"/><path d="M12 8v4l3 2"/></svg>навыки</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M4 12h10M4 16h13"/></svg>техники</li>
-</ul>
-</div>
-</div>
-<div>
-<h3 class="y">Внутренний</h3>
-<div class="sheet hot">
-<ul class="ico">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19s-6-3.6-6-8a3.4 3.4 0 0 1 6-2.2A3.4 3.4 0 0 1 18 11c0 4.4-6 8-6 8z"/></svg>чувства</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 16a4 4 0 0 1 .4-7.2 5 5 0 0 1 9.2 1.4A3.5 3.5 0 0 1 16.5 17H8"/></svg>мысли</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M8 6V4M16 6V4M4 10h16"/></svg>воспоминания</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/></svg>мнения и ожидания</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h8l4 4v12H7z"/><path d="M15 4v4h4"/></svg>убеждения</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.7.4-1.2.9-1.2 1.8"/><path d="M12 17.2h.01"/></svg>допущения</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5h11M8 12h11M8 19h11"/><path d="M4 5h.01M4 12h.01M4 19h.01"/></svg>правила</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
 <p class="caps" style="color:var(--y);font-size:clamp(32px,7vw,44px)">Внешний слой</p>
 <div class="cols">
 <div class="ly out">
@@ -482,30 +293,6 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px">
-<p class="caps" style="color:var(--y);font-size:clamp(28px,6vw,40px)">Внутренний</p>
-<img class="shot bust" src="pic/inner.png?v=4" alt="">
-</div>
-<div class="nest">
-<div class="sheet hot">
-<ul class="ico">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19s-6-3.6-6-8a3.4 3.4 0 0 1 6-2.2A3.4 3.4 0 0 1 18 11c0 4.4-6 8-6 8z"/></svg>чувства</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 16a4 4 0 0 1 .4-7.2 5 5 0 0 1 9.2 1.4A3.5 3.5 0 0 1 16.5 17H8"/></svg>мысли</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M8 6V4M16 6V4M4 10h16"/></svg>воспоминания</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/></svg>мнения и ожидания</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h8l4 4v12H7z"/><path d="M15 4v4h4"/></svg>убеждения</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.7.4-1.2.9-1.2 1.8"/><path d="M12 17.2h.01"/></svg>допущения</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5h11M8 12h11M8 19h11"/><path d="M4 5h.01M4 12h.01M4 19h.01"/></svg>правила</li>
-</ul>
-</div>
-</div>
-<p class="caps lead" style="align-self:flex-start">относительно другого человека, при взаимодействии с ним</p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
 <p class="caps lead">Но если при этом внутри мы будем</p>
 <div class="mist">
 <span>чувствовать себя униженными</span>
@@ -523,23 +310,6 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">И тут возникает логичный вопрос, а можно ли вообще разорвать этот <span class="y">порочный круг</span></p>
-<img class="sketch" style="max-height:220px" src="pic/sketch-loop.png?v=7" alt="">
-<p class="caps" style="font-size:clamp(64px,14vw,92px)"><span class="y">Можно</span></p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">И именно этому мы и обучаем в</p>
-<div class="corner">Школе здоровых отношений<img src="pic/two-hearts.png?v=4" alt=""></div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
 <p class="caps lead">В ней</p>
 <div class="num sm">60</div>
 <img class="shot" style="width:240px" src="pic/book.png?v=4" alt="">
@@ -550,41 +320,10 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">В ней <span class="y">60</span> уроков, в которых я подробно разбираю</p>
-<div class="cell now">как уйти от конфликтов</div>
-<div class="cell empty"></div>
-<div class="cell empty"></div>
-</div>
-</section>
+<div class="snake" style="height:220px">
 
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">В ней <span class="y">60</span> уроков, в которых я подробно разбираю</p>
-<div class="cell">как уйти от конфликтов</div>
-<div class="cell now">напряжения</div>
-<div class="cell empty"></div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">В ней <span class="y">60</span> уроков, в которых я подробно разбираю</p>
-<div class="cell">как уйти от конфликтов</div>
-<div class="cell">напряжения</div>
-<div class="cell now">откладывания проблем в долгий ящик в сторону отношений</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">Программа Школы здоровых отношений</p>
-<div class="hand">
-<svg viewBox="0 0 320 180" preserveAspectRatio="none"><ellipse cx="160" cy="90" rx="146" ry="74" fill="none" stroke="#7A8C52" stroke-width="7" transform="rotate(-8 160 90)"/></svg>
-<p>очень<br>глубокая</p>
-<img src="pic/well.png?v=4" alt="">
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
 </div>
 </div>
 </section>
@@ -592,13 +331,11 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="badge">2 недели</div>
-<img class="shot" style="width:150px" src="pic/glass.png?v=4" alt="">
-<p class="caps lead">Мы начинаем с того, что</p>
-<div class="rail">
-<div class="step">делаем аудит всех ваших отношений в разных сферах жизни</div>
-<div class="step">тщательно изучаем то, что у вас происходит в близких отношениях</div>
-<div class="step">и составляем список конкретных людей, с которыми вы будете работать в Школе</div>
+<div class="snake" style="height:280px">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 10 C 52 4, 60 14, 70 22" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="sn" style="left:70%;top:22%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
 </div>
 </div>
 </section>
@@ -606,28 +343,13 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<p class="caps lead">Затем мы разбираем ваше прошлое и смотрим, как много в нём было</p>
-<div class="cause">
-<span class="bad">насилия</span><i>→</i><span class="bad">травм</span><i>→</i><span class="bad">манипуляций</span>
-</div>
-<p class="caps mid">и насколько сильно этот опыт до сих пор <span class="r">влияет на вас</span></p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">Эта часть программы занимает у нас целых</p>
-<div class="eq">
-<div class="box">5<br>недель</div>
-<div class="sign">→</div>
-<div class="box hot">более<br>20 упражнений</div>
-</div>
-<div class="inkoval">
-<svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
-<path d="M48 128 C 36 48, 120 22, 200 26 C 300 16, 372 58, 364 128 C 378 198, 300 236, 198 232 C 90 240, 28 196, 48 128 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p>за которые вы выполните, и которые позволят вам сократить негативное влияние вашего прошлого на то, как вы ведёте и чувствуете себя в отношениях сейчас</p>
+<div class="snake" style="height:400px">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 10 C 52 4, 60 14, 70 22 C 84 34, 46 30, 30 40" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="sn" style="left:70%;top:22%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
+<div class="sn" style="left:30%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
+<div class="weeknote" style="left:50%;top:31%">5 недель</div>
 </div>
 </div>
 </section>
@@ -635,12 +357,15 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="badge">5 недель</div>
-<div class="inkoval big">
-<svg viewBox="0 0 400 280" preserveAspectRatio="none" aria-hidden="true">
-<path d="M52 140 C 34 52, 130 18, 206 24 C 310 12, 378 64, 368 142 C 384 220, 300 266, 196 260 C 86 270, 24 214, 52 140 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p>И только после этого мы приступим к изучению того, <span class="y">а как надо</span></p>
+<div class="snake" style="height:500px">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 10 C 52 4, 60 14, 70 22 C 84 34, 46 30, 30 40 C 10 50, 54 48, 70 56" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="sn" style="left:70%;top:22%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
+<div class="sn" style="left:30%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
+<div class="sn" style="left:70%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
+<div class="weeknote" style="left:50%;top:31%">5 недель</div>
+<div class="weeknote" style="left:48%;top:48%">2 недели</div>
 </div>
 </div>
 </section>
@@ -648,38 +373,17 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="badge">2 недели</div>
-<p class="caps lead">Дальше мы разберём</p>
-<div class="eq">
-<div class="box">8 базовых принципов здоровых отношений</div>
-<div class="sign">+</div>
-<div class="box">с помощью упражнений создадим себе</div>
-</div>
-<div class="down">↓</div>
-<div class="side a">внутренний ориентир</div>
-<p class="caps lead">который будет помогать нам их выстраивать дальше</p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="badge">2 недели</div>
-<p class="caps lead">Последняя неделя Школы будет такой</p>
-<p class="caps huge"><span class="y">отрезвляющей</span></p>
-<p class="caps lead">и снимающей <span class="y">розовые очки</span></p>
-<img class="shot" src="pic/glasses.png?v=4" alt="">
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">А последний урок у нас будет с вами посвящён очень важной теме, потому что мы с вами разберём, чем</p>
-<div class="frames hinge">
-<figure><img src="pic/healthy.png?v=5" alt=""><figcaption>здоровые отношения</figcaption></figure>
-<p class="caps"><span class="y">отличаются от</span></p>
-<figure><img src="pic/ideal.png?v=5" alt=""><figcaption>идеальных отношений</figcaption></figure>
+<div class="snake" style="height:580px">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 10 C 52 4, 60 14, 70 22 C 84 34, 46 30, 30 40 C 10 50, 54 48, 70 56 C 90 66, 46 64, 30 72" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="sn" style="left:70%;top:22%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
+<div class="sn" style="left:30%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
+<div class="sn" style="left:70%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
+<div class="sn" style="left:30%;top:72%"><span class="emo">👓</span><b>розовые очки</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
+<div class="weeknote" style="left:50%;top:31%">5 недель</div>
+<div class="weeknote" style="left:48%;top:48%">2 недели</div>
+<div class="weeknote" style="left:52%;top:64%">2 недели</div>
 </div>
 </div>
 </section>
@@ -687,159 +391,19 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="snake">
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="snake" style="height:640px">
+<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 10 C 52 4, 60 14, 70 22 C 84 34, 46 30, 30 40 C 10 50, 54 48, 70 56 C 90 66, 46 64, 30 72 C 10 82, 54 80, 70 88" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
+<div class="sn" style="left:30%;top:10%"><span class="emo">🔍</span><b>аудит</b></div>
+<div class="sn" style="left:70%;top:22%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
+<div class="sn" style="left:30%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
+<div class="sn" style="left:70%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
+<div class="sn" style="left:30%;top:72%"><span class="emo">👓</span><b>розовые очки</b></div>
+<div class="sn" style="left:70%;top:88%"><span class="emo">⚖️</span><b>здоровые и идеальные</b></div>
+<div class="weeknote" style="left:52%;top:8%">2 недели</div>
+<div class="weeknote" style="left:50%;top:31%">5 недель</div>
+<div class="weeknote" style="left:48%;top:48%">2 недели</div>
+<div class="weeknote" style="left:52%;top:64%">2 недели</div>
 </div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="snake">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 12 C 48 8, 68 10, 78 20" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
-<div class="sn" style="left:78%;top:20%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="snake">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 12 C 48 8, 68 10, 78 20 C 90 30, 40 34, 22 40" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
-<div class="sn" style="left:78%;top:20%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
-<div class="sn" style="left:22%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="snake">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 12 C 48 8, 68 10, 78 20 C 90 30, 40 34, 22 40 C 4 46, 54 50, 78 56" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
-<div class="sn" style="left:78%;top:20%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
-<div class="sn" style="left:22%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
-<div class="sn" style="left:78%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="snake">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 12 C 48 8, 68 10, 78 20 C 90 30, 40 34, 22 40 C 4 46, 54 50, 78 56 C 96 62, 44 66, 22 72" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
-<div class="sn" style="left:78%;top:20%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
-<div class="sn" style="left:22%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
-<div class="sn" style="left:78%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
-<div class="sn" style="left:22%;top:72%"><span class="emo">👓</span><b>розовые очки</b></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="snake">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 12 C 48 8, 68 10, 78 20 C 90 30, 40 34, 22 40 C 4 46, 54 50, 78 56 C 96 62, 44 66, 22 72 C 4 78, 52 82, 78 88" fill="none" stroke="#7A8C52" stroke-width="0.7" stroke-dasharray="1.6 1.4" stroke-linecap="round"/></svg>
-<div class="sn" style="left:22%;top:12%"><span class="emo">🔍</span><b>аудит</b></div>
-<div class="sn" style="left:78%;top:20%"><span class="emo">🗄️</span><b>разбор прошлого</b></div>
-<div class="sn" style="left:22%;top:40%"><span class="emo">💡</span><b>как надо</b></div>
-<div class="sn" style="left:78%;top:56%"><span class="emo">🧭</span><b>8 принципов</b></div>
-<div class="sn" style="left:22%;top:72%"><span class="emo">👓</span><b>розовые очки</b></div>
-<div class="sn" style="left:78%;top:88%"><span class="emo">⚖️</span><b>здоровые и идеальные</b></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">По итогу этой Школы вы буквально станете</p>
-<p class="caps huge"><span class="y">другим человеком</span></p>
-<img class="sketch" style="max-height:200px" src="pic/sketch-see.png?v=7" alt="">
-<p class="caps lead">потому что</p>
-<ul class="listsheet">
-<li><b>✓</b><span>то, что вы узнаете про себя и других</span></li>
-<li><b>✓</b><span>то, что вы начнёте замечать</span></li>
-<li><b>✓</b><span>уже будет невозможно забыть или развидеть</span></li>
-</ul>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="warncard">Это не защитит вас от <span class="redline">измен</span>, <span class="redline">предательств</span> и <span class="redline">разочарований</span>, потому что эти вещи очень мало зависят от нас</p>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="lane one">
-<div class="ln now"><img src="pic/shield.png?v=4" alt=""><span>но вам будет проще переносить такие моменты</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="lane">
-<div class="ln"><img src="pic/shield.png?v=4" alt=""><span>но вам будет проще переносить такие моменты</span></div>
-<div class="ln now"><img src="pic/knot.png?v=4" alt=""><span>справляться со сложностями</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="lane">
-<div class="ln"><img src="pic/shield.png?v=4" alt=""><span>но вам будет проще переносить такие моменты</span></div>
-<div class="ln"><img src="pic/knot.png?v=4" alt=""><span>справляться со сложностями</span></div>
-<div class="ln now"><img src="pic/two-hearts.png?v=4" alt=""><span>сохранять веру в себя и других людей</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="lane">
-<div class="ln"><img src="pic/shield.png?v=4" alt=""><span>но вам будет проще переносить такие моменты</span></div>
-<div class="ln"><img src="pic/knot.png?v=4" alt=""><span>справляться со сложностями</span></div>
-<div class="ln"><img src="pic/two-hearts.png?v=4" alt=""><span>сохранять веру в себя и других людей</span></div>
-<div class="ln now"><img src="pic/crown.png?v=4" alt=""><span>не терять свою самооценку</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="lane">
-<div class="ln"><img src="pic/shield.png?v=4" alt=""><span>но вам будет проще переносить такие моменты</span></div>
-<div class="ln"><img src="pic/knot.png?v=4" alt=""><span>справляться со сложностями</span></div>
-<div class="ln"><img src="pic/two-hearts.png?v=4" alt=""><span>сохранять веру в себя и других людей</span></div>
-<div class="ln"><img src="pic/crown.png?v=4" alt=""><span>не терять свою самооценку</span></div>
-<div class="ln now"><img src="pic/woman.png?v=4" alt=""><span>быть собой и строить отношения</span></div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">И в этом и заключается</p>
-<p class="caps" style="font-size:clamp(72px,16vw,110px)"><span class="y">счастье</span></p>
 </div>
 </section>
 
@@ -874,43 +438,6 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <strong>не все</strong>
 <div class="cut"><p>Он будет доступен только тем, кто присоединиться к следующему потоку Школы здоровых отношений через эту анкету предзаписи.</p></div>
 </div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<div class="rail">
-<div class="step">Школа здоровых отношений существует с 2022 года,</div>
-<div class="step">и за это время мы провели три больших групповых потока</div>
-<div class="step">с разборами ситуаций участников в общем чате.</div>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<img class="shot" style="width:120px" src="pic/book.png?v=4" alt="">
-<div class="inkoval">
-<svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
-<path d="M48 128 C 36 48, 120 22, 200 26 C 300 16, 372 58, 364 128 C 378 198, 300 236, 198 232 C 90 240, 28 196, 48 128 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p>Мы выгрузили эти разборы и собрали их в один большой сборник. В нём <span class="y">232</span> примера выполнения заданий Школы разными людьми с разными проблемами в отношениях.</p>
-</div>
-</div>
-</section>
-
-<section class="panel">
-<div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
-<div class="stack">
-<p class="caps lead">При покупке Школы здоровых отношений вы получите</p>
-<div class="eq">
-<div class="box">этот сборник</div>
-<div class="sign">=</div>
-<div class="box hot">в подарок</div>
-</div>
-<p class="caps lead">и сможете вдохновляться результатами других людей.</p>
 </div>
 </section>
 
