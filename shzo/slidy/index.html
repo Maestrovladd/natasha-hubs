@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Проба слайдов</title>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,600;0,700;0,800;1,800&family=Oswald:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{--y:#7A8C52;--red:#FF3B30}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -246,6 +246,36 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .pass strong{display:block;margin:14px 0 4px;font-weight:800;font-size:clamp(40px,9vw,56px);line-height:1;color:#5C6B3E;letter-spacing:-.03em}
 .pass .cut{border-top:2px dashed #7A8C52;margin-top:16px;padding-top:14px}
 .pass .cut p{font-size:16px;line-height:1.4}
+.panel:has(.sbornik) .stack{padding-left:10px;padding-right:10px}
+.sbornik{width:100%;background:#fff;border-radius:22px;padding:16px 14px 14px;display:grid;grid-template-columns:1.12fr .88fr;column-gap:10px;align-items:stretch;text-align:left;color:#1A1A1A}
+.sb-copy{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sb-labels{display:flex;gap:6px}
+.sb-labels span{display:inline-flex;align-items:center;height:24px;padding:0 10px;border:1.5px solid #7A8C52;border-radius:50px;font-size:10px;font-weight:700;color:#7A8C52;letter-spacing:.06em;text-transform:uppercase}
+.sbornik h2{margin:0;font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1.05;text-align:left;color:#1A1A1A}
+.sbornik h2 em{font-style:italic;font-weight:800;color:#5C6B3E;background:linear-gradient(180deg,transparent 64%,#EFF2E8 64%);padding:0 .04em}
+.sb-lead{margin:0;font-size:13px;line-height:1.35;font-weight:600;color:#2C2C2C}
+.sb-what{margin:0;padding:10px 10px 12px;background:#F9F8F5;border-radius:14px}
+.sb-what p{margin:0;font-size:12px;line-height:1.4;color:#2C2C2C;font-weight:500}
+.sb-what p+p{margin-top:8px}
+.sb-what ul{margin:8px 0 0;padding:0;list-style:none}
+.sb-what li{position:relative;margin-top:5px;padding-left:12px;font-size:12px;line-height:1.35;color:#2C2C2C;font-weight:500}
+.sb-what li:first-child{margin-top:2px}
+.sb-what li::before{content:"";position:absolute;left:0;top:.45em;width:5px;height:5px;border-radius:50%;background:#7A8C52}
+.sb-aside{display:flex;flex-direction:column;align-items:stretch;gap:8px;min-width:0}
+.sb-phone{width:100%;aspect-ratio:390/640;display:flex;flex-direction:column;position:relative;padding:1.7% 1.9% 2%;border-radius:13%/7.9%;background:linear-gradient(160deg,#f3e6cf 0%,#cbb58e 28%,#8a7354 58%,#2b241c 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 0 1.2px rgba(255,255,255,.22),0 14px 28px rgba(40,28,12,.18)}
+.sb-phone:before,.sb-phone:after{content:"";position:absolute;background:#3a3228;border-radius:2px}
+.sb-phone:before{left:-1.15%;top:16%;width:1.15%;height:8%;box-shadow:0 10px 0 0 #3a3228,0 18px 0 0 #3a3228}
+.sb-phone:after{right:-1.15%;top:22%;width:1.15%;height:11%}
+.sb-glass{flex:1 1 auto;width:100%;min-height:0;border-radius:11.2%/6.8%;overflow:hidden;position:relative;background:#e8f3dc;box-shadow:inset 0 0 0 1px #111;display:flex;flex-direction:column}
+.sb-island{position:absolute;z-index:4;top:1.05%;left:50%;width:32%;height:3.35%;transform:translateX(-50%);border-radius:999px;background:#050505;box-shadow:0 0 0 2px #111}
+.sb-ios{position:relative;z-index:3;flex:0 0 8.2%;display:flex;align-items:flex-end;justify-content:space-between;padding:0 6% 1.4% 7%;color:#111;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-weight:600;font-size:9px;letter-spacing:-.03em;line-height:1}
+.sb-ios b{display:flex;align-items:center;gap:2px;font-weight:600}
+.sb-ios svg{display:block;height:8px;width:auto;fill:#111}
+.sb-glass img{display:block;flex:1 1 0;min-height:0;width:100%;height:auto;object-fit:cover;object-position:top center}
+.sb-home{position:absolute;z-index:3;left:50%;bottom:1.35%;width:30%;height:.7%;transform:translateX(-50%);border-radius:999px;background:#1a1a1a}
+.sb-note{margin:0;padding:8px 8px 8px 10px;background:#F5F7F1;border:1.5px solid #7A8C52;border-radius:12px;box-shadow:inset 3px 0 0 #7A8C52}
+.sb-note strong{display:block;font-size:12px;font-weight:800;letter-spacing:-.02em;line-height:1.25;color:#1A1A1A}
+.sb-note span{display:block;margin-top:6px;font-size:11px;line-height:1.35;color:#5C6B3E;font-weight:600}
 .panel.dusk{background:#5C6B3E;color:#fff}
 .panel.dusk .logo{background:linear-gradient(#5C6B3E 70%,transparent);color:#fff}
 .panel.dusk .logo svg{stroke:#F5F7F1}
@@ -439,10 +469,38 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <section class="panel">
 <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#7A8C52" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><span>школа здоровых отношений</span></div>
 <div class="stack">
-<div class="pass">
-<p>Третий элемент – это бонус, который получат</p>
-<strong>не все</strong>
-<div class="cut"><p>Он будет доступен только тем, кто присоединиться к следующему потоку Школы здоровых отношений через эту анкету предзаписи.</p></div>
+<div class="sbornik">
+<div class="sb-copy">
+<div class="sb-labels"><span>Бонус</span><span>Бесплатно</span></div>
+<h2>Сборник <em>разборов</em></h2>
+<p class="sb-lead">В период с 2022 по 2026 год мы провели 232 терапевтических разбора в Школе здоровых отношений.</p>
+<div class="sb-what">
+<p>В них принимали участие разные люди с разными проблемами:</p>
+<ul>
+<li>в отношениях с мужем или партнёром</li>
+<li>в общении с детьми</li>
+<li>с мамой и родными</li>
+<li>на работе</li>
+<li>в отношениях с собой</li>
+</ul>
+<p>Мы сохранили все эти разборы и собрали их в единый сборник. Там вы найдёте дополнительные примеры выполнения заданий и увидите, как реальные люди решали свои проблемы с помощью Школы здоровых отношений.</p>
+</div>
+</div>
+<div class="sb-aside">
+<div class="sb-phone">
+<div class="sb-glass">
+<div class="sb-island"></div>
+<div class="sb-ios"><span>11:25</span><b>
+<svg viewBox="0 0 18 12" width="14" height="8"><rect x="1" y="7.2" width="2.2" height="4.2" rx=".4"/><rect x="5.2" y="5" width="2.2" height="6.4" rx=".4"/><rect x="9.4" y="2.6" width="2.2" height="8.8" rx=".4"/><rect x="13.6" y=".4" width="2.2" height="11" rx=".4"/></svg>
+<svg viewBox="0 0 16 12" width="12" height="8"><path d="M8 9.6a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3Zm0-3.05c1.62 0 3.1.62 4.2 1.64l-1.12 1.14A4.35 4.35 0 0 0 8 8.05c-1.12 0-2.15.43-2.93 1.13L3.95 8.04A5.9 5.9 0 0 1 8 6.55Zm0-3.1c2.5 0 4.78.96 6.5 2.54L13.4 7.12A7.55 7.55 0 0 0 8 4.95c-2.05 0-3.92.8-5.32 2.1L1.55 5.9A9.9 9.9 0 0 1 8 3.45Z"/></svg>
+<svg viewBox="0 0 27 13" width="18" height="8"><rect x=".75" y="1.1" width="22.2" height="10.8" rx="2.4" fill="none" stroke="#111" stroke-width="1.5"/><rect x="23.3" y="4.2" width="2.1" height="4.6" rx=".7"/><rect x="2.55" y="2.9" width="16.4" height="7.2" rx="1.3"/></svg>
+</b></div>
+<img src="pic/upd-chat.png" alt="">
+<span class="sb-home"></span>
+</div>
+</div>
+<p class="sb-note"><strong>Вам больше не потребуется разгребать сотни новых сообщений в чате, чтобы найти нужный вам разбор.</strong><span>Все примеры будут у вас под рукой в едином сборнике, который останется у вас навсегда.</span></p>
+</div>
 </div>
 </div>
 </section>
