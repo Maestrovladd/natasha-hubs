@@ -211,6 +211,9 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 .elx .kicker{font-weight:700;font-size:20px;line-height:1.3;color:#5C6B3E}
 .elx .punch{font-weight:800;font-size:clamp(36px,8vw,48px);line-height:1.05;color:#1A1A1A;border-bottom:7px solid #7A8C52;padding-bottom:4px}
 .sketch{width:min(100%,440px);height:auto;max-height:320px;object-fit:contain;display:block;background:transparent}
+.inkoval{width:100%;position:relative;min-height:250px;display:grid;place-items:center}
+.inkoval svg{position:absolute;inset:0;width:100%;height:100%}
+.inkoval p{position:relative;z-index:1;width:72%;margin:0;text-align:center;font-family:Figtree,system-ui,sans-serif;font-weight:800;font-size:16px;line-height:1.32;letter-spacing:-.02em;text-transform:none;color:#1A1A1A}
 </style>
 </head>
 <body>
@@ -577,7 +580,12 @@ html,body{background:var(--paper);color:var(--ink);font-family:Figtree,system-ui
 <div class="sign">→</div>
 <div class="box hot">более<br>20 упражнений</div>
 </div>
-<p class="caps lead">за которые вы выполните, и которые позволят вам сократить негативное влияние вашего прошлого на то, как вы ведёте и чувствуете себя в отношениях сейчас</p>
+<div class="inkoval">
+<svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+<path d="M48 128 C 36 48, 120 22, 200 26 C 300 16, 372 58, 364 128 C 378 198, 300 236, 198 232 C 90 240, 28 196, 48 128 Z" fill="none" stroke="#7A8C52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<p>за которые вы выполните, и которые позволят вам сократить негативное влияние вашего прошлого на то, как вы ведёте и чувствуете себя в отношениях сейчас</p>
+</div>
 </div>
 </section>
 
